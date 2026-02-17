@@ -9,11 +9,117 @@
 <body>
 
     <header>
-        <h1>Hi, I'm Joyce</h1>
-        <p>Java Backend Developer | Learning React</p>
+        <div class="header-content">
+            <h1>Hi, I'm Joyce</h1>
+            <p class="subtitle">Aspiring Software Engineer | Java Backend Developer</p>
+            <p class="tagline">Transitioning from QA to Development · Building reliable systems with quality-first mindset</p>
+        </div>
     </header>
 
-    <section>
+    <nav class="nav-bar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+    </nav>
+
+    <section id="about">
         <h2>About Me</h2>
-        <p>
-            I am a Java backend
+        <div class="about-content">
+            <p>
+                I am currently working as a Business QA Associate at HSBC Software Development (Guangdong) Co., Ltd., 
+                with strong expertise in Java backend development, Spring Boot, and microservices architecture. I am actively seeking to transition 
+                into a <strong>Software Engineer</strong> role where I can leverage my deep understanding of system architecture, API design, 
+                and quality engineering to build robust and scalable solutions.
+            </p>
+            <p>
+                My QA experience has provided me with unique insights into the complete software development lifecycle - from requirements analysis 
+                and system design to deployment and monitoring. Working across credit card systems, loan processing platforms, and rewards management 
+                applications, I've gained hands-on experience with multi-system integration, data flow optimization, and end-to-end testing automation. 
+                I bring a quality-first engineering mindset and am passionate about writing clean, maintainable code while continuously learning 
+                emerging technologies including AI and modern development practices.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Java Backend Development</h3>
+                <p>Skilled in Java programming, with experience in Spring Boot / SSM backend development</p>
+            </div>
+            <div class="skill-card">
+                <h3>Database & Caching</h3>
+                <p>Familiar with MySQL databases and Redis caching, with an understanding of distributed system environments</p>
+            </div>
+            <div class="skill-card">
+                <h3>Microservices & API</h3>
+                <p>Understanding of Spring Cloud microservice architecture and basic usage of message queues, with participation in API development and maintenance</p>
+            </div>
+            <div class="skill-card">
+                <h3>Banking Domain Knowledge</h3>
+                <p>Familiar with bank credit card business processes, including points systems, activity management, and payment process validation</p>
+            </div>
+            <div class="skill-card">
+                <h3>Quality Assurance</h3>
+                <p>Comprehensive testing expertise covering end-to-end testing, data validation, and multi-system integration verification</p>
+            </div>
+            <div class="skill-card">
+                <h3>Continuous Learning</h3>
+                <p>Actively following and learning new technologies such as AI, continuously improving engineering development capabilities</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>Business QA Associate</h3>
+                    <p class="company">HSBC Software Development (Guangdong) Co., Ltd.</p>
+                    <p class="role-note">Technical focus: System integration, API testing, and backend data validation</p>
+                </div>
+                <p class="duration">Jan 2024 - Present</p>
+            </div>
+
+            <div class="project">
+                <h4>Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) - Credit Limit Management</h4>
+                <p class="project-overview"><strong>Project Overview:</strong> Optimize credit limit management to protect the interests of both cardholders and the bank.</p>
+                <ul>
+                    <li>Designed and executed end-to-end testing of credit limit processes, ensuring data consistency across credit limit increase requests, customer information, and key data validation, while verifying seamless data exchange across multiple backend systems</li>
+                    <li>Implemented comprehensive rule validation and notification process testing, developing test scenarios to intercept non-compliant applications, thereby improving system security and customer experience</li>
+                    <li><strong>Technical Impact:</strong> Gained deep understanding of distributed system architecture, database transactions, and API integration patterns</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h4>Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2</h4>
+                <p class="project-overview"><strong>Project Overview:</strong> Optimize the loan process, simplify form content, and enhance the customer experience.</p>
+                <ul>
+                    <li>Architected and executed comprehensive test suites covering multiple scenarios including edge cases, ensuring complete validation of the loan workflow and business logic</li>
+                    <li>Validated cross-platform functionality (mobile and web), ensuring accurate data extraction from OBS customer databases and reliable API submission to the pre-loan processing system</li>
+                    <li><strong>Technical Impact:</strong> Developed expertise in RESTful API testing, data transformation validation, and cross-system integration debugging</li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <h4>Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall</h4>
+                <p class="project-overview"><strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.</p>
+                <ul>
+                    <li>Validated multiple complex modules including points account management, marketing activity engine, redemption workflow (electronic/physical vouchers), and payment processing, ensuring data consistency and accurate business logic between front-end and back-end systems</li>
+                    <li>Analyzed the complete rewards mall architecture end-to-end, validating data flow from FUN Center mobile app through backend APIs to database records, ensuring seamless integration and accurate real-time data synchronization</li>
+                    <li>Participated in Project Fun internal reporting system, designing test cases to verify statistical accuracy and data completeness of daily and monthly business intelligence reports, ensuring data integrity for decision-making</li>
+                    <li><strong>Technical Impact:</strong> Mastered full-stack testing concepts, payment gateway integration, and real-time data processing patterns in high-traffic applications</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Joyce. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
