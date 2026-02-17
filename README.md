@@ -18,11 +18,11 @@ Currently learning React to expand my full stack skills.
 ## Projects
 ### Order Management System
 Backend system built with Spring Boot and MySQL. Implements user authentication and CRUD operations.  
-[Gitee link](你的Gitee项目链接)
+[Gitee link](https://gitee.com/joyceyu434840)
 
 *More projects will be added as I continue learning.*
 
 ## Contact
-- Email: Joyceyu434840@163.com 
-- GitHub: https://github.com/joyceyu-tech
-- Gitee: https://gitee.com/joyceyu434840
+- Email: joyceyu434840@163.com
+- Phone: +86 137 1053 1043
+- GitHub: [joyceyu-tech](https://github.com/joyceyu-tech)
