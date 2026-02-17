@@ -24,4 +24,5 @@ Backend system built with Spring Boot and MySQL. Implements user authentication 
 
 ## Contact
 - Email: Joyceyu434840@163.com 
-- GitHub: [https://github.com/your-username](https://github.com/your-username)
+- GitHub: https://github.com/joyceyu-tech
+- Gitee: https://gitee.com/joyceyu434840
