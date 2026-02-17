@@ -3,6 +3,24 @@
 // 等待 DOM 加载完成
 document.addEventListener('DOMContentLoaded', function() {
     
+    // ==================== 0. 联系卡片隐藏功能 ====================
+    const closeContactBtn = document.getElementById('closeContactBtn');
+    const contactSidebar = document.getElementById('contactSidebar');
+    
+    if (closeContactBtn && contactSidebar) {
+        closeContactBtn.addEventListener('click', function() {
+            contactSidebar.classList.add('hidden');
+            // 保存到本地存储，刷新页面后记住用户的选择
+            localStorage.setItem('contactSidebarHidden', 'true');
+        });
+        
+        // 页面加载时检查是否需要隐藏
+        if (localStorage.getItem('contactSidebarHidden') === 'true') {
+            contactSidebar.classList.add('hidden');
+        }
+    }
+
+    
     // ==================== 1. 平滑滚动功能 ====================
     const navLinks = document.querySelectorAll('.nav-bar a');
     

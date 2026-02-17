@@ -823,6 +823,13 @@ footer p {
     top: 50%;
     transform: translateY(-50%);
     z-index: 998;
+    transition: all 0.3s ease;
+}
+
+.contact-sidebar.hidden {
+    right: -250px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contact-card {
@@ -832,6 +839,26 @@ footer p {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 200px;
     border-left: 4px solid #667eea;
+    position: relative;
+}
+
+.close-contact-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.close-contact-btn:hover {
+    color: #667eea;
 }
 
 .contact-card h3 {
