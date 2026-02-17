@@ -310,8 +310,16 @@ h2::after {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 35px;
+}
+
+/* 确保在小屏幕上卡片能够适应 */
+@media (max-width: 400px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* Project Card Styles */
@@ -320,7 +328,7 @@ h2::after {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     display: flex;
     flex-direction: column;
 }
@@ -748,18 +756,6 @@ footer p {
     background-color: rgba(102, 126, 234, 0.3);
     border-left-color: #667eea;
     color: #ffffff;
-}
-
-/* 滚动动画 - 淡入效果 */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* 响应式调整 */

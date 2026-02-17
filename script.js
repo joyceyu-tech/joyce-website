@@ -83,46 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    // ==================== 5. 滚动淡入动画 ====================
-    function fadeInOnScroll() {
-        const fadeElements = document.querySelectorAll('.skill-card, .project-card, .experience-item');
-        
-        fadeElements.forEach(element => {
-            // 添加淡入类
-            element.classList.add('fade-in');
-            
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementTop < windowHeight - 100) {
-                element.classList.add('visible');
-            }
-        });
-    }
-
-    
-    // ==================== 6. 打字机效果（标题） ====================
-    const subtitle = document.querySelector('.subtitle');
-    
-    if (subtitle) {
-        const originalText = subtitle.textContent;
-        subtitle.textContent = '';
-        let charIndex = 0;
-        
-        function typeWriter() {
-            if (charIndex < originalText.length) {
-                subtitle.textContent += originalText.charAt(charIndex);
-                charIndex++;
-                setTimeout(typeWriter, 80); // 打字速度
-            }
-        }
-        
-        // 延迟开始打字效果
-        setTimeout(typeWriter, 500);
-    }
-
-    
-    // ==================== 7. 项目卡片悬停效果增强 ====================
+    // ==================== 6. 项目卡片悬停效果增强 ====================
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
@@ -136,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // ==================== 8. 技能卡片随机颜色边框 ====================
+    // ==================== 7. 技能卡片随机颜色边框 ====================
     const skillCards = document.querySelectorAll('.skill-card');
     const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe', '#43e97b'];
     
@@ -156,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateActiveNav();
                 updateScrollProgress();
                 toggleBackToTop();
-                fadeInOnScroll();
                 scrollTimeout = null;
             }, 10);
         }
@@ -166,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== 页面加载时初始化 ====================
     updateActiveNav();
     updateScrollProgress();
-    fadeInOnScroll();
     
     
     // ==================== 添加平滑过渡效果 ====================
