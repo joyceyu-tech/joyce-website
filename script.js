@@ -3,25 +3,60 @@
 // 等待 DOM 加载完成
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==================== 0. 联系卡片隐藏功能 ====================
-    const closeContactBtn = document.getElementById('closeContactBtn');
+    // ==================== 1. 联系侧边栏 Toggle 功能 ====================
+    const toggleContactBtn = document.getElementById('toggleContactBtn');
+    const contactToggle = document.getElementById('contactToggle');
     const contactSidebar = document.getElementById('contactSidebar');
     
-    if (closeContactBtn && contactSidebar) {
-        closeContactBtn.addEventListener('click', function() {
-            contactSidebar.classList.add('hidden');
-            // 保存到本地存储，刷新页面后记住用户的选择
-            localStorage.setItem('contactSidebarHidden', 'true');
-        });
-        
-        // 页面加载时检查是否需要隐藏
-        if (localStorage.getItem('contactSidebarHidden') === 'true') {
-            contactSidebar.classList.add('hidden');
+    // 默认状态：联系侧边栏是隐藏的
+    if (contactSidebar) {
+        contactSidebar.classList.add('hidden');
+    }
+    
+    // 在1400px以下显示 toggle 按钮
+    function updateContactToggleVisibility() {
+        if (window.innerWidth <= 1400 && contactToggle) {
+            contactToggle.classList.add('visible');
+        } else if (contactToggle) {
+            contactToggle.classList.remove('visible');
+            // 大屏幕时始终显示侧边栏
+            if (contactSidebar) {
+                contactSidebar.classList.remove('hidden');
+            }
         }
     }
+    
+    // 关闭按钮点击事件 - 隐藏侧边栏
+    if (toggleContactBtn && contactSidebar) {
+        toggleContactBtn.addEventListener('click', function() {
+            contactSidebar.classList.add('hidden');
+        });
+    }
+    
+    // Toggle 按钮点击事件 - 显示/隐藏侧边栏
+    if (contactToggle && contactSidebar) {
+        contactToggle.addEventListener('click', function() {
+            contactSidebar.classList.toggle('hidden');
+        });
+    }
+    
+    // 关闭overlay点击事件
+    if (contactSidebar) {
+        contactSidebar.addEventListener('click', function(e) {
+            if (e.target === this && window.innerWidth <= 768) {
+                this.classList.add('hidden');
+            }
+        });
+    }
+    
+    // 初始化 toggle 按钮可见性
+    updateContactToggleVisibility();
+    
+    // 窗口大小改变时更新 toggle 按钮可见性
+    window.addEventListener('resize', updateContactToggleVisibility);
 
     
-    // ==================== 1. 平滑滚动功能 ====================
+    // ==================== 2. 平滑滚动功能 ====================
     const navLinks = document.querySelectorAll('.nav-bar a');
     
     navLinks.forEach(link => {
@@ -43,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // ==================== 2. 导航栏高亮功能 ====================
+    // ==================== 3. 导航栏高亮功能 ====================
     function updateActiveNav() {
         const sections = document.querySelectorAll('section');
         const scrollPosition = window.scrollY + 100; // 偏移量
@@ -67,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    // ==================== 3. 滚动进度条 ====================
+    // ==================== 4. 滚动进度条 ====================
     function updateScrollProgress() {
         const scrollTop = window.scrollY;
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -80,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-    // ==================== 4. 返回顶部按钮 ====================
+    // ==================== 5. 返回顶部按钮 ====================
     const backToTopButton = document.getElementById('backToTop');
     
     function toggleBackToTop() {
