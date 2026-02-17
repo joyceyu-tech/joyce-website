@@ -12,22 +12,6 @@
 - 3个后端项目（红包雨抽奖系统、外卖管理系统、拼车平台）
 
 
-## 💼 Featured Projects
-
-### 1️⃣ Red Packet Rain Lottery System
-**Enterprise-level lottery activity management platform**
-
-🔗 [View on Gitee](https://gitee.com/joyceyu434840/lottery-system.git)
-
-**Tech Stack:** Spring Boot · MyBatis-Plus · MySQL · Redis · RabbitMQ · MinIO
-
-**Key Achievements:**
-- ✅ Developed User and Activity modules with real-time data synchronization
-- ⚡ Optimized high-concurrency scenarios using Redis token bucket + Lua scripts to prevent overselling
-- 🚀 Implemented asynchronous lottery processing with RabbitMQ for improved stability
-- 📊 Achieved **QPS of 2312** on core interfaces through JMeter performance testing
-
-
 ###主要项目
 
 ### 红包雨抽奖系统
