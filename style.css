@@ -18,7 +18,6 @@ header {
     text-align: center;
     padding: 80px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-left: 220px;  /* 为侧边栏留出空间 */
 }
 
 .header-content {
@@ -114,6 +113,7 @@ body {
     background-color: #f8f9fa;
     color: #2c3e50;
     line-height: 1.6;
+    margin-left: 220px;  /* 为左侧导航栏预留空间 */
 }
 
 /* Section Styles */
