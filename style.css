@@ -802,7 +802,9 @@ footer p {
     }
 
     .about-content p {
-        text-align: left;
+        text-align: justify;
+        text-align-last: auto;
+        word-spacing: -0.05em;
     }
     
     .avatar-wrapper {
@@ -940,7 +942,9 @@ footer p {
     }
 
     .about-content p {
-        text-align: left;
+        text-align: justify;
+        text-align-last: auto;
+        word-spacing: -0.05em;
     }
     
     .avatar-wrapper {
