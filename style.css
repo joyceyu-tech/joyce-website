@@ -144,8 +144,8 @@ header h1 {
 }
 
 .contact-toggle svg {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 }
 
 /* ==================== 区块样式 ==================== */
@@ -202,6 +202,7 @@ h2::after {
     line-height: 1.8;
     margin-bottom: 20px;
     color: #34495e;
+    text-align: justify;
 }
 
 .about-content p:last-child {
@@ -673,6 +674,11 @@ footer p {
 
 .contact-item svg {
     flex-shrink: 0;
+    color: #b8b8b8;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover svg {
     color: #667eea;
 }
 
@@ -793,6 +799,10 @@ footer p {
     
     header {
         padding: 50px 15px;
+    }
+
+    .about-content p {
+        text-align: left;
     }
     
     .avatar-wrapper {
@@ -927,6 +937,10 @@ footer p {
 @media (max-width: 480px) {
     header {
         padding: 40px 15px;
+    }
+
+    .about-content p {
+        text-align: left;
     }
     
     .avatar-wrapper {
