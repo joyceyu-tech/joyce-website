@@ -13,16 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         contactSidebar.classList.add('hidden');
     }
     
-    // 在1400px以下显示 toggle 按钮
+    // 显示 toggle 按钮（桌面端与移动端都可用）
     function updateContactToggleVisibility() {
-        if (window.innerWidth <= 1400 && contactToggle) {
+        if (contactToggle) {
             contactToggle.classList.add('visible');
-        } else if (contactToggle) {
-            contactToggle.classList.remove('visible');
-            // 大屏幕时始终显示侧边栏
-            if (contactSidebar) {
-                contactSidebar.classList.remove('hidden');
-            }
         }
     }
     
