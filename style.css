@@ -116,6 +116,38 @@ header h1 {
     color: #ffffff;
 }
 
+.contact-toggle {
+    position: fixed;
+    bottom: 95px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    z-index: 997;
+}
+
+.contact-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.contact-toggle svg {
+    width: 28px;
+    height: 28px;
+}
+
 /* ==================== 区块样式 ==================== */
 section {
     max-width: 1400px;
@@ -656,44 +688,6 @@ footer p {
 }
 
 /* 手机端联系浮动按钮 */
-.contact-toggle {
-    position: fixed;
-    bottom: 95px;
-    right: 30px;
-    width: 55px;
-    height: 55px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0);
-    transition: all 0.3s ease;
-    z-index: 997;
-}
-
-.contact-toggle.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
-}
-
-.contact-toggle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-}
-
-.contact-toggle svg {
-    width: 28px;
-    height: 28px;
-}
-
 /* ==================== 动画 ==================== */
 @keyframes fadeInDown {
     from {
@@ -871,18 +865,6 @@ footer p {
         padding-left: 22px;
     }
     
-    .contact-toggle {
-        width: 50px;
-        height: 50px;
-        bottom: 85px;
-        right: 20px;
-    }
-    
-    .contact-toggle svg {
-        width: 24px;
-        height: 24px;
-    }
-    
     .contact-sidebar {
         position: fixed;
         right: 0;
@@ -926,6 +908,18 @@ footer p {
     .back-to-top svg {
         width: 20px;
         height: 20px;
+    }
+    
+    .contact-toggle {
+        width: 50px;
+        height: 50px;
+        bottom: 70px;
+        right: 20px;
+    }
+    
+    .contact-toggle svg {
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -1021,9 +1015,15 @@ footer p {
     }
     
     .contact-toggle {
-        width: 50px;
-        height: 50px;
-        bottom: 85px;
-        right: 20px;
+        width: 48px;
+        height: 48px;
+        bottom: 65px;
+        right: 15px;
     }
+    
+    .contact-toggle svg {
+        width: 22px;
+        height: 22px;
+    }
+    
 }

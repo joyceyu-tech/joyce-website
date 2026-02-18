@@ -3,8 +3,7 @@
 // 等待 DOM 加载完成
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==================== 1. 联系侧边栏 Toggle 功能 ====================
-    const toggleContactBtn = document.getElementById('toggleContactBtn');
+    // ==================== 1. 联系侧边栏功能 ====================
     const contactToggle = document.getElementById('contactToggle');
     const contactSidebar = document.getElementById('contactSidebar');
     
@@ -13,24 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
         contactSidebar.classList.add('hidden');
     }
     
-    // 显示 toggle 按钮（桌面端与移动端都可用）
-    function updateContactToggleVisibility() {
-        if (contactToggle) {
-            contactToggle.classList.add('visible');
-        }
-    }
-    
-    // 关闭按钮点击事件 - 隐藏侧边栏
-    if (toggleContactBtn && contactSidebar) {
-        toggleContactBtn.addEventListener('click', function() {
-            contactSidebar.classList.add('hidden');
-        });
-    }
-    
-    // Toggle 按钮点击事件 - 显示/隐藏侧边栏
+    // 浮动按钮点击事件 - 显示/隐藏侧边栏
     if (contactToggle && contactSidebar) {
         contactToggle.addEventListener('click', function() {
             contactSidebar.classList.toggle('hidden');
+        });
+    }
+    
+    // 关闭按钮点击事件 - 隐藏侧边栏
+    const toggleContactBtn = document.getElementById('toggleContactBtn');
+    if (toggleContactBtn && contactSidebar) {
+        toggleContactBtn.addEventListener('click', function() {
+            contactSidebar.classList.add('hidden');
         });
     }
     
@@ -42,12 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // 初始化 toggle 按钮可见性
-    updateContactToggleVisibility();
-    
-    // 窗口大小改变时更新 toggle 按钮可见性
-    window.addEventListener('resize', updateContactToggleVisibility);
 
     
     // ==================== 2. 平滑滚动功能 ====================
