@@ -802,9 +802,7 @@ footer p {
     }
 
     .about-content p {
-        text-align: justify;
-        text-align-last: auto;
-        word-spacing: -0.05em;
+        text-align: left;
     }
     
     .avatar-wrapper {
@@ -911,27 +909,27 @@ footer p {
     }
     
     .back-to-top {
-        width: 40px;
-        height: 40px;
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .back-to-top svg {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .contact-toggle {
         width: 50px;
         height: 50px;
         bottom: 70px;
         right: 20px;
     }
     
+    .back-to-top svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .contact-toggle {
+        width: 50px;
+        height: 50px;
+        bottom: 130px;
+        right: 20px;
+    }
+    
     .contact-toggle svg {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
     }
 }
 
@@ -942,9 +940,7 @@ footer p {
     }
 
     .about-content p {
-        text-align: justify;
-        text-align-last: auto;
-        word-spacing: -0.05em;
+        text-align: left;
     }
     
     .avatar-wrapper {
