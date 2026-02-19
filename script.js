@@ -2,7 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const isMobileViewport = window.matchMedia('(max-width: 768px)');
-    const langToggle = document.getElementById('langToggle');
+    const langZhButton = document.getElementById('langZh');
+    const langEnButton = document.getElementById('langEn');
 
     const translations = {
         en: {
@@ -109,9 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 '#backToTop': 'Back to top',
                 '#contactToggle': 'Toggle contact panel',
                 '#toggleContactBtn': 'Toggle contact panel'
-            },
-            langButton: '中文',
-            langButtonAria: 'Switch language'
+            }
         },
         zh: {
             title: 'Joyce | 个人作品集',
@@ -217,9 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 '#backToTop': '返回顶部',
                 '#contactToggle': '切换联系面板',
                 '#toggleContactBtn': '切换联系面板'
-            },
-            langButton: 'EN',
-            langButtonAria: '切换语言'
+            }
         }
     };
 
@@ -281,9 +278,9 @@ document.addEventListener('DOMContentLoaded', function() {
         applyHtml(t.html);
         applyAria(t.aria);
 
-        if (langToggle) {
-            langToggle.textContent = t.langButton;
-            langToggle.setAttribute('aria-label', t.langButtonAria);
+        if (langZhButton && langEnButton) {
+            langZhButton.classList.toggle('active', lang === 'zh');
+            langEnButton.classList.toggle('active', lang === 'en');
         }
     }
 
@@ -292,11 +289,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialLanguage = savedLanguage || (browserIsChinese ? 'zh' : 'en');
     applyLanguage(initialLanguage);
 
-    if (langToggle) {
-        langToggle.addEventListener('click', function() {
-            const nextLanguage = currentLanguage === 'en' ? 'zh' : 'en';
-            applyLanguage(nextLanguage);
-            localStorage.setItem('language', nextLanguage);
+    if (langZhButton) {
+        langZhButton.addEventListener('click', function() {
+            applyLanguage('zh');
+            localStorage.setItem('language', 'zh');
+        });
+    }
+
+    if (langEnButton) {
+        langEnButton.addEventListener('click', function() {
+            applyLanguage('en');
+            localStorage.setItem('language', 'en');
         });
     }
 
