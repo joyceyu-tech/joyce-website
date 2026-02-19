@@ -23,6 +23,10 @@
 
     <header>
         <div class="header-content">
+            <div class="lang-switch-floating" role="group" aria-label="Language switch">
+                <button class="lang-toggle" id="langZh" type="button" aria-label="切换到中文">中文</button>
+                <button class="lang-toggle" id="langEn" type="button" aria-label="Switch to English">EN</button>
+            </div>
             <div class="hero-grid">
             <div class="hero-text">
                 <p class="hero-badge">Open to Software Engineer opportunities</p>
@@ -62,10 +66,6 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <div class="lang-switch-floating" role="group" aria-label="Language switch">
-            <button class="lang-toggle" id="langZh" type="button" aria-label="切换到中文">中文</button>
-            <button class="lang-toggle" id="langEn" type="button" aria-label="Switch to English">EN</button>
-        </div>
     </nav>
 
     <main id="main-content">
@@ -274,32 +274,30 @@
             </div>
 
             <div class="project">
-                <h4>Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) - Credit Limit Management</h4>
-                <p class="project-overview"><strong>Situation:</strong> Credit limit processing involved strict compliance rules and cross-system data dependencies.</p>
+                <h4>Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) Credit Limit Management</h4>
+                <p class="project-overview"><strong>Project Overview:</strong> Optimize credit limit management to protect the interests of both cardholders and the bank.</p>
                 <ul>
-                    <li><strong>Task:</strong> Ensure end-to-end reliability of credit limit increase journeys and prevent non-compliant applications from passing.</li>
-                    <li><strong>Action:</strong> Designed cross-system E2E scenarios, validated business rules and notifications, and verified critical data consistency across request, customer, and backend records.</li>
-                    <li><strong>Result:</strong> Improved release confidence for credit limit features and strengthened risk control in sensitive banking workflows.</li>
+                    <li>Responsible for end-to-end testing of credit limit processes, ensuring consistency of data such as credit limit increase requests, customer information, and other key data, and verifying data exchange across multiple systems.</li>
+                    <li>Conducted rule validation and tested the credit limit increase notification process, ensuring that non-compliant applications are intercepted and improving system security and customer experience.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <h4>Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2</h4>
-                <p class="project-overview"><strong>Situation:</strong> Loan application optimization required high correctness across mobile, web, and backend integrations.</p>
+                <p class="project-overview"><strong>Project Overview:</strong> Optimize the loan process, simplify form content, and enhance the customer experience.</p>
                 <ul>
-                    <li><strong>Task:</strong> Validate end-to-end loan submission quality across channels while maintaining business rule correctness.</li>
-                    <li><strong>Action:</strong> Built comprehensive scenario suites (including edge cases), validated OBS data extraction and downstream API submission behavior on both mobile and web.</li>
-                    <li><strong>Result:</strong> Increased confidence in multi-channel loan workflow stability and reduced risk of data transformation defects before release.</li>
+                    <li>Designed and executed comprehensive test cases covering multiple scenarios to ensure complete testing of the loan process.</li>
+                    <li>Verified mobile and web loan scenarios, ensuring the accurate extraction of OBS customer data and its submission to the pre-loan system.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <h4>Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall</h4>
-                <p class="project-overview"><strong>Situation:</strong> Rewards mall flows combined high-traffic user interactions, multi-module dependencies, and strict data correctness needs.</p>
+                <p class="project-overview"><strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.</p>
                 <ul>
-                    <li><strong>Task:</strong> Guarantee correctness and stability for points, redemption, payment, and reporting workflows.</li>
-                    <li><strong>Action:</strong> Executed end-to-end validation from mobile app to API to database, and designed report verification cases for daily/monthly statistics integrity.</li>
-                    <li><strong>Result:</strong> Improved consistency of rewards and payment-related data, supporting smoother user experience and more reliable business reporting.</li>
+                    <li>Responsible for testing various modules of the rewards mall, including the points account page, marketing activity displays, points redemption (electronic/physical vouchers), and product purchase flow, ensuring data consistency and accurate payment logic between the front-end and back-end systems.</li>
+                    <li>Gained in-depth understanding of the entire rewards mall process and participated in testing, combining the FUN Center front-end app and back-end report records to ensure smooth data transfer and accurate display.</li>
+                    <li>Also involved in Project Fun, testing the reporting function that provides statistical data to internal bank personnel. Focused on verifying the accuracy and completeness of daily and monthly reports to ensure the data is accurate and meets requirements.</li>
                 </ul>
             </div>
         </div>

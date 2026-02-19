@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isMobileViewport = window.matchMedia('(max-width: 768px)');
     const langZhButton = document.getElementById('langZh');
     const langEnButton = document.getElementById('langEn');
+    const langSwitchFloating = document.querySelector('.lang-switch-floating');
 
     const translations = {
         en: {
@@ -83,28 +84,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 '#experience > h2': 'Work Experience',
                 '#experience > .section-intro': 'Delivering quality in complex banking systems while growing toward end-to-end engineering impact.',
                 '.experience-header h3': 'Software Testing Professional',
+                '.company': 'HSBC Software Development (Guangdong) Co., Ltd.',
                 '.role-note': 'Focus on testing strategy, cross-system validation, and stable release quality.',
                 '.duration': 'Jan 2024 - Present',
-                '.experience-item .project:nth-of-type(1) h4': 'Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) - Credit Limit Management',
+                '.experience-item .project:nth-of-type(1) h4': 'Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) Credit Limit Management',
                 '.experience-item .project:nth-of-type(2) h4': 'Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2',
                 '.experience-item .project:nth-of-type(3) h4': 'Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall',
+                '.experience-item .project:nth-child(2) h4': 'Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) Credit Limit Management',
+                '.experience-item .project:nth-child(3) h4': 'Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2',
+                '.experience-item .project:nth-child(4) h4': 'Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall',
+                '.experience-item .project:last-of-type h4': 'Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall',
                 'footer p': '© 2026 Joyce. All rights reserved.',
                 '.contact-card h3': 'Quick Contact',
                 '.contact-card .contact-item:nth-of-type(1) a': 'Contact Me'
             },
             html: {
-                '.experience-item .project:nth-of-type(1) .project-overview': '<strong>Situation:</strong> Credit limit processing involved strict compliance rules and cross-system data dependencies.',
-                '.experience-item .project:nth-of-type(1) li:nth-child(1)': '<strong>Task:</strong> Ensure end-to-end reliability of credit limit increase journeys and prevent non-compliant applications from passing.',
-                '.experience-item .project:nth-of-type(1) li:nth-child(2)': '<strong>Action:</strong> Designed cross-system E2E scenarios, validated business rules and notifications, and verified critical data consistency across request, customer, and backend records.',
-                '.experience-item .project:nth-of-type(1) li:nth-child(3)': '<strong>Result:</strong> Improved release confidence for credit limit features and strengthened risk control in sensitive banking workflows.',
-                '.experience-item .project:nth-of-type(2) .project-overview': '<strong>Situation:</strong> Loan application optimization required high correctness across mobile, web, and backend integrations.',
-                '.experience-item .project:nth-of-type(2) li:nth-child(1)': '<strong>Task:</strong> Validate end-to-end loan submission quality across channels while maintaining business rule correctness.',
-                '.experience-item .project:nth-of-type(2) li:nth-child(2)': '<strong>Action:</strong> Built comprehensive scenario suites (including edge cases), validated OBS data extraction and downstream API submission behavior on both mobile and web.',
-                '.experience-item .project:nth-of-type(2) li:nth-child(3)': '<strong>Result:</strong> Increased confidence in multi-channel loan workflow stability and reduced risk of data transformation defects before release.',
-                '.experience-item .project:nth-of-type(3) .project-overview': '<strong>Situation:</strong> Rewards mall flows combined high-traffic user interactions, multi-module dependencies, and strict data correctness needs.',
-                '.experience-item .project:nth-of-type(3) li:nth-child(1)': '<strong>Task:</strong> Guarantee correctness and stability for points, redemption, payment, and reporting workflows.',
-                '.experience-item .project:nth-of-type(3) li:nth-child(2)': '<strong>Action:</strong> Executed end-to-end validation from mobile app to API to database, and designed report verification cases for daily/monthly statistics integrity.',
-                '.experience-item .project:nth-of-type(3) li:nth-child(3)': '<strong>Result:</strong> Improved consistency of rewards and payment-related data, supporting smoother user experience and more reliable business reporting.'
+                '.experience-item .project:nth-of-type(1) .project-overview': '<strong>Project Overview:</strong> Optimize credit limit management to protect the interests of both cardholders and the bank.',
+                '.experience-item .project:nth-of-type(1) li:nth-child(1)': 'Responsible for end-to-end testing of credit limit processes, ensuring consistency of data such as credit limit increase requests, customer information, and other key data, and verifying data exchange across multiple systems.',
+                '.experience-item .project:nth-of-type(1) li:nth-child(2)': 'Conducted rule validation and tested the credit limit increase notification process, ensuring that non-compliant applications are intercepted and improving system security and customer experience.',
+                '.experience-item .project:nth-of-type(2) .project-overview': '<strong>Project Overview:</strong> Optimize the loan process, simplify form content, and enhance the customer experience.',
+                '.experience-item .project:nth-of-type(2) li:nth-child(1)': 'Designed and executed comprehensive test cases covering multiple scenarios to ensure complete testing of the loan process.',
+                '.experience-item .project:nth-of-type(2) li:nth-child(2)': 'Verified mobile and web loan scenarios, ensuring the accurate extraction of OBS customer data and its submission to the pre-loan system.',
+                '.experience-item .project:nth-of-type(3) .project-overview': '<strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.',
+                '.experience-item .project:nth-of-type(3) li:nth-child(1)': 'Responsible for testing various modules of the rewards mall, including the points account page, marketing activity displays, points redemption (electronic/physical vouchers), and product purchase flow, ensuring data consistency and accurate payment logic between the front-end and back-end systems.',
+                '.experience-item .project:nth-of-type(3) li:nth-child(2)': 'Gained in-depth understanding of the entire rewards mall process and participated in testing, combining the FUN Center front-end app and back-end report records to ensure smooth data transfer and accurate display.',
+                '.experience-item .project:nth-of-type(3) li:nth-child(3)': 'Also involved in Project Fun, testing the reporting function that provides statistical data to internal bank personnel. Focused on verifying the accuracy and completeness of daily and monthly reports to ensure the data is accurate and meets requirements.'
+                ,'.experience-item .project:last-of-type .project-overview': '<strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.'
+                ,'.experience-item .project:last-of-type li:nth-child(1)': 'Responsible for testing various modules of the rewards mall, including the points account page, marketing activity displays, points redemption (electronic/physical vouchers), and product purchase flow, ensuring data consistency and accurate payment logic between the front-end and back-end systems.'
+                ,'.experience-item .project:last-of-type li:nth-child(2)': 'Gained in-depth understanding of the entire rewards mall process and participated in testing, combining the FUN Center front-end app and back-end report records to ensure smooth data transfer and accurate display.'
+                ,'.experience-item .project:last-of-type li:nth-child(3)': 'Also involved in Project Fun, testing the reporting function that provides statistical data to internal bank personnel. Focused on verifying the accuracy and completeness of daily and monthly reports to ensure the data is accurate and meets requirements.'
             },
             aria: {
                 '#backToTop': 'Back to top',
@@ -186,31 +194,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 '#projects .project-card:nth-of-type(3) .project-features li:nth-child(3)': '使用装饰器模式实现计价算法，并结合地图 API 完成路径计算',
                 '#projects .project-card:nth-of-type(3) .project-features li:nth-child(4)': '实现订单超时处理与 WebSocket 实时推送，提升交互体验',
                 '#projects .project-card:nth-of-type(3) .btn-primary': '查看 Gitee',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(1)': 'Spring Cloud',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(2)': 'MyBatis',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(3)': 'Redis',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(4)': 'RabbitMQ',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(5)': 'MongoDB',
+                '#projects .project-card:nth-of-type(3) .tech-tag:nth-child(6)': 'WebSocket',
                 '#experience > h2': '工作经历',
                 '#experience > .section-intro': '在复杂银行系统中持续交付质量，同时向端到端工程影响力演进。',
-                '.experience-header h3': '软件测试从业者',
+                '.experience-header h3': '业务QA助理',
+                '.company': '汇丰软件开发（广东）有限公司',
                 '.role-note': '聚焦测试策略、跨系统验证与稳定发布质量。',
                 '.duration': '2024.01 - 至今',
-                '.experience-item .project:nth-of-type(1) h4': '项目一：恒生银行 MECP（信用卡额度管理）',
+                '.experience-item .project:nth-of-type(1) h4': '项目一：恒生银行 MECP (Major Enhancement on Card Protection) 信用卡额度管理',
                 '.experience-item .project:nth-of-type(2) h4': '项目二：恒生银行 P Loan Universal Form MVP1+MVP2',
                 '.experience-item .project:nth-of-type(3) h4': '项目三：恒生银行 FUN Center 信用卡积分商城',
+                '.experience-item .project:nth-child(2) h4': '项目一：恒生银行 MECP (Major Enhancement on Card Protection) 信用卡额度管理',
+                '.experience-item .project:nth-child(3) h4': '项目二：恒生银行 P Loan Universal Form MVP1+MVP2',
+                '.experience-item .project:nth-child(4) h4': '项目三：恒生银行 FUN Center 信用卡积分商城',
+                '.experience-item .project:last-of-type h4': '项目三：恒生银行 FUN Center 信用卡积分商城',
                 'footer p': '© 2026 Joyce. 保留所有权利。',
                 '.contact-card h3': '快速联系',
                 '.contact-card .contact-item:nth-of-type(1) a': '联系我'
             },
             html: {
-                '.experience-item .project:nth-of-type(1) .project-overview': '<strong>背景：</strong>额度流程涉及严格合规规则与多系统数据依赖。',
-                '.experience-item .project:nth-of-type(1) li:nth-child(1)': '<strong>任务：</strong>保障提额流程端到端稳定，并拦截不合规申请。',
-                '.experience-item .project:nth-of-type(1) li:nth-child(2)': '<strong>行动：</strong>设计跨系统 E2E 场景，验证规则与通知链路，并核对请求、客户与后端记录的数据一致性。',
-                '.experience-item .project:nth-of-type(1) li:nth-child(3)': '<strong>结果：</strong>提升额度功能发布信心，并强化高敏感业务的风险控制能力。',
-                '.experience-item .project:nth-of-type(2) .project-overview': '<strong>背景：</strong>贷款流程优化需同时保证移动端、Web 与后端集成的高正确性。',
-                '.experience-item .project:nth-of-type(2) li:nth-child(1)': '<strong>任务：</strong>验证多端贷款提交流程质量，并确保业务规则准确。',
-                '.experience-item .project:nth-of-type(2) li:nth-child(2)': '<strong>行动：</strong>构建覆盖边界场景的测试集，验证 OBS 数据抽取与下游 API 提交流程。',
-                '.experience-item .project:nth-of-type(2) li:nth-child(3)': '<strong>结果：</strong>提升多渠道贷款流程稳定性，降低发布前数据转换缺陷风险。',
-                '.experience-item .project:nth-of-type(3) .project-overview': '<strong>背景：</strong>积分商城涉及高流量交互、多模块依赖与严格数据正确性要求。',
-                '.experience-item .project:nth-of-type(3) li:nth-child(1)': '<strong>任务：</strong>保障积分、兑换、支付与报表链路的正确性与稳定性。',
-                '.experience-item .project:nth-of-type(3) li:nth-child(2)': '<strong>行动：</strong>完成从 App 到 API 再到数据库的端到端验证，并设计日报/月报口径与完整性校验用例。',
-                '.experience-item .project:nth-of-type(3) li:nth-child(3)': '<strong>结果：</strong>提升奖励与支付数据一致性，支撑更顺畅的用户体验与更可靠的业务报表。'
+                '.experience-item .project:nth-of-type(1) .project-overview': '<strong>项目概述：</strong>优化信用额度管理，提升持卡人和银行的利益保护。',
+                '.experience-item .project:nth-of-type(1) li:nth-child(1)': '负责信用额度全流程测试，确保提额申请、客户信息等数据的一致性，并验证多个系统间的数据交换。',
+                '.experience-item .project:nth-of-type(1) li:nth-child(2)': '执行规则校验和提额通知流程测试，确保不合规申请被拦截，优化系统安全性和客户体验。',
+                '.experience-item .project:nth-of-type(2) .project-overview': '<strong>项目概述：</strong>优化贷款流程，简化表单内容，提升客户体验。',
+                '.experience-item .project:nth-of-type(2) li:nth-child(1)': '设计并执行全面的测试用例，覆盖多个场景，确保贷款流程的全面测试。',
+                '.experience-item .project:nth-of-type(2) li:nth-child(2)': '验证手机端与 Web 端的贷款场景，确保 OBS 客户信息准确提取并提交至贷前系统。',
+                '.experience-item .project:nth-of-type(3) .project-overview': '<strong>项目概述：</strong>提升信用卡用户活跃度和满意度，构建一站式积分兑换平台。',
+                '.experience-item .project:nth-of-type(3) li:nth-child(1)': '负责测试积分商城各功能模块，包括积分账户页面、营销活动展示、积分兑换（电子券/实体券）流程及商品购买流程，确保前后端数据一致性与支付逻辑准确。',
+                '.experience-item .project:nth-of-type(3) li:nth-child(2)': '深入理解并参与测试积分商城全流程，结合 FUN Center 前端 APP 和后台报表记录，确保数据流畅传递与准确展示。',
+                '.experience-item .project:nth-of-type(3) li:nth-child(3)': '同时参与 Project Fun，测试为银行内部人员提供统计数据的报表功能，重点验证日报和月报数据的准确性与完整性，确保数据报告无误并符合需求。'
+                ,'.experience-item .project:last-of-type .project-overview': '<strong>项目概述：</strong>提升信用卡用户活跃度和满意度，构建一站式积分兑换平台。'
+                ,'.experience-item .project:last-of-type li:nth-child(1)': '负责测试积分商城各功能模块，包括积分账户页面、营销活动展示、积分兑换（电子券/实体券）流程及商品购买流程，确保前后端数据一致性与支付逻辑准确。'
+                ,'.experience-item .project:last-of-type li:nth-child(2)': '深入理解并参与测试积分商城全流程，结合 FUN Center 前端 APP 和后台报表记录，确保数据流畅传递与准确展示。'
+                ,'.experience-item .project:last-of-type li:nth-child(3)': '同时参与 Project Fun，测试为银行内部人员提供统计数据的报表功能，重点验证日报和月报数据的准确性与完整性，确保数据报告无误并符合需求。'
             },
             aria: {
                 '#backToTop': '返回顶部',
@@ -224,28 +245,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function applyTexts(map) {
         Object.entries(map).forEach(([selector, value]) => {
-            const element = document.querySelector(selector);
-            if (element) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
                 element.textContent = value;
-            }
+            });
         });
     }
 
     function applyHtml(map) {
         Object.entries(map).forEach(([selector, value]) => {
-            const element = document.querySelector(selector);
-            if (element) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
                 element.innerHTML = value;
-            }
+            });
         });
     }
 
     function applyAria(map) {
         Object.entries(map).forEach(([selector, value]) => {
-            const element = document.querySelector(selector);
-            if (element) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
                 element.setAttribute('aria-label', value);
-            }
+            });
         });
     }
 
@@ -291,13 +312,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function bindLanguageSwitch(button, language) {
         if (!button) return;
+        let lastSwitchAt = 0;
         const switchLanguage = function() {
+            const now = Date.now();
+            if (now - lastSwitchAt < 250) return;
+            lastSwitchAt = now;
             applyLanguage(language);
             localStorage.setItem('language', language);
         };
         button.addEventListener('click', switchLanguage);
         button.addEventListener('touchend', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             switchLanguage();
         }, { passive: false });
     }
@@ -388,6 +414,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function updateLangSwitchVisibility() {
+        if (!langSwitchFloating) return;
+        const shouldShow = window.scrollY <= 16;
+        langSwitchFloating.classList.toggle('hidden', !shouldShow);
+    }
+
     if (backToTopButton) {
         backToTopButton.addEventListener('click', function() {
             window.scrollTo({
@@ -413,6 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateActiveNav();
                 updateScrollProgress();
                 toggleBackToTop();
+                updateLangSwitchVisibility();
                 scrollTimeout = null;
             }, 100);
         }
@@ -427,6 +460,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== 页面初始化 ====================
     updateActiveNav();
     updateScrollProgress();
+    updateLangSwitchVisibility();
 
     console.log('%c👋 Welcome to Joyce\'s Portfolio!', 'color: #667eea; font-size: 20px; font-weight: bold;');
 });
