@@ -2,6 +2,19 @@
 
 个人作品集网站，使用 HTML、CSS 和 JavaScript 构建，展示我的 Java 后端开发项目和技术能力。
 
+## 文案更新（单一数据源）
+
+项目采用 **单一数据源 + 构建时生成** 的业界方案：
+
+- **唯一编辑入口**：`content.json` — 所有中英文文案集中在此
+- **构建输出**：`node build.js` 会根据 `content.json` 自动生成 `index.html` 和 `translations.js`
+
+**修改文案流程：**
+
+1. 编辑 `content.json` 中的 `en`（英文）或 `zh`（中文）对应内容
+2. 运行 `node build.js` 或 `npm run build`
+3. 生成的 `index.html` 和 `translations.js` 会自动更新，无需手动同步
+
 ## 技术栈
 - Frontend: HTML5、CSS3、JavaScript
 - Backend Projects: Java、Spring Boot、Spring Cloud、MySQL、Redis、RabbitMQ

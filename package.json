@@ -1,0 +1,8 @@
+{
+  "name": "joyce-portfolio",
+  "version": "1.0.0",
+  "description": "Joyce's portfolio website - single source i18n",
+  "scripts": {
+    "build": "node build.js"
+  }
+}
