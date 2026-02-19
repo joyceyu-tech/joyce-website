@@ -1229,15 +1229,6 @@ footer p {
         text-overflow: ellipsis;
     }
 
-    /* 中等手机 (600px 及以下)：两列 + GitHub 按钮通栏 */
-    @media (max-width: 600px) {
-        .hero-actions {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .hero-btn-github {
-            grid-column: 1 / -1;
-        }
-    }
 
     section {
         margin: 24px auto;
@@ -1472,14 +1463,15 @@ footer p {
 
     .hero-actions {
         margin-top: 12px;
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
     }
 
     .hero-btn {
-        padding: 10px 12px;
-        font-size: 13px;
-        min-height: 42px;
+        padding: 8px 4px;
+        font-size: 10px;
+        min-height: 38px;
+        line-height: 1.2;
     }
 
     .hero-stat {
