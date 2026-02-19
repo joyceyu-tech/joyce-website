@@ -951,33 +951,40 @@ footer p {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 0;
+    padding: 8px 10px;
     border-bottom: 1px solid #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
 }
 
 .contact-item:last-child {
     border-bottom: none;
 }
 
+.contact-item:hover {
+    background-color: #f0f2ff;
+}
+
 .contact-item svg {
     flex-shrink: 0;
-    color: #b8b8b8;
-    transition: color 0.3s ease;
+    color: #667eea;
+    transition: color 0.2s ease;
 }
 
 .contact-item:hover svg {
-    color: #667eea;
+    color: #764ba2;
 }
 
 .contact-item a {
-    color: #555;
+    color: #667eea;
     text-decoration: none;
     font-size: 14px;
-    transition: color 0.3s ease;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 .contact-item a:hover {
-    color: #667eea;
+    color: #764ba2;
 }
 
 /* 手机端联系浮动按钮 */

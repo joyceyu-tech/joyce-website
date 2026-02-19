@@ -355,10 +355,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactToggle = document.getElementById('contactToggle');
     const contactSidebar = document.getElementById('contactSidebar');
 
-    if (contactSidebar) {
-        contactSidebar.classList.add('hidden');
-    }
-
     if (contactToggle && contactSidebar) {
         contactToggle.addEventListener('click', function() {
             contactSidebar.classList.toggle('hidden');
