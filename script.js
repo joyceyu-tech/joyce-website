@@ -5,6 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const langZhButton = document.getElementById('langZh');
     const langEnButton = document.getElementById('langEn');
     const langSwitchFloating = document.querySelector('.lang-switch-floating');
+    const storage = {
+        get(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch (error) {
+                return null;
+            }
+        },
+        set(key, value) {
+            try {
+                localStorage.setItem(key, value);
+            } catch (error) {
+                // Ignore storage failures in restricted webviews (e.g., some in-app browsers).
+            }
+        }
+    };
 
     const translations = {
         en: {
@@ -305,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const savedLanguage = localStorage.getItem('language');
+    const savedLanguage = storage.get('language');
     const browserIsChinese = navigator.language.toLowerCase().startsWith('zh');
     const initialLanguage = savedLanguage || (browserIsChinese ? 'zh' : 'en');
     applyLanguage(initialLanguage);
@@ -325,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (now - lastSwitchAt < 250) return;
             lastSwitchAt = now;
             applyLanguage(language);
-            localStorage.setItem('language', language);
+            storage.set('language', language);
             triggerTapFeedback();
         };
 
@@ -335,7 +351,14 @@ document.addEventListener('DOMContentLoaded', function() {
             switchLanguage();
         });
 
-        // Mobile-first: pointer events are more consistent than touchend across browsers
+        // Mobile-first: WeChat webview is more reliable with touchend.
+        button.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            switchLanguage();
+        }, { passive: false });
+
+        // Additional fallback for browsers with Pointer Events.
         button.addEventListener('pointerup', function(e) {
             e.preventDefault();
             switchLanguage();
