@@ -313,19 +313,33 @@ document.addEventListener('DOMContentLoaded', function() {
     function bindLanguageSwitch(button, language) {
         if (!button) return;
         let lastSwitchAt = 0;
+        function triggerTapFeedback() {
+            button.classList.remove('tap-feedback');
+            // Force reflow so repeated taps can replay animation.
+            void button.offsetWidth;
+            button.classList.add('tap-feedback');
+            setTimeout(() => button.classList.remove('tap-feedback'), 120);
+        }
         const switchLanguage = function() {
             const now = Date.now();
             if (now - lastSwitchAt < 250) return;
             lastSwitchAt = now;
             applyLanguage(language);
             localStorage.setItem('language', language);
+            triggerTapFeedback();
         };
-        button.addEventListener('click', switchLanguage);
-        button.addEventListener('touchend', function(e) {
+
+        // Desktop fallback
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
             switchLanguage();
-        }, { passive: false });
+        });
+
+        // Mobile-first: pointer events are more consistent than touchend across browsers
+        button.addEventListener('pointerup', function(e) {
+            e.preventDefault();
+            switchLanguage();
+        });
     }
 
     bindLanguageSwitch(langZhButton, 'zh');
@@ -416,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateLangSwitchVisibility() {
         if (!langSwitchFloating) return;
-        const shouldShow = window.scrollY <= 16;
+        const shouldShow = isMobileViewport.matches ? true : window.scrollY <= 16;
         langSwitchFloating.classList.toggle('hidden', !shouldShow);
     }
 
