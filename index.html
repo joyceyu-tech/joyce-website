@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <title>Joyce | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joyce's portfolio: HSBC software testing professional, ISTQB Certified Tester, and aspiring full-stack engineer with strong Java backend foundations.">
+    <link rel="canonical" href="https://joyceyu.dpdns.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joyce | Portfolio">
+    <meta property="og:description" content="HSBC Software Testing | ISTQB Certified Tester | Aspiring Full-Stack Engineer">
+    <meta property="og:url" content="https://joyceyu.dpdns.org/">
+    <meta property="og:image" content="https://joyceyu.dpdns.org/images/avatar.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joyce | Portfolio">
+    <meta name="twitter:description" content="HSBC Software Testing | ISTQB Certified Tester | Aspiring Full-Stack Engineer">
+    <meta name="twitter:image" content="https://joyceyu.dpdns.org/images/avatar.jpg">
+    <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header>
-        <div class="header-content">
-            <div class="profile-container">
-                <div class="avatar-wrapper">
-                    <img id="avatar" src="images/avatar.jpg" alt="Joyce's Profile Avatar">
+        <div class="header-content hero-grid">
+            <div class="hero-text">
+                <p class="hero-badge">Open to Software Engineer opportunities</p>
+                <h1>Hi, I'm Joyce</h1>
+                <p class="subtitle">Software Testing Professional at HSBC · Aspiring Full-Stack Engineer</p>
+                <p class="tagline">I build reliable systems with a testing mindset and backend-first foundation, and I am actively growing into frontend engineering with React and TypeScript.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="hero-btn hero-btn-primary">View Projects</a>
+                    <a href="mailto:joyceyu434840@163.com" class="hero-btn hero-btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-stats" aria-label="Career highlights">
+                    <div class="hero-stat">
+                        <strong>3+</strong>
+                        <span>Years of Testing Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>3</strong>
+                        <span>Backend Projects</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>ISTQB</strong>
+                        <span>Certified Tester</span>
+                    </div>
                 </div>
             </div>
-            <h1>Hi, I'm Joyce</h1>
-            <p class="subtitle">HSBC Business QA | Aspiring Full-Stack Engineer</p>
-            <p class="tagline">ISTQB Certified Tester · Master's in Tech Management · QA Engineer expanding into Software Engineer</p>
+            <div class="profile-container hero-profile">
+                <div class="avatar-wrapper">
+                    <img id="avatar" src="images/avatar.jpg" alt="Joyce's Profile Avatar" width="150" height="150" loading="eager" decoding="async">
+                </div>
+            </div>
         </div>
     </header>
 
@@ -26,66 +60,74 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">中文</button>
     </nav>
 
+    <main id="main-content">
     <section id="about">
         <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                I am a Business QA Associate at HSBC and an ISTQB Certified Tester, holding a Master’s degree in Technology and Engineering Management. 
-                In my current role, I focus on end-to-end testing for Hang Seng Bank projects, which has given me a strong understanding of banking business 
-                logic, the SDLC, and agile methodologies.
-            </p>
-            <p>
-                <strong>Technical Focus & Growth:</strong> My core technical strength lies in Java Backend Development (Spring Boot), where I have built multiple personal projects.
-            </p>
-            <p>
-                I am actively expanding my skillset towards the frontend. 
-                Currently, I am learning React and TypeScript by studying the architecture and codebase of our department's internal AI platform. 
-                I am fascinated by how AI integrates with modern web applications and am working to bridge the gap between my backend knowledge and 
-                frontend implementation to become a well-rounded software engineer.
-            </p>
+        <p class="section-intro">Testing by profession, engineering by mindset. I deliver reliable software while steadily expanding my end-to-end engineering capability.</p>
+        <div class="about-grid">
+            <div class="about-content about-summary">
+                <p>
+                    I am a software testing professional at HSBC and an ISTQB Certified Tester, with a Master’s degree in Technology and Engineering Management.
+                    My daily work covers end-to-end testing across banking systems, where precision, data consistency, and customer impact matter.
+                </p>
+                <p>
+                    Beyond testing delivery, my core technical background is Java backend development. I continue strengthening engineering fundamentals through hands-on work with Spring Boot and related backend practices.
+                </p>
+            </div>
+            <div class="about-content about-focus">
+                <h3>Current Growth Focus</h3>
+                <ul class="about-list">
+                    <li>Deepening Java backend capabilities and system design thinking</li>
+                    <li>Learning Spring AI and AI application development</li>
+                    <li>Learning React and TypeScript as a complementary direction, inspired by my department's AI team's frontend stack</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
+        <p class="section-intro">A balanced skill profile across software quality, backend implementation, and domain understanding.</p>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>Java Backend Development</h3>
-                <p>Skilled in Java programming, with experience in Spring Boot / SSM backend development</p>
+                <h3>Backend Engineering</h3>
+                <p>Java, Spring Boot, and practical backend architecture skills from personal projects.</p>
             </div>
             <div class="skill-card">
                 <h3>Database & Caching</h3>
-                <p>Familiar with MySQL databases and Redis caching, with an understanding of distributed system environments</p>
+                <p>Hands-on with MySQL and Redis for data modeling, caching, and performance optimization.</p>
             </div>
             <div class="skill-card">
                 <h3>Microservices & API</h3>
-                <p>Understanding of Spring Cloud microservice architecture and basic usage of message queues, with participation in API development and maintenance</p>
+                <p>Spring Cloud, API development and integration, with practical message queue usage.</p>
             </div>
             <div class="skill-card">
                 <h3>Banking Domain Knowledge</h3>
-                <p>Familiar with bank credit card business processes, including points systems, activity management, and payment process validation</p>
+                <p>Deep familiarity with credit card workflows, rewards systems, and payment validation.</p>
             </div>
             <div class="skill-card">
                 <h3>Quality Assurance</h3>
-                <p>Comprehensive testing expertise covering end-to-end testing, data validation, and multi-system integration verification</p>
+                <p>Strong E2E test design, data validation, and multi-system integration verification capability.</p>
             </div>
             <div class="skill-card">
-                <h3>Continuous Learning</h3>
-                <p>Actively following and learning new technologies such as AI, continuously improving engineering development capabilities</p>
+                <h3>Learning Agility</h3>
+                <p>Actively learning React, TypeScript, and AI-related product engineering practices.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
         <h2>Personal Projects</h2>
+        <p class="section-intro">Projects that demonstrate backend depth, distributed thinking, and production-oriented engineering decisions.</p>
         <div class="projects-grid">
             
             <!-- Project Card 1 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project-lottery-system.jpg" alt="Red Packet Rain Lottery System" onerror="this.src='https://via.placeholder.com/600x400/667eea/ffffff?text=Lottery+System'">
+                    <img src="images/project-lottery-system.jpg" alt="Red Packet Rain Lottery System" width="600" height="400" loading="lazy" decoding="async" onerror="this.src='images/project-placeholder.svg'">
                     <div class="project-overlay">
                         <span class="project-type">Monolithic</span>
                     </div>
@@ -114,7 +156,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/lottery-system.git" class="btn-primary" target="_blank">
+                        <a href="https://gitee.com/joyceyu434840/lottery-system.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -127,7 +169,7 @@
             <!-- Project Card 2 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project-takeout-system.jpg" alt="Sky Take Out System" onerror="this.src='https://via.placeholder.com/600x400/764ba2/ffffff?text=Take+Out+System'">
+                    <img src="images/project-takeout-system.jpg" alt="Sky Take Out System" width="600" height="400" loading="lazy" decoding="async" onerror="this.src='images/project-placeholder.svg'">
                     <div class="project-overlay">
                         <span class="project-type">Monolithic</span>
                     </div>
@@ -156,7 +198,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/sky-take-out.git" class="btn-primary" target="_blank">
+                        <a href="https://gitee.com/joyceyu434840/sky-take-out.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -169,7 +211,7 @@
             <!-- Project Card 3 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project-city-ride.jpg" alt="O2O City Ride System" onerror="this.src='https://via.placeholder.com/600x400/e74c3c/ffffff?text=City+Ride+System'">
+                    <img src="images/project-city-ride.jpg" alt="O2O City Ride System" width="600" height="400" loading="lazy" decoding="async" onerror="this.src='images/project-placeholder.svg'">
                     <div class="project-overlay">
                         <span class="project-type">Microservices</span>
                     </div>
@@ -199,7 +241,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/o2o-city-ride.git" class="btn-primary" target="_blank">
+                        <a href="https://gitee.com/joyceyu434840/o2o-city-ride.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -214,48 +256,50 @@
 
     <section id="experience">
         <h2>Work Experience</h2>
+        <p class="section-intro">Delivering quality in complex banking systems while growing toward end-to-end engineering impact.</p>
         
         <div class="experience-item">
             <div class="experience-header">
                 <div>
-                    <h3>Business QA Associate</h3>
+                    <h3>Software Testing Professional</h3>
                     <p class="company">HSBC Software Development (Guangdong) Co., Ltd.</p>
+                    <p class="role-note">Focus on testing strategy, cross-system validation, and stable release quality.</p>
                 </div>
                 <p class="duration">Jan 2024 - Present</p>
             </div>
 
             <div class="project">
                 <h4>Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) - Credit Limit Management</h4>
-                <p class="project-overview"><strong>Project Overview:</strong> Optimize credit limit management to protect the interests of both cardholders and the bank.</p>
+                <p class="project-overview"><strong>Situation:</strong> Credit limit processing involved strict compliance rules and cross-system data dependencies.</p>
                 <ul>
-                    <li>Designed and executed end-to-end testing of credit limit processes, ensuring data consistency across credit limit increase requests, customer information, and key data validation, while verifying seamless data exchange across multiple backend systems</li>
-                    <li>Implemented comprehensive rule validation and notification process testing, developing test scenarios to intercept non-compliant applications, thereby improving system security and customer experience</li>
-                    <li><strong>Technical Impact:</strong> Gained deep understanding of distributed system architecture, database transactions, and API integration patterns</li>
+                    <li><strong>Task:</strong> Ensure end-to-end reliability of credit limit increase journeys and prevent non-compliant applications from passing.</li>
+                    <li><strong>Action:</strong> Designed cross-system E2E scenarios, validated business rules and notifications, and verified critical data consistency across request, customer, and backend records.</li>
+                    <li><strong>Result:</strong> Improved release confidence for credit limit features and strengthened risk control in sensitive banking workflows.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <h4>Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2</h4>
-                <p class="project-overview"><strong>Project Overview:</strong> Optimize the loan process, simplify form content, and enhance the customer experience.</p>
+                <p class="project-overview"><strong>Situation:</strong> Loan application optimization required high correctness across mobile, web, and backend integrations.</p>
                 <ul>
-                    <li>Architected and executed comprehensive test suites covering multiple scenarios including edge cases, ensuring complete validation of the loan workflow and business logic</li>
-                    <li>Validated cross-platform functionality (mobile and web), ensuring accurate data extraction from OBS customer databases and reliable API submission to the pre-loan processing system</li>
-                    <li><strong>Technical Impact:</strong> Developed expertise in RESTful API testing, data transformation validation, and cross-system integration debugging</li>
+                    <li><strong>Task:</strong> Validate end-to-end loan submission quality across channels while maintaining business rule correctness.</li>
+                    <li><strong>Action:</strong> Built comprehensive scenario suites (including edge cases), validated OBS data extraction and downstream API submission behavior on both mobile and web.</li>
+                    <li><strong>Result:</strong> Increased confidence in multi-channel loan workflow stability and reduced risk of data transformation defects before release.</li>
                 </ul>
             </div>
 
             <div class="project">
                 <h4>Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall</h4>
-                <p class="project-overview"><strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.</p>
+                <p class="project-overview"><strong>Situation:</strong> Rewards mall flows combined high-traffic user interactions, multi-module dependencies, and strict data correctness needs.</p>
                 <ul>
-                    <li>Validated multiple complex modules including points account management, marketing activity engine, redemption workflow (electronic/physical vouchers), and payment processing, ensuring data consistency and accurate business logic between front-end and back-end systems</li>
-                    <li>Analyzed the complete rewards mall architecture end-to-end, validating data flow from FUN Center mobile app through backend APIs to database records, ensuring seamless integration and accurate real-time data synchronization</li>
-                    <li>Participated in Project Fun internal reporting system, designing test cases to verify statistical accuracy and data completeness of daily and monthly business intelligence reports, ensuring data integrity for decision-making</li>
-                    <li><strong>Technical Impact:</strong> Mastered full-stack testing concepts, payment gateway integration, and real-time data processing patterns in high-traffic applications</li>
+                    <li><strong>Task:</strong> Guarantee correctness and stability for points, redemption, payment, and reporting workflows.</li>
+                    <li><strong>Action:</strong> Executed end-to-end validation from mobile app to API to database, and designed report verification cases for daily/monthly statistics integrity.</li>
+                    <li><strong>Result:</strong> Improved consistency of rewards and payment-related data, supporting smoother user experience and more reliable business reporting.</li>
                 </ul>
             </div>
         </div>
     </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Joyce. All rights reserved.</p>
@@ -301,23 +345,17 @@
                 <svg width="20" height="20" viewBox="0 0 1024 1024" fill="currentColor">
                     <path d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                 </svg>
-                <a href="https://gitee.com/joyceyu434840" target="_blank">Gitee</a>
+                <a href="https://gitee.com/joyceyu434840" target="_blank" rel="noopener noreferrer">Gitee</a>
             </div>
             <div class="contact-item">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
-                <a href="https://github.com/joyceyu-tech" target="_blank">GitHub</a>
-            </div>
-            <div class="contact-item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                <a href="https://www.linkedin.com/in/zhuoshi-yu-3774541a2/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/joyceyu-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
