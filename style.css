@@ -1203,6 +1203,10 @@ footer p {
         margin-top: 14px;
     }
 
+    .hero-actions .hero-btn:nth-child(1) { order: 2; } /* 查看项目 → 中间 */
+    .hero-actions .hero-btn:nth-child(2) { order: 1; } /* 联系我 → 左侧 */
+    .hero-actions .hero-btn:nth-child(3) { order: 3; } /* GitHub → 右侧 */
+
     .hero-btn {
         width: auto;
         min-width: 0;
