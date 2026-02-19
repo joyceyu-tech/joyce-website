@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 '.hero-btn-secondary': '联系我',
                 '.hero-stat:nth-child(1) span': '测试经验',
                 '.hero-stat:nth-child(2) span': '后端项目',
-                '.hero-stat:nth-child(3) span': 'ISTQB 认证',
+                '.hero-stat:nth-child(3) span': '认证测试员',
                 '.nav-bar a[href="#about"]': '关于我',
                 '.nav-bar a[href="#skills"]': '技能',
                 '.nav-bar a[href="#projects"]': '项目',
