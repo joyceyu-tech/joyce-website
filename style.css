@@ -1203,7 +1203,8 @@ footer p {
     }
 
     .hero-stat {
-        padding: 8px 6px;
+        padding: 8px 4px;
+        text-align: center;
     }
 
     .hero-stat strong {
@@ -1212,6 +1213,10 @@ footer p {
 
     .hero-stat span {
         font-size: 10px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     section {
@@ -1450,7 +1455,8 @@ footer p {
     }
 
     .hero-stat {
-        padding: 6px 4px;
+        padding: 6px 3px;
+        text-align: center;
     }
 
     .hero-stat strong {
@@ -1459,6 +1465,10 @@ footer p {
 
     .hero-stat span {
         font-size: 9px;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
 
