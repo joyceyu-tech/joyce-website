@@ -289,19 +289,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialLanguage = savedLanguage || (browserIsChinese ? 'zh' : 'en');
     applyLanguage(initialLanguage);
 
-    if (langZhButton) {
-        langZhButton.addEventListener('click', function() {
-            applyLanguage('zh');
-            localStorage.setItem('language', 'zh');
-        });
+    function bindLanguageSwitch(button, language) {
+        if (!button) return;
+        const switchLanguage = function() {
+            applyLanguage(language);
+            localStorage.setItem('language', language);
+        };
+        button.addEventListener('click', switchLanguage);
+        button.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            switchLanguage();
+        }, { passive: false });
     }
 
-    if (langEnButton) {
-        langEnButton.addEventListener('click', function() {
-            applyLanguage('en');
-            localStorage.setItem('language', 'en');
-        });
-    }
+    bindLanguageSwitch(langZhButton, 'zh');
+    bindLanguageSwitch(langEnButton, 'en');
 
     // ==================== 1. 联系侧边栏功能 ====================
     const contactToggle = document.getElementById('contactToggle');
