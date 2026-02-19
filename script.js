@@ -321,14 +321,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    const queryLanguage = new URLSearchParams(window.location.search).get('lang');
+    const normalizedQueryLanguage = queryLanguage === 'zh' || queryLanguage === 'en' ? queryLanguage : null;
+    if (normalizedQueryLanguage) {
+        storage.set('language', normalizedQueryLanguage);
+    }
     const savedLanguage = storage.get('language');
     const browserIsChinese = navigator.language.toLowerCase().startsWith('zh');
-    const initialLanguage = savedLanguage || (browserIsChinese ? 'zh' : 'en');
+    const initialLanguage = normalizedQueryLanguage || savedLanguage || (browserIsChinese ? 'zh' : 'en');
     applyLanguage(initialLanguage);
 
-    function bindLanguageSwitch(button, language) {
+    function attachLangFeedback(button, language) {
         if (!button) return;
-        let lastSwitchAt = 0;
         function triggerTapFeedback() {
             button.classList.remove('tap-feedback');
             // Force reflow so repeated taps can replay animation.
@@ -336,37 +340,18 @@ document.addEventListener('DOMContentLoaded', function() {
             button.classList.add('tap-feedback');
             setTimeout(() => button.classList.remove('tap-feedback'), 120);
         }
-        const switchLanguage = function() {
-            const now = Date.now();
-            if (now - lastSwitchAt < 250) return;
-            lastSwitchAt = now;
-            applyLanguage(language);
-            storage.set('language', language);
-            triggerTapFeedback();
-        };
 
-        // Desktop fallback
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            switchLanguage();
+        button.addEventListener('pointerdown', function() {
+            triggerTapFeedback();
         });
 
-        // Mobile-first: WeChat webview is more reliable with touchend.
-        button.addEventListener('touchend', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            switchLanguage();
-        }, { passive: false });
-
-        // Additional fallback for browsers with Pointer Events.
-        button.addEventListener('pointerup', function(e) {
-            e.preventDefault();
-            switchLanguage();
+        button.addEventListener('click', function() {
+            storage.set('language', language);
         });
     }
 
-    bindLanguageSwitch(langZhButton, 'zh');
-    bindLanguageSwitch(langEnButton, 'en');
+    attachLangFeedback(langZhButton, 'zh');
+    attachLangFeedback(langEnButton, 'en');
 
     // ==================== 1. 联系侧边栏功能 ====================
     const contactToggle = document.getElementById('contactToggle');
