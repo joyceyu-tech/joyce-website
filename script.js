@@ -333,20 +333,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function attachLangFeedback(button, language) {
         if (!button) return;
-        function triggerTapFeedback() {
-            button.classList.remove('tap-feedback');
-            // Force reflow so repeated taps can replay animation.
-            void button.offsetWidth;
-            button.classList.add('tap-feedback');
-            setTimeout(() => button.classList.remove('tap-feedback'), 120);
-        }
-
-        button.addEventListener('pointerdown', function() {
-            triggerTapFeedback();
-        });
-
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
             storage.set('language', language);
+            applyLanguage(language);
+            // 更新 URL 便于分享/书签，但不触发页面重载。
+            // 微信 WebView 对 query 参数变化的页面跳转会命中缓存导致语言未切换，
+            // 原地切换 + history.pushState 是最可靠的跨环境方案。
+            try {
+                history.pushState(null, '', '?lang=' + language);
+            } catch (err) {
+                // 降级：忽略，语言已原地切换成功
+            }
         });
     }
 
