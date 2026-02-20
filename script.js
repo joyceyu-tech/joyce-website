@@ -203,13 +203,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('section');
         const scrollPosition = window.scrollY + 100;
 
+        // 先清除所有按钮的 active，回到顶部时全部恢复为未点击的白色状态
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // 还在顶部（未滚入第一个 section）时，不再高亮任何一项
+        const firstSectionTop = sections.length ? sections[0].offsetTop : 0;
+        if (scrollPosition < firstSectionTop) return;
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.classList.remove('active'));
                 const activeLink = document.querySelector(`.nav-bar a[href="#${sectionId}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
