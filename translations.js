@@ -98,8 +98,8 @@ const TRANSLATIONS = {
             "#experience .experience-item:nth-of-type(2) .duration": "Oct 2022 - Jul 2023",
             "#exp-project-4 h4": "Project 1: OCT Integrated Water and Electricity Platform",
             "#exp-project-5 h4": "Project 2: Infrastructure and Comprehensive Operation and Maintenance Cloud Platform",
-            "footer p": "© 2026 Joyce. All rights reserved.",
-            "footer .footer-hint": "Best on desktop. In WeChat: … → Open in browser",
+            "footer .footer-copyright": "© 2026 Joyce. All rights reserved.",
+            "footer .footer-hint-text": "Best on desktop. In WeChat: … → Open in browser",
             ".contact-card h3": "Quick Contact",
             ".contact-card .contact-item:nth-of-type(1) a": "Contact Me"
         },
@@ -227,8 +227,8 @@ const TRANSLATIONS = {
             "#experience .experience-item:nth-of-type(2) .duration": "2022.10 - 2023.07",
             "#exp-project-4 h4": "项目一：华侨城水电一体化平台",
             "#exp-project-5 h4": "项目二：基础设施与综合运维管理云平台",
-            "footer p": "© 2026 Joyce. 保留所有权利。",
-            "footer .footer-hint": "推荐电脑访问；微信内请点「…」→「在浏览器中打开」",
+            "footer .footer-copyright": "© 2026 Joyce. 保留所有权利。",
+            "footer .footer-hint-text": "推荐电脑端打开，体验更佳",
             ".contact-card h3": "快速联系",
             ".contact-card .contact-item:nth-of-type(1) a": "联系我"
         },

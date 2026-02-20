@@ -931,6 +931,7 @@ footer p {
 }
 
 footer .footer-hint {
+    display: none; /* 仅窄屏显示，电脑端不显示 */
     font-size: 12px;
     opacity: 0.92;
     margin-top: 10px;
@@ -939,6 +940,14 @@ footer .footer-hint {
     max-width: 28em;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+footer .footer-hint-icon {
+    flex-shrink: 0;
+    opacity: 0.9;
 }
 
 /* ==================== 返回顶部按钮 ==================== */
@@ -1218,6 +1227,10 @@ footer .footer-hint {
     
     .contact-sidebar {
         display: block;
+    }
+    
+    footer .footer-hint {
+        display: inline-flex; /* 窄屏时显示「推荐电脑端打开」提示 */
     }
 }
 
