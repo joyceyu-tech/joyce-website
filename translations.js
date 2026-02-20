@@ -13,7 +13,7 @@ const TRANSLATIONS = {
         "twitterDescription": "HSBC Software Testing | ISTQB Certified Tester | Aspiring Full-Stack Engineer",
         "text": {
             ".skip-link": "Skip to main content",
-            ".top-banner-text": "Best on desktop. WeChat: open in browser.",
+            ".top-banner-text": "Best on desktop.",
             ".top-banner-close": "Got it",
             ".first-visit-modal-title": "Viewing tip",
             ".first-visit-modal-body": "This site works best on desktop. On mobile or in WeChat it adapts; in WeChat if something looks wrong, tap … → Open in browser.",
