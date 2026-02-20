@@ -100,8 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         storage.set('language', normalizedQueryLanguage);
     }
     const savedLanguage = storage.get('language');
-    const browserIsChinese = navigator.language.toLowerCase().startsWith('zh');
-    const initialLanguage = normalizedQueryLanguage || savedLanguage || (browserIsChinese ? 'zh' : 'en');
+    const initialLanguage = normalizedQueryLanguage || savedLanguage || 'en';
     applyLanguage(initialLanguage);
 
     function attachLangFeedback(button, language) {
