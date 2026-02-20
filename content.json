@@ -10,7 +10,7 @@
     "twitterDescription": "HSBC Software Testing | ISTQB Certified Tester | Aspiring Full-Stack Engineer",
     "text": {
       ".skip-link": "Skip to main content",
-      ".top-banner-text": "Best on desktop.",
+      ".top-banner-text": "Best viewed on desktop",
       ".top-banner-close": "Got it",
       ".first-visit-modal-title": "Viewing tip",
       ".first-visit-modal-body": "This site works best on desktop. On mobile or in WeChat it adapts; in WeChat if something looks wrong, tap … → Open in browser.",
@@ -133,7 +133,7 @@
     "twitterDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | 全栈工程方向",
     "text": {
       ".skip-link": "跳转到主要内容",
-      ".top-banner-text": "推荐电脑端打开",
+      ".top-banner-text": "电脑端访问效果更佳。",
       ".top-banner-close": "知道了",
       ".first-visit-modal-title": "浏览提示",
       ".first-visit-modal-body": "本站推荐在电脑浏览器访问；手机与微信内也可使用。若在微信内显示异常，请点右上角「…」→「在浏览器中打开」。",
