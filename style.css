@@ -123,8 +123,13 @@ button {
 }
 .top-banner-icon {
     flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
     opacity: 0.95;
     vertical-align: middle;
+    color: inherit;
 }
 .top-banner-close {
     position: absolute;
