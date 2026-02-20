@@ -280,6 +280,34 @@
                 </ul>
             </div>
         </div>
+
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h3>{{text|#experience .experience-item:nth-of-type(2) .experience-header h3}}</h3>
+                    <p class="company">{{text|#experience .experience-item:nth-of-type(2) .company}}</p>
+                    <p class="role-note">{{text|#experience .experience-item:nth-of-type(2) .role-note}}</p>
+                </div>
+                <p class="duration">{{text|#experience .experience-item:nth-of-type(2) .duration}}</p>
+            </div>
+
+            <div class="project" id="exp-project-4">
+                <h4>{{text|#exp-project-4 h4}}</h4>
+                <p class="project-overview">{{html|#exp-project-4 .project-overview}}</p>
+                <ul>
+                    <li>{{html|#exp-project-4 li:nth-child(1)}}</li>
+                </ul>
+            </div>
+
+            <div class="project" id="exp-project-5">
+                <h4>{{text|#exp-project-5 h4}}</h4>
+                <p class="project-overview">{{html|#exp-project-5 .project-overview}}</p>
+                <ul>
+                    <li>{{html|#exp-project-5 li:nth-child(1)}}</li>
+                    <li>{{html|#exp-project-5 li:nth-child(2)}}</li>
+                </ul>
+            </div>
+        </div>
     </section>
     </main>
 

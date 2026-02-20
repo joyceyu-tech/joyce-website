@@ -14,15 +14,15 @@
 ## 主要项目
 
 ### 红包雨抽奖系统
-企业级抽奖活动管理平台 | [Gitee](https://gitee.com/joyceyu434840/lottery-system.git)  
+企业级抽奖活动管理平台 · [**Gitee 仓库 →**](https://gitee.com/joyceyu434840/lottery-system.git)  
 技术：Spring Boot、MyBatis-Plus、MySQL、Redis、RabbitMQ、MinIO
 
 ### 外卖管理系统  
-餐饮商家后台与用户小程序 | [Gitee](https://gitee.com/joyceyu434840/sky-take-out.git)  
+餐饮商家后台与用户小程序 · [**Gitee 仓库 →**](https://gitee.com/joyceyu434840/sky-take-out.git)  
 技术：Spring Boot、MyBatis、MySQL、Redis、AliOSS
 
 ### O2O拼车平台
-微服务架构的城市拼车系统 | [Gitee](https://gitee.com/joyceyu434840/city-ride.git)  
+微服务架构的城市拼车系统 · [**Gitee 仓库 →**](https://gitee.com/joyceyu434840/city-ride.git)  
 技术：Spring Cloud、Redis、RabbitMQ、MongoDB、WebSocket
 
 
@@ -37,6 +37,5 @@
 **Joyce Yu**
 
 - 📧 Email: [joyceyu434840@163.com](mailto:joyceyu434840@163.com)
-- 📱 Phone: [+86 137 1053 1043](tel:+8613710531043)
 - 🐙 GitHub: [@joyceyu-tech](https://github.com/joyceyu-tech)
 - 🦊 Gitee: [@joyceyu434840](https://gitee.com/joyceyu434840)

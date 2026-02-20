@@ -79,7 +79,7 @@ const TRANSLATIONS = {
             "#projects .project-card:nth-of-type(3) .project-features li:nth-child(4)": "Implemented order timeout handling and WebSocket real-time push for smooth user interaction",
             "#projects .project-card:nth-of-type(3) .btn-primary": "View on Gitee",
             "#experience > h2": "Work Experience",
-            "#experience > .section-intro": "Delivering quality in complex banking systems while growing toward end-to-end engineering impact.",
+            "#experience > .section-intro": "Delivering quality across complex systems—from banking to infrastructure and O&M platforms—while growing toward end-to-end engineering impact.",
             ".experience-header h3": "Software Testing Professional",
             ".company": "HSBC Software Development (Guangdong) Co., Ltd.",
             ".role-note": "Focus on testing strategy, cross-system validation, and stable release quality.",
@@ -87,6 +87,12 @@ const TRANSLATIONS = {
             "#exp-project-1 h4": "Project 1: Hang Seng Bank MECP (Major Enhancement on Card Protection) Credit Limit Management",
             "#exp-project-2 h4": "Project 2: Hang Seng Bank P Loan Universal Form MVP1+MVP2",
             "#exp-project-3 h4": "Project 3: Hang Seng Bank FUN Center Credit Card Reward Mall",
+            "#experience .experience-item:nth-of-type(2) .experience-header h3": "Software Test Engineer",
+            "#experience .experience-item:nth-of-type(2) .company": "Kehua Data Co., Ltd.",
+            "#experience .experience-item:nth-of-type(2) .role-note": "End-to-end billing testing and multi-module functional testing; O&M platform monitoring and environment setup.",
+            "#experience .experience-item:nth-of-type(2) .duration": "Oct 2022 - Jul 2023",
+            "#exp-project-4 h4": "Project 1: OCT Integrated Water and Electricity Platform",
+            "#exp-project-5 h4": "Project 2: Infrastructure and Comprehensive Operation and Maintenance Cloud Platform",
             "footer p": "© 2026 Joyce. All rights reserved.",
             ".contact-card h3": "Quick Contact",
             ".contact-card .contact-item:nth-of-type(1) a": "Contact Me"
@@ -101,7 +107,12 @@ const TRANSLATIONS = {
             "#exp-project-3 .project-overview": "<strong>Project Overview:</strong> Enhance credit card user engagement and satisfaction by building an all-in-one rewards redemption platform.",
             "#exp-project-3 li:nth-child(1)": "Responsible for testing various modules of the rewards mall, including the points account page, marketing activity displays, points redemption (electronic/physical vouchers), and product purchase flow, ensuring data consistency and accurate payment logic between the front-end and back-end systems.",
             "#exp-project-3 li:nth-child(2)": "Gained in-depth understanding of the entire rewards mall process and participated in testing, combining the FUN Center front-end app and back-end report records to ensure smooth data transfer and accurate display.",
-            "#exp-project-3 li:nth-child(3)": "Also involved in Project Fun, testing the reporting function that provides statistical data to internal bank personnel. Focused on verifying the accuracy and completeness of daily and monthly reports to ensure the data is accurate and meets requirements."
+            "#exp-project-3 li:nth-child(3)": "Also involved in Project Fun, testing the reporting function that provides statistical data to internal bank personnel. Focused on verifying the accuracy and completeness of daily and monthly reports to ensure the data is accurate and meets requirements.",
+            "#exp-project-4 .project-overview": "<strong>Project Overview:</strong> Integrated water and electricity platform with billing system and multi-module management.",
+            "#exp-project-4 li:nth-child(1)": "Conducted end-to-end testing of the billing system, covering billing, payment collection, and invoicing. Participated in multi-module functional testing, including customer management, integrated management, and asset management.",
+            "#exp-project-5 .project-overview": "<strong>Project Overview:</strong> Intelligent operation and maintenance management platform with monitoring system, version testing, and environment setup.",
+            "#exp-project-5 li:nth-child(1)": "Responsible for testing the monitoring system of the intelligent operation and maintenance management platform (equipment monitoring, energy management, data analysis, and alarm notifications).",
+            "#exp-project-5 li:nth-child(2)": "Supported version testing and environmental setup (system and device modeling, data simulation, and alarm validation)."
         },
         "aria": {
             "#backToTop": "Back to top",
@@ -191,7 +202,7 @@ const TRANSLATIONS = {
             "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(5)": "MongoDB",
             "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(6)": "WebSocket",
             "#experience > h2": "工作经历",
-            "#experience > .section-intro": "在复杂银行系统中持续交付质量，同时向端到端工程影响力演进。",
+            "#experience > .section-intro": "在金融与基础设施等复杂系统中持续交付质量，同时向端到端工程影响力演进。",
             ".experience-header h3": "业务QA助理",
             ".company": "汇丰软件开发（广东）有限公司",
             ".role-note": "聚焦测试策略、跨系统验证与稳定发布质量。",
@@ -199,6 +210,12 @@ const TRANSLATIONS = {
             "#exp-project-1 h4": "项目一：恒生银行 MECP (Major Enhancement on Card Protection) 信用卡额度管理",
             "#exp-project-2 h4": "项目二：恒生银行 P Loan Universal Form MVP1+MVP2",
             "#exp-project-3 h4": "项目三：恒生银行 FUN Center 信用卡积分商城",
+            "#experience .experience-item:nth-of-type(2) .experience-header h3": "软件测试工程师",
+            "#experience .experience-item:nth-of-type(2) .company": "科华数据股份有限公司",
+            "#experience .experience-item:nth-of-type(2) .role-note": "负责计费与运维平台全流程测试及多模块功能验证。",
+            "#experience .experience-item:nth-of-type(2) .duration": "2022.10 - 2023.07",
+            "#exp-project-4 h4": "项目一：华侨城水电一体化平台",
+            "#exp-project-5 h4": "项目二：基础设施与综合运维管理云平台",
             "footer p": "© 2026 Joyce. 保留所有权利。",
             ".contact-card h3": "快速联系",
             ".contact-card .contact-item:nth-of-type(1) a": "联系我"
@@ -213,7 +230,12 @@ const TRANSLATIONS = {
             "#exp-project-3 .project-overview": "<strong>项目概述：</strong>提升信用卡用户活跃度和满意度，构建一站式积分兑换平台。",
             "#exp-project-3 li:nth-child(1)": "负责测试积分商城各功能模块，包括积分账户页面、营销活动展示、积分兑换（电子券/实体券）流程及商品购买流程，确保前后端数据一致性与支付逻辑准确。",
             "#exp-project-3 li:nth-child(2)": "深入理解并参与测试积分商城全流程，结合 FUN Center 前端 APP 和后台报表记录，确保数据流畅传递与准确展示。",
-            "#exp-project-3 li:nth-child(3)": "同时参与 Project Fun，测试为银行内部人员提供统计数据的报表功能，重点验证日报和月报数据的准确性与完整性，确保数据报告无误并符合需求。"
+            "#exp-project-3 li:nth-child(3)": "同时参与 Project Fun，测试为银行内部人员提供统计数据的报表功能，重点验证日报和月报数据的准确性与完整性，确保数据报告无误并符合需求。",
+            "#exp-project-4 .project-overview": "<strong>项目概述：</strong>华侨城水电一体化平台，涵盖计费系统与客户、综合、资产管理等多模块。",
+            "#exp-project-4 li:nth-child(1)": "负责计费系统全流程测试（计费、收缴费、账单等），并参与客户管理、综合管理、资产管理等多模块功能测试。",
+            "#exp-project-5 .project-overview": "<strong>项目概述：</strong>智能化运维管理云平台，包含监控、消息与微服务应用及测试环境支撑。",
+            "#exp-project-5 li:nth-child(1)": "负责智能化运维管理平台的监控系统测试（设备监控、能源管理、数据分析、告警通知等微服务），版本测试与支持（消息与微服务应用平台）。",
+            "#exp-project-5 li:nth-child(2)": "参与测试环境搭建（系统与设备建模，数据仿真与告警验证）。"
         },
         "aria": {
             "#backToTop": "返回顶部",
