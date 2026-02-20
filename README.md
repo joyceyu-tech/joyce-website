@@ -25,26 +25,32 @@
 微服务架构的城市拼车系统 · [**Gitee 仓库 →**](https://gitee.com/joyceyu434840/city-ride.git)  
 技术：Spring Cloud、Redis、RabbitMQ、MongoDB、WebSocket
 
+---
 
-## 访问与自适应说明
+## 使用说明
 
-本站**主要针对 PC / 桌面浏览器**进行设计与排版，同时通过媒体查询对平板和手机做了样式自适应（如 1024px、768px、480px 等断点）。
+> 如何访问本站、在什么设备/环境下打开、如何切换语言。
 
-| 使用场景 | 说明 |
-|---------|------|
-| **电脑浏览器** | 推荐。完整布局与最佳阅读体验。 |
-| **手机浏览器** | 支持。页面会自适应窄屏，可直接在 Safari、Chrome 等手机浏览器中打开。 |
-| **微信内打开** | 支持。在微信中打开链接即可浏览；若遇排版或交互异常，可点击右上角「…」选择「在浏览器中打开」以获得更好体验。 |
+**访问与自适应**：本站主要针对 PC/桌面浏览器，并对平板与手机做了自适应（断点 1024px、768px、480px 等）。
 
-站点**默认为英文**；可在页面**右上方**点击「中文」/「EN」随时切换语言。
+| 使用场景     | 说明 |
+|-------------|------|
+| 电脑浏览器   | 推荐，完整布局与最佳体验。 |
+| 手机浏览器   | 支持，窄屏自适应，Safari/Chrome 等直接打开。 |
+| 微信内打开   | 支持；异常时可点右上角「…」→「在浏览器中打开」。 |
 
-实现：`content.json`（en/zh）→ `build.js` 生成 `translations.js`；`script.js` 默认英文，按 `?lang=` 或本地存储的偏好显示语言，点击切换时用选择器替换文案并记存。
+**语言**：默认为英文；页面右上方可点击「中文」/「EN」切换。实现：`content.json`（en/zh）→ `build.js` 生成 `translations.js`，`script.js` 按 `?lang=` 或本地偏好切换并记存。
+
+---
 
 ## 构建说明
 
 - 本地预览：直接打开 `index.html`
 - 部署：推送至 GitHub，GitHub Pages 构建，Cloudflare CDN 加速，自定义域名
-- 文案修改：编辑 `content.json` 后运行 `node build.js` 生成 `index.html` 和 `translations.js`
+- **文案修改**：只改 `content.json` 即可。构建方式任选其一：
+  - **推荐**：改完 `content.json` 后直接 **commit + push**。GitHub Actions 会在 push 后自动执行 `npm run build` 并把生成的 `index.html`、`translations.js` 写回仓库，网站即更新（见 `.github/workflows/build.yml`）。
+  - **本地构建**：在项目根目录执行 `npm run build`，再把生成的 `index.html`、`translations.js` 一起 commit 并 push。
+  - **提交时本地构建**：执行一次 `npm run hook:install`，之后每次 `git commit` 会在本地自动跑构建并把生成文件加入本次提交。
 
 ## 📧 Contact
 

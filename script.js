@@ -123,6 +123,65 @@ document.addEventListener('DOMContentLoaded', function() {
     attachLangFeedback(langZhButton, 'zh');
     attachLangFeedback(langEnButton, 'en');
 
+    // ==================== 三种工业做法合一 ====================
+    // 1) 顶部 Banner：首屏可见、可关闭，sessionStorage 记住本会话不再显示
+    // 2) 按设备/环境：仅手机或微信内置浏览器显示，桌面不打扰（窄屏 viewport 或 WeChat UA）
+    // 3) 首次弹窗/卡片：首次访问（localStorage）显示，点「知道了」关闭；关闭后再在手机/微信显示 Banner
+    const topBanner = document.getElementById('topBanner');
+    const topBannerClose = document.getElementById('topBannerClose');
+    const firstVisitOverlay = document.getElementById('firstVisitOverlay');
+    const firstVisitClose = document.getElementById('firstVisitClose');
+    const narrowViewport = window.matchMedia('(max-width: 768px)');
+    const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+
+    function getBannerDismissed() {
+        try { return sessionStorage.getItem('joyce-banner-dismissed'); } catch (e) { return null; }
+    }
+    function setBannerDismissed() {
+        try { sessionStorage.setItem('joyce-banner-dismissed', '1'); } catch (e) {}
+    }
+    function getFirstVisitDone() {
+        try { return localStorage.getItem('joyce-first-visit-done'); } catch (e) { return null; }
+    }
+    function setFirstVisitDone() {
+        try { localStorage.setItem('joyce-first-visit-done', '1'); } catch (e) {}
+    }
+
+    function shouldShowBanner() {
+        return (narrowViewport.matches || isWeChat) && !getBannerDismissed();
+    }
+    function maybeShowBanner() {
+        if (!topBanner || !getFirstVisitDone() || !shouldShowBanner()) return;
+        topBanner.removeAttribute('hidden');
+    }
+    function hideBanner() {
+        if (topBanner) topBanner.setAttribute('hidden', '');
+    }
+
+    if (firstVisitOverlay && firstVisitClose) {
+        firstVisitClose.addEventListener('click', function() {
+            setFirstVisitDone();
+            firstVisitOverlay.setAttribute('hidden', '');
+            maybeShowBanner();
+        });
+    }
+    // 仅在小屏（手机/平板）或微信内提示；桌面端不显示弹窗也不显示 Banner
+    var isNarrowOrWeChat = narrowViewport.matches || isWeChat;
+    if (!getFirstVisitDone() && isNarrowOrWeChat) {
+        if (firstVisitOverlay) firstVisitOverlay.removeAttribute('hidden');
+    } else if (getFirstVisitDone() && shouldShowBanner()) {
+        maybeShowBanner();
+    }
+    narrowViewport.addEventListener('change', function() {
+        if (!shouldShowBanner()) hideBanner(); else maybeShowBanner();
+    });
+    if (topBannerClose && topBanner) {
+        topBannerClose.addEventListener('click', function() {
+            setBannerDismissed();
+            hideBanner();
+        });
+    }
+
     // ==================== 1. 联系侧边栏功能 ====================
     const contactToggle = document.getElementById('contactToggle');
     const contactSidebar = document.getElementById('contactSidebar');

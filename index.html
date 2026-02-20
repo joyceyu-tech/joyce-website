@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="top-banner" id="topBanner" role="region" aria-label="Viewing tip" hidden>
+        <span class="top-banner-text">Best on desktop. In WeChat: … → Open in browser</span>
+        <button type="button" class="top-banner-close" id="topBannerClose" aria-label="Close">Got it</button>
+    </div>
+    <div class="first-visit-overlay" id="firstVisitOverlay" role="dialog" aria-labelledby="firstVisitTitle" aria-modal="true" hidden>
+        <div class="first-visit-card">
+            <h2 class="first-visit-title" id="firstVisitTitle">Viewing tip</h2>
+            <p class="first-visit-body">This site works best on desktop. On mobile or in WeChat it adapts; in WeChat if something looks wrong, tap … → Open in browser.</p>
+            <button type="button" class="first-visit-close" id="firstVisitClose">Got it</button>
+        </div>
+    </div>
     <header>
         <div class="header-content">
             <div class="lang-switch-floating" role="group" aria-label="Language switch">
@@ -29,7 +40,7 @@
             <div class="hero-text">
                 <p class="hero-badge">Open to Software Engineer opportunities</p>
                 <h1>Hi, I'm Joyce</h1>
-                <p class="subtitle">Software Testing Professional at HSBC · Aspiring Full-Stack Engineer</p>
+                <p class="subtitle">Business QA Associate at HSBC · Aspiring Full-Stack Engineer</p>
                 <p class="tagline">I build reliable systems with a testing mindset and backend-first foundation, and I am actively growing into frontend engineering with React and TypeScript.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="hero-btn hero-btn-primary">View Projects</a>
@@ -245,7 +256,7 @@
         <div class="experience-item">
             <div class="experience-header">
                 <div>
-                    <h3>Software Testing Professional</h3>
+                    <h3>Business QA Associate</h3>
                     <p class="company">HSBC Software Development (Guangdong) Co., Ltd.</p>
                     <p class="role-note">Focus on testing strategy, cross-system validation, and stable release quality.</p>
                 </div>
@@ -313,6 +324,7 @@
 
     <footer>
         <p>© 2026 Joyce. All rights reserved.</p>
+        <p class="footer-hint">Best on desktop. In WeChat: … → Open in browser</p>
     </footer>
 
     <div class="scroll-progress">

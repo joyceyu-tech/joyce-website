@@ -81,6 +81,98 @@ button {
     }
 }
 
+/* ==================== 顶部提示条（仅窄屏首屏可见，可关闭） ==================== */
+.top-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 10px 16px 10px 14px;
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.top-banner[hidden] {
+    display: none !important;
+}
+.top-banner-text {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+.top-banner-close {
+    flex-shrink: 0;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.top-banner-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==================== 首次访问弹窗/卡片 ==================== */
+.first-visit-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+.first-visit-overlay[hidden] {
+    display: none !important;
+}
+.first-visit-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    padding: 24px;
+}
+.first-visit-title {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d3748;
+}
+.first-visit-body {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+}
+.first-visit-close {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.first-visit-close:hover {
+    opacity: 0.95;
+}
+
 /* ==================== 头部样式 ==================== */
 header {
     background: var(--gradient-primary);
@@ -836,6 +928,17 @@ footer {
 footer p {
     font-size: 14px;
     margin: 0;
+}
+
+footer .footer-hint {
+    font-size: 12px;
+    opacity: 0.92;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 28em;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 /* ==================== 返回顶部按钮 ==================== */

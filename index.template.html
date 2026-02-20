@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="top-banner" id="topBanner" role="region" aria-label="Viewing tip" hidden>
+        <span class="top-banner-text">{{text|.top-banner-text}}</span>
+        <button type="button" class="top-banner-close" id="topBannerClose" aria-label="Close">{{text|.top-banner-close}}</button>
+    </div>
+    <div class="first-visit-overlay" id="firstVisitOverlay" role="dialog" aria-labelledby="firstVisitTitle" aria-modal="true" hidden>
+        <div class="first-visit-card">
+            <h2 class="first-visit-title" id="firstVisitTitle">{{text|.first-visit-modal-title}}</h2>
+            <p class="first-visit-body">{{text|.first-visit-modal-body}}</p>
+            <button type="button" class="first-visit-close" id="firstVisitClose">{{text|.first-visit-modal-close}}</button>
+        </div>
+    </div>
     <header>
         <div class="header-content">
             <div class="lang-switch-floating" role="group" aria-label="Language switch">
@@ -313,6 +324,7 @@
 
     <footer>
         <p>{{text|footer p}}</p>
+        <p class="footer-hint">{{text|footer .footer-hint}}</p>
     </footer>
 
     <div class="scroll-progress">

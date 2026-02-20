@@ -1,0 +1,32 @@
+# 当你 push 后自动运行 npm run build，并把生成的 index.html、translations.js 写回仓库
+# 这样你只需改 content.json 并 push，网站就会是最新内容
+name: Build on push
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Commit and push if built files changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html translations.js
+          git diff --staged --quiet || (git commit -m "chore: build from content.json" && git push)
