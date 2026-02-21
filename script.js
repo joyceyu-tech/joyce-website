@@ -268,6 +268,70 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.borderLeftColor = borderColorByIndex;
     });
 
+    // ==================== 7. 项目图片点击放大 ====================
+    const zoomableProjectImages = document.querySelectorAll('.project-image img');
+    if (zoomableProjectImages.length > 0) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'image-lightbox';
+        lightbox.setAttribute('hidden', '');
+        lightbox.innerHTML = `
+            <div class="image-lightbox-content" role="dialog" aria-modal="true" aria-label="Image preview">
+                <button type="button" class="image-lightbox-close" aria-label="Close image preview">&times;</button>
+                <img src="" alt="">
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImage = lightbox.querySelector('img');
+        const lightboxClose = lightbox.querySelector('.image-lightbox-close');
+
+        function openLightbox(sourceImage) {
+            if (!lightboxImage) return;
+            lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+            lightboxImage.alt = sourceImage.alt || 'Project image preview';
+            lightbox.removeAttribute('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+        }
+
+        zoomableProjectImages.forEach(image => {
+            image.tabIndex = 0;
+            image.setAttribute('role', 'button');
+            image.setAttribute('aria-label', 'Open image preview');
+
+            image.addEventListener('click', function() {
+                openLightbox(image);
+            });
+
+            image.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openLightbox(image);
+                }
+            });
+        });
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', function(event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !lightbox.hasAttribute('hidden')) {
+                closeLightbox();
+            }
+        });
+    }
+
     // ==================== 滚动事件监听 ====================
     let scrollTimeout;
     window.addEventListener('scroll', function() {
