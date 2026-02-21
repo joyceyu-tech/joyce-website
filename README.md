@@ -52,7 +52,7 @@
 - **部署**：代码推送至 GitHub 后，由 GitHub Pages 托管，配合 Cloudflare CDN 与自定义域名访问。
 - **文案修改**：网站内容由 `content.json` 驱动，改文案只需编辑该文件。之后可任选其一：
   - **方式 1（推荐）**：本地执行 `npm run build`（即 `node build.js`）构建，将生成的 `index.html`、`translations.js` 一并 commit 并 push。符合工程习惯。
-  - **方式 2**：直接 commit 并 push，由 [GitHub Actions](.github/workflows/build.yml) 在 push 后自动构建并写回仓库。
+  - **方式 2（兜底）**：直接 commit 并 push，由 [GitHub Actions](.github/workflows/build.yml) 在 push 后自动构建并写回仓库。适用于忘记本地 build 或仅修改 content.json 的情况。
 
 ## 📧 Contact
 

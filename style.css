@@ -717,77 +717,10 @@ h2 {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
-    cursor: zoom-in;
-}
-
-.project-image-zoomable {
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-}
-
-/* 透明遮罩层：在微信等内置浏览器中，直接点 img 会被拦截，用 div 遮罩捕获触摸可规避 */
-.project-image-zoom-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    cursor: zoom-in;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 .project-card:hover .project-image img {
     transform: none;
-}
-
-/* ==================== 项目图片放大预览 ==================== */
-.image-lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 11000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.82);
-    backdrop-filter: blur(2px);
-}
-
-.image-lightbox[hidden] {
-    display: none !important;
-}
-
-.image-lightbox-content {
-    position: relative;
-    width: min(92vw, 1400px);
-    max-height: 90vh;
-}
-
-.image-lightbox-content img {
-    width: 100%;
-    max-height: 90vh;
-    object-fit: contain;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-}
-
-.image-lightbox-close {
-    position: absolute;
-    top: -14px;
-    right: -14px;
-    width: 36px;
-    height: 36px;
-    border: none;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.95);
-    color: #1f2937;
-    font-size: 22px;
-    line-height: 1;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
 .project-content {
@@ -1691,25 +1624,24 @@ footer .footer-hint-icon {
         gap: 25px;
     }
 
-    /* 手机端：项目图/占位区高度缩小，避免占满屏；3x2 比例保持由宽高比决定高度以完整显示图片 */
+    /* 手机端：图片按原始宽高比完整显示，避免上下遮挡；卡片取消 hover 上浮 */
+    .project-card:hover {
+        transform: none;
+    }
     .project-image {
-        height: 160px;
+        height: auto;
+        overflow: visible;
     }
     .project-image.project-image-ratio-3x2 {
+        aspect-ratio: unset;
         height: auto;
-        aspect-ratio: 3 / 2;
-        min-height: 0; /* 配合 flex 与 aspect-ratio，避免布局异常 */
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .project-image.project-image-ratio-3x2 img {
-        width: auto;
+        width: 100%;
         height: auto;
-        max-width: 100%;
-        max-height: 100%;
+        display: block;
         object-fit: contain;
-        background: transparent;
+        vertical-align: bottom;
         transition: none;
     }
     .project-image.project-image-placeholder-only {
@@ -1921,25 +1853,23 @@ footer .footer-hint-icon {
         margin-bottom: 20px;
         border-radius: 12px;
     }
-    
+    .project-card:hover {
+        transform: none;
+    }
     .project-image {
-        height: 140px;
+        height: auto;
+        overflow: visible;
     }
     .project-image.project-image-ratio-3x2 {
+        aspect-ratio: unset;
         height: auto;
-        aspect-ratio: 3 / 2;
-        min-height: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .project-image.project-image-ratio-3x2 img {
-        width: auto;
+        width: 100%;
         height: auto;
-        max-width: 100%;
-        max-height: 100%;
+        display: block;
         object-fit: contain;
-        background: transparent;
+        vertical-align: bottom;
         transition: none;
     }
     .project-image.project-image-placeholder-only {
