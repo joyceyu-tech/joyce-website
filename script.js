@@ -329,26 +329,31 @@ document.addEventListener('DOMContentLoaded', function() {
             image.setAttribute('aria-label', 'Open image preview');
             image.classList.add('project-image-zoomable');
             const imageWrapper = image.closest('.project-image');
-            if (imageWrapper) imageWrapper.classList.add('project-image-zoomable');
+            if (!imageWrapper) return;
 
-            image.addEventListener('click', function(event) {
+            imageWrapper.classList.add('project-image-zoomable');
+
+            // 透明遮罩层：微信内置浏览器会拦截 img 上的触摸，用 div 遮罩可规避
+            const overlay = document.createElement('div');
+            overlay.className = 'project-image-zoom-overlay';
+            overlay.setAttribute('aria-hidden', 'true');
+            imageWrapper.appendChild(overlay);
+
+            function handleOpen(event) {
                 openFromEvent(event, image);
-            });
-            image.addEventListener('pointerup', function(event) {
-                openFromEvent(event, image);
-            });
-            image.addEventListener('touchend', function(event) {
-                openFromEvent(event, image);
+            }
+
+            overlay.addEventListener('click', handleOpen);
+            overlay.addEventListener('pointerup', handleOpen);
+            overlay.addEventListener('touchend', function(event) {
+                handleOpen(event);
             }, { passive: false });
 
-            if (imageWrapper) {
-                imageWrapper.addEventListener('click', function(event) {
-                    if (event.target === imageWrapper) openFromEvent(event, image);
-                });
-                imageWrapper.addEventListener('touchend', function(event) {
-                    if (event.target === imageWrapper) openFromEvent(event, image);
-                }, { passive: false });
-            }
+            image.addEventListener('click', handleOpen);
+            image.addEventListener('pointerup', handleOpen);
+            image.addEventListener('touchend', function(event) {
+                handleOpen(event);
+            }, { passive: false });
 
             image.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter' || event.key === ' ') {

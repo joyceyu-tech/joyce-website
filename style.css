@@ -674,6 +674,7 @@ h2 {
     width: 100%;
     height: 240px;
     overflow: hidden;
+    flex-shrink: 0; /* 防止在 project-card 的 flex 布局中被压缩，避免图片上下被裁切 */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
@@ -722,6 +723,19 @@ h2 {
 .project-image-zoomable {
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
+}
+
+/* 透明遮罩层：在微信等内置浏览器中，直接点 img 会被拦截，用 div 遮罩捕获触摸可规避 */
+.project-image-zoom-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: zoom-in;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .project-card:hover .project-image img {
@@ -1677,12 +1691,14 @@ footer .footer-hint-icon {
         gap: 25px;
     }
 
-    /* 手机端：项目图/占位区高度缩小，避免占满屏 */
+    /* 手机端：项目图/占位区高度缩小，避免占满屏；3x2 比例保持由宽高比决定高度以完整显示图片 */
     .project-image {
         height: 160px;
     }
     .project-image.project-image-ratio-3x2 {
         height: auto;
+        aspect-ratio: 3 / 2;
+        min-height: 0; /* 配合 flex 与 aspect-ratio，避免布局异常 */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1911,6 +1927,8 @@ footer .footer-hint-icon {
     }
     .project-image.project-image-ratio-3x2 {
         height: auto;
+        aspect-ratio: 3 / 2;
+        min-height: 0;
         display: flex;
         align-items: center;
         justify-content: center;
