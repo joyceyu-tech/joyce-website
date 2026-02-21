@@ -309,19 +309,50 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
 
+        let lastOpenAt = 0;
+
+        function openFromEvent(event, image) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const now = Date.now();
+            // touch/pointer/click may fire in sequence on mobile; dedupe within a short window.
+            if (now - lastOpenAt < 250) return;
+            lastOpenAt = now;
+            openLightbox(image);
+        }
+
         zoomableProjectImages.forEach(image => {
             image.tabIndex = 0;
             image.setAttribute('role', 'button');
             image.setAttribute('aria-label', 'Open image preview');
+            image.classList.add('project-image-zoomable');
+            const imageWrapper = image.closest('.project-image');
+            if (imageWrapper) imageWrapper.classList.add('project-image-zoomable');
 
-            image.addEventListener('click', function() {
-                openLightbox(image);
+            image.addEventListener('click', function(event) {
+                openFromEvent(event, image);
             });
+            image.addEventListener('pointerup', function(event) {
+                openFromEvent(event, image);
+            });
+            image.addEventListener('touchend', function(event) {
+                openFromEvent(event, image);
+            }, { passive: false });
+
+            if (imageWrapper) {
+                imageWrapper.addEventListener('click', function(event) {
+                    if (event.target === imageWrapper) openFromEvent(event, image);
+                });
+                imageWrapper.addEventListener('touchend', function(event) {
+                    if (event.target === imageWrapper) openFromEvent(event, image);
+                }, { passive: false });
+            }
 
             image.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    openLightbox(image);
+                    openFromEvent(event, image);
                 }
             });
         });

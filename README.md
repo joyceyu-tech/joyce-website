@@ -49,11 +49,10 @@
 ## 构建说明
 
 - **本地预览**：在浏览器中直接打开根目录下的 `index.html` 即可。
-- **部署**：将代码推送至 GitHub，由 GitHub Pages 构建并托管，配合 Cloudflare CDN 加速与自定义域名访问。
-- **文案修改**：仅需编辑 `content.json`，网站内容即由此驱动。更新后的构建与发布可任选以下方式之一：
-  - **推荐（CI 自动构建）**：修改 `content.json` 后直接 **commit 并 push**。GitHub Actions 会在 push 后自动执行 `npm run build`，将生成的 `index.html` 与 `translations.js` 写回仓库并完成网站更新，详见 [`.github/workflows/build.yml`](.github/workflows/build.yml)。
-  - **本地构建**：在项目根目录执行 `npm run build`（即 `node build.js`），将生成的 `index.html`、`translations.js` 一并 commit 并 push。习惯上可先本地跑一遍构建再提交，便于自检。
-  - **提交时自动构建（兜底）**：执行一次 `npm run hook:install` 安装 Git 钩子；此后每次 `git commit` 会在本地自动执行构建，并将生成文件纳入当次提交。这样即使在其他环境或忘记先跑 `node build.js`，也能保证提交里包含最新构建产物，网站不会漏更新。
+- **部署**：代码推送至 GitHub 后，由 GitHub Pages 托管，配合 Cloudflare CDN 与自定义域名访问。
+- **文案修改**：网站内容由 `content.json` 驱动，改文案只需编辑该文件。之后可任选其一：
+  - **方式 1（推荐）**：本地执行 `npm run build`（即 `node build.js`）构建，将生成的 `index.html`、`translations.js` 一并 commit 并 push。符合工程习惯。
+  - **方式 2**：直接 commit 并 push，由 [GitHub Actions](.github/workflows/build.yml) 在 push 后自动构建并写回仓库。
 
 ## 📧 Contact
 

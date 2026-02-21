@@ -719,6 +719,11 @@ h2 {
     cursor: zoom-in;
 }
 
+.project-image-zoomable {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
 .project-card:hover .project-image img {
     transform: none;
 }
@@ -1689,6 +1694,7 @@ footer .footer-hint-icon {
         max-height: 100%;
         object-fit: contain;
         background: transparent;
+        transition: none;
     }
     .project-image.project-image-placeholder-only {
         height: 100px;
@@ -1916,6 +1922,7 @@ footer .footer-hint-icon {
         max-height: 100%;
         object-fit: contain;
         background: transparent;
+        transition: none;
     }
     .project-image.project-image-placeholder-only {
         height: 90px;
