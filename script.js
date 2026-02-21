@@ -22,6 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    function onMediaQueryChange(mediaQueryList, handler) {
+        if (!mediaQueryList || typeof handler !== 'function') return;
+        if (typeof mediaQueryList.addEventListener === 'function') {
+            mediaQueryList.addEventListener('change', handler);
+            return;
+        }
+        if (typeof mediaQueryList.addListener === 'function') {
+            mediaQueryList.addListener(handler);
+        }
+    }
+
     const translations = (typeof TRANSLATIONS !== 'undefined' ? TRANSLATIONS : {});
 
     /* Translations loaded from translations.js */
@@ -150,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 仅在小屏（手机/平板）或微信内显示顶部 Banner；不显示首次弹窗
     if (shouldShowBanner()) maybeShowBanner();
-    narrowViewport.addEventListener('change', function() {
+    onMediaQueryChange(narrowViewport, function() {
         if (!shouldShowBanner()) hideBanner(); else maybeShowBanner();
     });
     if (topBannerClose && topBanner) {
