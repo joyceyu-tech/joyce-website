@@ -1622,13 +1622,21 @@ footer .footer-hint-icon {
     }
     .projects-grid {
         gap: 25px;
+        min-width: 0; /* 允许在窄屏下正确收缩 */
     }
 
-    /* 手机端：图片按原始宽高比完整显示，避免上下遮挡；卡片取消 hover 上浮 */
+    /* 手机端：扩大图片可用宽度，完整显示；取消 hover 上浮 */
+    #projects {
+        padding: 40px 8px 50px; /* 减少左右 padding，给图片更多宽度 */
+    }
+    .project-card {
+        min-width: 0; /* 防止 grid 子项 min-width:auto 导致溢出 */
+    }
     .project-card:hover {
         transform: none;
     }
     .project-image {
+        min-width: 0;
         height: auto;
         overflow: visible;
     }
@@ -1638,6 +1646,7 @@ footer .footer-hint-icon {
     }
     .project-image.project-image-ratio-3x2 img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         display: block;
         object-fit: contain;
@@ -1852,11 +1861,16 @@ footer .footer-hint-icon {
     .project-card {
         margin-bottom: 20px;
         border-radius: 12px;
+        min-width: 0;
     }
     .project-card:hover {
         transform: none;
     }
+    #projects {
+        padding: 35px 6px 45px; /* 更小屏幕进一步减少左右 padding */
+    }
     .project-image {
+        min-width: 0;
         height: auto;
         overflow: visible;
     }
@@ -1866,6 +1880,7 @@ footer .footer-hint-icon {
     }
     .project-image.project-image-ratio-3x2 img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         display: block;
         object-fit: contain;
