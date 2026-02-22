@@ -211,7 +211,7 @@
       "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(6)": "WebSocket",
       "#experience > h2": "工作经历",
       "#experience > .section-intro": "在金融与基础设施等复杂系统中持续交付质量，同时向端到端工程影响力演进。",
-      ".experience-header h3": "业务QA助理",
+      ".experience-header h3": "业务QA专员",
       ".company": "汇丰软件开发（广东）有限公司",
       ".role-note": "聚焦测试策略、跨系统验证与稳定发布质量。",
       ".duration": "2024.01 - 至今",
