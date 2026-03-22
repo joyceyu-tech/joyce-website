@@ -186,7 +186,7 @@
       "#projects .project-card:nth-of-type(1) .project-features li:nth-child(4)": "核心接口压测达到 2312 QPS",
       "#projects .project-card:nth-of-type(1) .btn-primary": "查看 Gitee",
       "#projects .project-card:nth-of-type(2) .project-type": "单体架构",
-      "#projects .project-card:nth-of-type(2) .project-content h3": "苍穹外卖系统",
+      "#projects .project-card:nth-of-type(2) .project-content h3": "天送外卖系统",
       "#projects .project-card:nth-of-type(2) .project-description": "前后端分离的餐饮管理系统，包含商家后台与用户端小程序，覆盖菜品、套餐、分类与订单等核心流程。",
       "#projects .project-card:nth-of-type(2) .project-features h4": "关键成果：",
       "#projects .project-card:nth-of-type(2) .project-features li:nth-child(1)": "实现商家端员工、菜品、分类与套餐管理，并支持分页查询",
