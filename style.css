@@ -516,6 +516,11 @@ section {
     white-space: normal;
 }
 
+/* Skills 引言较长：与下方三列卡片同宽，占满内容区再换行（避免 760px 裁切导致右侧大块留白） */
+#skills .section-intro {
+    max-width: none;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
