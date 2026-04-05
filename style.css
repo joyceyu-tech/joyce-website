@@ -338,32 +338,6 @@ header h1 {
     transform: translateY(-2px);
 }
 
-.hero-stats {
-    margin-top: 22px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
-}
-
-.hero-stat {
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 10px 12px;
-}
-
-.hero-stat strong {
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.1;
-}
-
-.hero-stat span {
-    font-size: 12px;
-    opacity: 0.95;
-}
-
 /* ==================== 导航栏样式 ==================== */
 .nav-bar {
     position: fixed;
@@ -1210,18 +1184,12 @@ footer .footer-hint-icon {
 
     .hero-actions {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
     }
 
     .hero-actions .hero-btn {
         min-width: 0;
-    }
-
-    .hero-stats {
-        max-width: 620px;
-        margin-left: auto;
-        margin-right: auto;
     }
     
     .avatar-wrapper {
@@ -1384,29 +1352,12 @@ footer .footer-hint-icon {
     }
 
     .hero-actions {
-        margin-top: 12px;
-    }
-
-    .hero-stats {
-        margin-top: 12px;
-    }
-
-    .hero-actions {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 8px 14px;
         width: 100%;
         margin-top: 14px;
-    }
-
-    .hero-actions .hero-btn:nth-child(1) { order: 2; }
-    .hero-actions .hero-btn:nth-child(2) { order: 1; }
-    .hero-actions .hero-btn:nth-child(3) { order: 3; }
-
-    /* 手机端：隐藏 Contact Me，右下角已有联系入口 */
-    .hero-actions .hero-btn:nth-child(2) {
-        display: none;
     }
 
     /* 手机端：恢复按钮样式，背景+边框，明确可点击 */
@@ -1438,53 +1389,6 @@ footer .footer-hint-icon {
         color: #ffffff;
         box-shadow: none;
     }
-
-    /* 手机端：统计区单行文字+分隔符，居中 */
-    .hero-stats {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: baseline;
-        gap: 4px 6px;
-        margin-top: 12px;
-        grid-template-columns: unset;
-    }
-
-    .hero-stat {
-        padding: 0;
-        text-align: center;
-        background: transparent;
-        border: none;
-        border-radius: 0;
-        display: inline-flex;
-        align-items: baseline;
-        gap: 4px;
-    }
-
-    .hero-stat::after {
-        content: "·";
-        margin-left: 6px;
-        opacity: 0.6;
-        font-weight: 400;
-    }
-
-    .hero-stat:last-child::after {
-        display: none;
-    }
-
-    .hero-stat strong {
-        font-size: 13px;
-        display: inline;
-    }
-
-    .hero-stat span {
-        font-size: 11px;
-        display: inline;
-        white-space: nowrap;
-        overflow: visible;
-        text-overflow: unset;
-    }
-
 
     section {
         margin: 24px auto;
@@ -1840,16 +1744,6 @@ footer .footer-hint-icon {
         min-height: 40px;
     }
 
-    .hero-stat strong {
-        font-size: 12px;
-    }
-
-    .hero-stat span {
-        font-size: 10px;
-    }
-    
-
-    
     section {
         padding: 0 12px;
     }

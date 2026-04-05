@@ -36,23 +36,8 @@
                 <p class="subtitle">{{text|.subtitle}}</p>
                 <p class="tagline">{{text|.tagline}}</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="hero-btn hero-btn-primary">{{text|.hero-btn-primary}}</a>
-                    <a href="mailto:joyceyu434840@163.com" class="hero-btn hero-btn-secondary">{{text|.hero-btn-secondary}}</a>
+                    <a href="https://gitee.com/joyceyu434840" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">{{text|.hero-btn-primary}}</a>
                     <a href="https://github.com/joyceyu-tech/joyce-website" class="hero-btn hero-btn-secondary hero-btn-github" target="_blank" rel="noopener noreferrer" title="View this portfolio source on GitHub">{{text|.hero-btn-github}}</a>
-                </div>
-                <div class="hero-stats" aria-label="Career highlights">
-                    <div class="hero-stat">
-                        <strong>3+</strong>
-                        <span>{{text|.hero-stat:nth-child(1) span}}</span>
-                    </div>
-                    <div class="hero-stat">
-                        <strong>3</strong>
-                        <span>{{text|.hero-stat:nth-child(2) span}}</span>
-                    </div>
-                    <div class="hero-stat">
-                        <strong>ISTQB</strong>
-                        <span>{{text|.hero-stat:nth-child(3) span}}</span>
-                    </div>
                 </div>
             </div>
             <div class="profile-container hero-profile">
@@ -126,110 +111,7 @@
         <h2>{{text|#projects > h2}}</h2>
         <p class="section-intro">{{text|#projects > .section-intro}}</p>
         <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image project-image-ratio-3x2">
-                    <img src="images/project-lottery-system.png" alt="Red Packet Rain Lottery System cover" loading="lazy" decoding="async">
-                </div>
-                <div class="project-content">
-                    <h3>{{text|#projects .project-card:nth-of-type(1) .project-content h3}}</h3>
-                    <p class="project-description">{{text|#projects .project-card:nth-of-type(1) .project-description}}</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MyBatis-Plus</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">RabbitMQ</span>
-                        <span class="tech-tag">MinIO</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>{{text|#projects .project-card:nth-of-type(1) .project-features h4}}</h4>
-                        <ul>
-                            <li>{{text|#projects .project-card:nth-of-type(1) .project-features li:nth-child(1)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(1) .project-features li:nth-child(2)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(1) .project-features li:nth-child(3)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(1) .project-features li:nth-child(4)}}</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/lottery-system.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 1024 1024" width="16" height="16">
-                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
-                            </svg>
-                            {{text|#projects .project-card:nth-of-type(1) .btn-primary}}
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image project-image-ratio-3x2">
-                    <img src="images/project-sky-takeout-system.png" alt="Sky Take Out System cover" loading="lazy" decoding="async">
-                </div>
-                <div class="project-content">
-                    <h3>{{text|#projects .project-card:nth-of-type(2) .project-content h3}}</h3>
-                    <p class="project-description">{{text|#projects .project-card:nth-of-type(2) .project-description}}</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MyBatis</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">AliOSS</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>{{text|#projects .project-card:nth-of-type(2) .project-features h4}}</h4>
-                        <ul>
-                            <li>{{text|#projects .project-card:nth-of-type(2) .project-features li:nth-child(1)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(2) .project-features li:nth-child(2)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(2) .project-features li:nth-child(3)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(2) .project-features li:nth-child(4)}}</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/sky-take-out.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 1024 1024" width="16" height="16">
-                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
-                            </svg>
-                            {{text|#projects .project-card:nth-of-type(2) .btn-primary}}
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image project-image-ratio-3x2">
-                    <img src="images/project-o2o-city-ride-system.png" alt="O2O City Ride System cover" loading="lazy" decoding="async">
-                </div>
-                <div class="project-content">
-                    <h3>{{text|#projects .project-card:nth-of-type(3) .project-content h3}}</h3>
-                    <p class="project-description">{{text|#projects .project-card:nth-of-type(3) .project-description}}</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Cloud</span>
-                        <span class="tech-tag">MyBatis</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">RabbitMQ</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">WebSocket</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>{{text|#projects .project-card:nth-of-type(3) .project-features h4}}</h4>
-                        <ul>
-                            <li>{{text|#projects .project-card:nth-of-type(3) .project-features li:nth-child(1)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(3) .project-features li:nth-child(2)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(3) .project-features li:nth-child(3)}}</li>
-                            <li>{{text|#projects .project-card:nth-of-type(3) .project-features li:nth-child(4)}}</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/o2o-city-ride.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 1024 1024" width="16" height="16">
-                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
-                            </svg>
-                            {{text|#projects .project-card:nth-of-type(3) .btn-primary}}
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+{{inject|portfolioProjectsGrid}}
         </div>
     </section>
 

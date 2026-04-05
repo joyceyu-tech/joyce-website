@@ -1,5 +1,127 @@
 {
-  "_comment": "单一数据源：修改文案只需编辑此文件，然后运行 node build.js 生成 index.html 和 translations.js",
+  "_comment": "单一数据源：修改文案只需编辑此文件，然后运行 node build.js 生成 index.html 和 translations.js。个人项目列表在 portfolioProjects，新增项目只需追加对象（slug 唯一），勿改 nth-of-type 序号。",
+  "portfolioProjects": [
+    {
+      "slug": "lottery",
+      "image": "images/project-lottery-system.png",
+      "imageAlt": {
+        "en": "Red Packet Rain Lottery System cover",
+        "zh": "红包雨抽奖系统封面"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/lottery-system.git",
+      "techTags": ["Spring Boot", "MyBatis-Plus", "MySQL", "Redis", "RabbitMQ", "MinIO"],
+      "title": {
+        "en": "Red Packet Rain Lottery System",
+        "zh": "红包雨抽奖系统"
+      },
+      "description": {
+        "en": "Enterprise-level lottery activity management platform, supporting red packet rain, lottery events, prizes, and member management. Suitable for high-concurrency scenarios such as corporate annual meetings and holiday events.",
+        "zh": "面向企业活动场景的抽奖管理平台，支持红包雨、奖品管理与会员管理，适用于年会与节日等高并发活动。"
+      },
+      "featuresHeading": {
+        "en": "Key Achievements:",
+        "zh": "关键成果："
+      },
+      "features": {
+        "en": [
+          "Developed User and Activity modules with accurate real-time data display for frontend",
+          "Optimized high-concurrency using Redis preloading and token bucket + Lua scripts to prevent overselling",
+          "Implemented asynchronous lottery processing with RabbitMQ for improved system stability",
+          "Achieved QPS of 2312 on core interfaces through JMeter performance testing"
+        ],
+        "zh": [
+          "完成用户与活动模块开发，保障前端实时数据展示准确",
+          "通过 Redis 预热与令牌桶 + Lua 脚本优化并发，避免超卖",
+          "引入 RabbitMQ 异步抽奖流程，提升系统稳定性",
+          "核心接口压测达到 2312 QPS"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    },
+    {
+      "slug": "sky-takeout",
+      "image": "images/project-sky-takeout-system.png",
+      "imageAlt": {
+        "en": "Sky Take Out System cover",
+        "zh": "天送外卖系统封面"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/sky-take-out.git",
+      "techTags": ["Spring Boot", "MyBatis", "MySQL", "Redis", "AliOSS"],
+      "title": {
+        "en": "Sky Take Out System",
+        "zh": "天送外卖系统"
+      },
+      "description": {
+        "en": "A catering management system with frontend-backend separation, including a merchant backend management system and a user mini program. Supports dishes, set meals, categories, and orders, optimizing user ordering experience and merchant management efficiency.",
+        "zh": "前后端分离的餐饮管理系统，包含商家后台与用户端小程序，覆盖菜品、套餐、分类与订单等核心流程。"
+      },
+      "featuresHeading": {
+        "en": "Key Achievements:",
+        "zh": "关键成果："
+      },
+      "features": {
+        "en": [
+          "Developed merchant backend managing employees, dishes, categories, and set meals with pagination",
+          "Implemented mini-program caching for dishes and set meals, improving frontend interaction efficiency",
+          "Built shopping cart management (add, view, clear) and order submission workflow",
+          "Designed payment flow with simulated WeChat Pay integration for smooth user ordering experience"
+        ],
+        "zh": [
+          "实现商家端员工、菜品、分类与套餐管理，并支持分页查询",
+          "实现菜品与套餐缓存，优化用户端交互响应效率",
+          "完成购物车与下单流程开发，打通关键交易链路",
+          "设计模拟微信支付流程，提升下单体验完整性"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    },
+    {
+      "slug": "o2o-city-ride",
+      "image": "images/project-o2o-city-ride-system.png",
+      "imageAlt": {
+        "en": "O2O City Ride System cover",
+        "zh": "同城拼车系统封面"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/o2o-city-ride.git",
+      "techTags": ["Spring Cloud", "MyBatis", "Redis", "RabbitMQ", "MongoDB", "WebSocket"],
+      "title": {
+        "en": "O2O City Ride System",
+        "zh": "同城拼车系统"
+      },
+      "description": {
+        "en": "A city-based carpooling platform supporting drivers posting trips, passenger route matching, order generation, and message notifications. Based on microservices architecture with high availability and real-time communication, covering registration, trip publishing, ride invitations, and complete payment workflow.",
+        "zh": "基于微服务的同城拼车平台，支持行程发布、路线匹配、订单处理与消息通知，覆盖从注册到支付的完整流程。"
+      },
+      "featuresHeading": {
+        "en": "Key Achievements:",
+        "zh": "关键成果："
+      },
+      "features": {
+        "en": [
+          "Developed User module with personal info, password modification, and document uploads",
+          "Integrated Baidu OCR for automatic vehicle and identity document recognition",
+          "Designed trip fare calculation algorithm using Decorator pattern with map API integration",
+          "Implemented order timeout handling and WebSocket real-time push for smooth user interaction"
+        ],
+        "zh": [
+          "完成用户模块开发，支持资料维护、密码修改与证件上传",
+          "接入百度 OCR，实现证件信息自动识别",
+          "使用装饰器模式实现计价算法，并结合地图 API 完成路径计算",
+          "实现订单超时处理与 WebSocket 实时推送，提升交互体验"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    }
+  ],
   "en": {
     "title": "Joyce | Portfolio",
     "hiddenTitle": "👋 Come back soon! - Joyce Portfolio",
@@ -17,14 +139,10 @@
       ".first-visit-modal-close": "Got it",
       ".hero-badge": "Open to Software Engineer opportunities",
       "header h1": "Hi, I'm Joyce",
-      ".subtitle": "Business QA Associate at HSBC · Aspiring Full-Stack Engineer",
+      ".subtitle": "Business QA Associate at HSBC · ISTQB Certified Tester · Aspiring Full-Stack Engineer",
       ".tagline": "I build reliable systems with a testing mindset and backend-first foundation, and I am actively growing into frontend engineering with React and TypeScript.",
       ".hero-btn-primary": "Projects",
-      ".hero-btn-secondary": "Contact Me",
       ".hero-btn-github": "GitHub",
-      ".hero-stat:nth-child(1) span": "Years of Testing",
-      ".hero-stat:nth-child(2) span": "Backend Projects",
-      ".hero-stat:nth-child(3) span": "Certified Tester",
       ".nav-bar a[href=\"#about\"]": "About Me",
       ".nav-bar a[href=\"#skills\"]": "Skills",
       ".nav-bar a[href=\"#projects\"]": "Projects",
@@ -53,33 +171,6 @@
       "#skills .skill-card:nth-child(6) p": "Actively learning React, TypeScript, Spring AI, and AI application development.",
       "#projects > h2": "Personal Projects",
       "#projects > .section-intro": "Projects that demonstrate backend depth, distributed thinking, and production-oriented engineering decisions.",
-      "#projects .project-card:nth-of-type(1) .project-type": "Monolithic",
-      "#projects .project-card:nth-of-type(1) .project-content h3": "Red Packet Rain Lottery System",
-      "#projects .project-card:nth-of-type(1) .project-description": "Enterprise-level lottery activity management platform, supporting red packet rain, lottery events, prizes, and member management. Suitable for high-concurrency scenarios such as corporate annual meetings and holiday events.",
-      "#projects .project-card:nth-of-type(1) .project-features h4": "Key Achievements:",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(1)": "Developed User and Activity modules with accurate real-time data display for frontend",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(2)": "Optimized high-concurrency using Redis preloading and token bucket + Lua scripts to prevent overselling",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(3)": "Implemented asynchronous lottery processing with RabbitMQ for improved system stability",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(4)": "Achieved QPS of 2312 on core interfaces through JMeter performance testing",
-      "#projects .project-card:nth-of-type(1) .btn-primary": "View on Gitee",
-      "#projects .project-card:nth-of-type(2) .project-type": "Monolithic",
-      "#projects .project-card:nth-of-type(2) .project-content h3": "Sky Take Out System",
-      "#projects .project-card:nth-of-type(2) .project-description": "A catering management system with frontend-backend separation, including a merchant backend management system and a user mini program. Supports dishes, set meals, categories, and orders, optimizing user ordering experience and merchant management efficiency.",
-      "#projects .project-card:nth-of-type(2) .project-features h4": "Key Achievements:",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(1)": "Developed merchant backend managing employees, dishes, categories, and set meals with pagination",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(2)": "Implemented mini-program caching for dishes and set meals, improving frontend interaction efficiency",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(3)": "Built shopping cart management (add, view, clear) and order submission workflow",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(4)": "Designed payment flow with simulated WeChat Pay integration for smooth user ordering experience",
-      "#projects .project-card:nth-of-type(2) .btn-primary": "View on Gitee",
-      "#projects .project-card:nth-of-type(3) .project-type": "Microservices",
-      "#projects .project-card:nth-of-type(3) .project-content h3": "O2O City Ride System",
-      "#projects .project-card:nth-of-type(3) .project-description": "A city-based carpooling platform supporting drivers posting trips, passenger route matching, order generation, and message notifications. Based on microservices architecture with high availability and real-time communication, covering registration, trip publishing, ride invitations, and complete payment workflow.",
-      "#projects .project-card:nth-of-type(3) .project-features h4": "Key Achievements:",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(1)": "Developed User module with personal info, password modification, and document uploads",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(2)": "Integrated Baidu OCR for automatic vehicle and identity document recognition",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(3)": "Designed trip fare calculation algorithm using Decorator pattern with map API integration",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(4)": "Implemented order timeout handling and WebSocket real-time push for smooth user interaction",
-      "#projects .project-card:nth-of-type(3) .btn-primary": "View on Gitee",
       "#experience > h2": "Work Experience",
       "#experience > .section-intro": "Delivering quality across complex systems—from banking to infrastructure and O&M platforms—while growing toward end-to-end engineering impact.",
       ".experience-header h3": "Business QA Associate",
@@ -120,7 +211,8 @@
     "aria": {
       "#backToTop": "Back to top",
       "#contactToggle": "Toggle contact panel",
-      "#toggleContactBtn": "Toggle contact panel"
+      "#toggleContactBtn": "Toggle contact panel",
+      ".hero-btn-primary": "Open Joyce's Gitee profile"
     }
   },
   "zh": {
@@ -140,14 +232,10 @@
       ".first-visit-modal-close": "知道了",
       ".hero-badge": "正在寻找软件工程师机会",
       "header h1": "你好，我是 Joyce",
-      ".subtitle": "汇丰软件测试从业者 · 全栈工程方向",
+      ".subtitle": "汇丰软件测试从业者 · ISTQB 认证测试员 · 全栈工程方向",
       ".tagline": "我以测试思维和后端基础构建可靠系统，同时持续学习 React 与 TypeScript，提升端到端工程能力。",
       ".hero-btn-primary": "项目",
-      ".hero-btn-secondary": "联系我",
       ".hero-btn-github": "GitHub 源码",
-      ".hero-stat:nth-child(1) span": "测试经验",
-      ".hero-stat:nth-child(2) span": "后端项目",
-      ".hero-stat:nth-child(3) span": "认证测试员",
       ".nav-bar a[href=\"#about\"]": "关于我",
       ".nav-bar a[href=\"#skills\"]": "技能",
       ".nav-bar a[href=\"#projects\"]": "项目",
@@ -176,39 +264,6 @@
       "#skills .skill-card:nth-child(6) p": "持续学习 React、TypeScript、Spring AI 与 AI 应用工程实践。",
       "#projects > h2": "个人项目",
       "#projects > .section-intro": "项目体现了我在后端深度、分布式思维与生产可用性决策方面的工程能力。",
-      "#projects .project-card:nth-of-type(1) .project-type": "单体架构",
-      "#projects .project-card:nth-of-type(1) .project-content h3": "红包雨抽奖系统",
-      "#projects .project-card:nth-of-type(1) .project-description": "面向企业活动场景的抽奖管理平台，支持红包雨、奖品管理与会员管理，适用于年会与节日等高并发活动。",
-      "#projects .project-card:nth-of-type(1) .project-features h4": "关键成果：",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(1)": "完成用户与活动模块开发，保障前端实时数据展示准确",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(2)": "通过 Redis 预热与令牌桶 + Lua 脚本优化并发，避免超卖",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(3)": "引入 RabbitMQ 异步抽奖流程，提升系统稳定性",
-      "#projects .project-card:nth-of-type(1) .project-features li:nth-child(4)": "核心接口压测达到 2312 QPS",
-      "#projects .project-card:nth-of-type(1) .btn-primary": "查看 Gitee",
-      "#projects .project-card:nth-of-type(2) .project-type": "单体架构",
-      "#projects .project-card:nth-of-type(2) .project-content h3": "天送外卖系统",
-      "#projects .project-card:nth-of-type(2) .project-description": "前后端分离的餐饮管理系统，包含商家后台与用户端小程序，覆盖菜品、套餐、分类与订单等核心流程。",
-      "#projects .project-card:nth-of-type(2) .project-features h4": "关键成果：",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(1)": "实现商家端员工、菜品、分类与套餐管理，并支持分页查询",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(2)": "实现菜品与套餐缓存，优化用户端交互响应效率",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(3)": "完成购物车与下单流程开发，打通关键交易链路",
-      "#projects .project-card:nth-of-type(2) .project-features li:nth-child(4)": "设计模拟微信支付流程，提升下单体验完整性",
-      "#projects .project-card:nth-of-type(2) .btn-primary": "查看 Gitee",
-      "#projects .project-card:nth-of-type(3) .project-type": "微服务架构",
-      "#projects .project-card:nth-of-type(3) .project-content h3": "同城拼车系统",
-      "#projects .project-card:nth-of-type(3) .project-description": "基于微服务的同城拼车平台，支持行程发布、路线匹配、订单处理与消息通知，覆盖从注册到支付的完整流程。",
-      "#projects .project-card:nth-of-type(3) .project-features h4": "关键成果：",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(1)": "完成用户模块开发，支持资料维护、密码修改与证件上传",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(2)": "接入百度 OCR，实现证件信息自动识别",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(3)": "使用装饰器模式实现计价算法，并结合地图 API 完成路径计算",
-      "#projects .project-card:nth-of-type(3) .project-features li:nth-child(4)": "实现订单超时处理与 WebSocket 实时推送，提升交互体验",
-      "#projects .project-card:nth-of-type(3) .btn-primary": "查看 Gitee",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(1)": "Spring Cloud",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(2)": "MyBatis",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(3)": "Redis",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(4)": "RabbitMQ",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(5)": "MongoDB",
-      "#projects .project-card:nth-of-type(3) .tech-tag:nth-child(6)": "WebSocket",
       "#experience > h2": "工作经历",
       "#experience > .section-intro": "在金融与基础设施等复杂系统中持续交付质量，同时向端到端工程影响力演进。",
       ".experience-header h3": "业务QA专员",
@@ -249,7 +304,8 @@
     "aria": {
       "#backToTop": "返回顶部",
       "#contactToggle": "切换联系面板",
-      "#toggleContactBtn": "切换联系面板"
+      "#toggleContactBtn": "切换联系面板",
+      ".hero-btn-primary": "打开 Joyce 的 Gitee 主页"
     }
   }
 }
