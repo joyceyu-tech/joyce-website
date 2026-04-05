@@ -2,8 +2,50 @@
   "_comment": "单一数据源：修改文案只需编辑此文件，然后运行 node build.js 生成 index.html 和 translations.js。个人项目列表在 portfolioProjects，新增项目只需追加对象（slug 唯一），勿改 nth-of-type 序号。",
   "portfolioProjects": [
     {
+      "slug": "smart-campus-ai",
+      "image": "images/project-smart-campus-ai-system.jpg",
+      "mobileImage": "images/project-smart-campus-ai-system-mobile.jpg",
+      "imageAlt": {
+        "en": "Smart Campus AI System cover",
+        "zh": "智慧园区 AI 系统封面"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/campusai",
+      "techTags": ["Spring Boot", "Spring AI", "Redis", "RabbitMQ", "MySQL", "MinIO"],
+      "title": {
+        "en": "Smart Campus AI System",
+        "zh": "智慧园区 AI 系统"
+      },
+      "description": {
+        "en": "An AI application platform for campus scenarios, integrating Spring AI and large models to support assistant conversations, announcement Q&A, and RAG-based document retrieval.",
+        "zh": "面向园区场景的 AI 应用平台，基于 Spring AI 与大模型集成，支持 AI 助手、公告问答与基于 RAG 的文档检索。"
+      },
+      "featuresHeading": {
+        "en": "Key Achievements:",
+        "zh": "关键成果："
+      },
+      "features": {
+        "en": [
+          "Built an AI assistant with Spring AI, supporting conversational Q&A, prompt optimization, and conversation memory persistence in MySQL",
+          "Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically",
+          "Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering",
+          "Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization"
+        ],
+        "zh": [
+          "基于 Spring AI 集成大模型，开发 AI 助手，实现对话问答、提示词优化与 MySQL 会话记忆存储",
+          "基于 Function Calling 实现用户信息自动采集与入库，并动态更新会话上下文",
+          "实现对话式公告系统，完成公告向量化存储与检索，支持自然语言问答",
+          "基于 Redis Stack 构建 RAG 知识库，结合向量检索与大模型生成，实现文档智能检索与总结"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    },
+    {
       "slug": "lottery",
       "image": "images/project-lottery-system.jpg",
+      "mobileImage": "images/project-lottery-system-mobile.jpg",
       "imageAlt": {
         "en": "Red Packet Rain Lottery System cover",
         "zh": "红包雨抽奖系统封面"
@@ -44,6 +86,7 @@
     {
       "slug": "sky-takeout",
       "image": "images/project-sky-takeout-system.jpg",
+      "mobileImage": "images/project-sky-takeout-system-mobile.jpg",
       "imageAlt": {
         "en": "Sky Take Out System cover",
         "zh": "天送外卖系统封面"
@@ -84,6 +127,7 @@
     {
       "slug": "o2o-city-ride",
       "image": "images/project-o2o-city-ride-system.jpg",
+      "mobileImage": "images/project-o2o-city-ride-system-mobile.jpg",
       "imageAlt": {
         "en": "O2O City Ride System cover",
         "zh": "同城拼车系统封面"

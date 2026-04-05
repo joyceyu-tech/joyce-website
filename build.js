@@ -100,9 +100,13 @@ function buildPortfolioOutput(projects) {
       .map((line) => `                            <li>${escapeHtml(line)}</li>`)
       .join('\n');
 
+    const responsiveImageAttrs = project.mobileImage
+      ? ` srcset="${escapeHtml(project.mobileImage)} 640w, ${escapeHtml(project.image)} 1280w" sizes="(max-width: 768px) 100vw, 50vw"`
+      : '';
+
     cardHtmlParts.push(`            <div class="project-card" data-project-slug="${escapeHtml(slug)}">
                 <div class="project-image project-image-ratio-3x2">
-                    <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
+                    <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
                     <h3>${escapeHtml(project.title.en)}</h3>
