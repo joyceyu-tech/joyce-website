@@ -36,7 +36,8 @@
                 <p class="subtitle">{{text|.subtitle}}</p>
                 <p class="tagline">{{text|.tagline}}</p>
                 <div class="hero-actions">
-                    <a href="https://gitee.com/joyceyu434840" class="hero-btn hero-btn-primary" target="_blank" rel="noopener noreferrer">{{text|.hero-btn-primary}}</a>
+                    <a href="#experience" class="hero-btn hero-btn-primary hero-cta-experience">{{text|.hero-cta-experience}}</a>
+                    <a href="#projects" class="hero-btn hero-btn-secondary hero-cta-portfolio">{{text|.hero-cta-portfolio}}</a>
                     <a href="https://github.com/joyceyu-tech/joyce-website" class="hero-btn hero-btn-secondary hero-btn-github" target="_blank" rel="noopener noreferrer" title="View this portfolio source on GitHub">{{text|.hero-btn-github}}</a>
                 </div>
             </div>
@@ -52,8 +53,8 @@
     <nav class="nav-bar">
         <a href="#about">{{text|.nav-bar a[href="#about"]}}</a>
         <a href="#skills">{{text|.nav-bar a[href="#skills"]}}</a>
-        <a href="#projects">{{text|.nav-bar a[href="#projects"]}}</a>
         <a href="#experience">{{text|.nav-bar a[href="#experience"]}}</a>
+        <a href="#projects">{{text|.nav-bar a[href="#projects"]}}</a>
     </nav>
 
     <main id="main-content">
@@ -103,14 +104,6 @@
         </div>
     </section>
 
-    <section id="projects">
-        <h2>{{text|#projects > h2}}</h2>
-        <p class="section-intro">{{text|#projects > .section-intro}}</p>
-        <div class="projects-grid">
-{{inject|portfolioProjectsGrid}}
-        </div>
-    </section>
-
     <section id="experience">
         <h2>{{text|#experience > h2}}</h2>
         <p class="section-intro">{{text|#experience > .section-intro}}</p>
@@ -131,25 +124,7 @@
                 <ul>
                     <li>{{html|#exp-project-1 li:nth-child(1)}}</li>
                     <li>{{html|#exp-project-1 li:nth-child(2)}}</li>
-                </ul>
-            </div>
-
-            <div class="project" id="exp-project-2">
-                <h4>{{text|#exp-project-2 h4}}</h4>
-                <p class="project-overview">{{html|#exp-project-2 .project-overview}}</p>
-                <ul>
-                    <li>{{html|#exp-project-2 li:nth-child(1)}}</li>
-                    <li>{{html|#exp-project-2 li:nth-child(2)}}</li>
-                </ul>
-            </div>
-
-            <div class="project" id="exp-project-3">
-                <h4>{{text|#exp-project-3 h4}}</h4>
-                <p class="project-overview">{{html|#exp-project-3 .project-overview}}</p>
-                <ul>
-                    <li>{{html|#exp-project-3 li:nth-child(1)}}</li>
-                    <li>{{html|#exp-project-3 li:nth-child(2)}}</li>
-                    <li>{{html|#exp-project-3 li:nth-child(3)}}</li>
+                    <li>{{html|#exp-project-1 li:nth-child(3)}}</li>
                 </ul>
             </div>
         </div>
@@ -169,17 +144,17 @@
                 <p class="project-overview">{{html|#exp-project-4 .project-overview}}</p>
                 <ul>
                     <li>{{html|#exp-project-4 li:nth-child(1)}}</li>
+                    <li>{{html|#exp-project-4 li:nth-child(2)}}</li>
                 </ul>
             </div>
+        </div>
+    </section>
 
-            <div class="project" id="exp-project-5">
-                <h4>{{text|#exp-project-5 h4}}</h4>
-                <p class="project-overview">{{html|#exp-project-5 .project-overview}}</p>
-                <ul>
-                    <li>{{html|#exp-project-5 li:nth-child(1)}}</li>
-                    <li>{{html|#exp-project-5 li:nth-child(2)}}</li>
-                </ul>
-            </div>
+    <section id="projects">
+        <h2>{{text|#projects > h2}}</h2>
+        <p class="section-intro">{{text|#projects > .section-intro}}</p>
+        <div class="projects-grid">
+{{inject|portfolioProjectsGrid}}
         </div>
     </section>
     </main>

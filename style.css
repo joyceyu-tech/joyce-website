@@ -303,7 +303,7 @@ header h1 {
 
 .hero-actions {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 22px;
 }
@@ -855,6 +855,10 @@ h2 {
     line-height: 1.5;
 }
 
+.role-note:empty {
+    display: none;
+}
+
 .duration {
     color: #7f8c8d;
     font-size: 15px;
@@ -1191,6 +1195,11 @@ footer .footer-hint-icon {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
+    }
+
+    .hero-actions .hero-btn:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
     }
 
     .hero-actions .hero-btn {
