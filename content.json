@@ -6,18 +6,18 @@
       "image": "images/project-smart-campus-ai-system.jpg",
       "mobileImage": "images/project-smart-campus-ai-system-mobile.jpg",
       "imageAlt": {
-        "en": "Smart Campus AI System cover",
-        "zh": "智慧园区 AI 系统封面"
+        "en": "AI knowledge base and Q&A platform cover",
+        "zh": "AI 智能知识库与问答平台封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/campusai",
       "techTags": ["Spring Boot", "Spring AI", "Redis", "RabbitMQ", "MySQL", "MinIO"],
       "title": {
-        "en": "Smart Campus AI System",
-        "zh": "智慧园区 AI 系统"
+        "en": "AI Knowledge Base & Q&A Platform",
+        "zh": "AI 智能知识库与问答平台"
       },
       "description": {
-        "en": "An AI application platform for campus scenarios, integrating Spring AI and large models to support assistant conversations, announcement Q&A, and RAG-based document retrieval.",
-        "zh": "面向园区场景的 AI 应用平台，基于 Spring AI 与大模型集成，支持 AI 助手、公告问答与基于 RAG 的文档检索。"
+        "en": "An intelligent knowledge base and Q&A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.",
+        "zh": "基于大语言模型构建的智能知识库与问答系统，结合 Spring AI 与向量检索等能力，提升信息检索质量与使用体验。"
       },
       "featuresHeading": {
         "en": "Key Achievements:",
@@ -232,7 +232,7 @@
       ".contact-card .contact-item:nth-of-type(1) a": "Contact Me"
     },
     "html": {
-      "#exp-project-1 .project-overview": "<strong>Project Overview:</strong> Raise cardholder engagement and satisfaction with an integrated points platform—accounts, redemption, campaigns, and lucky-draw experiences—alongside internal operations reporting tests to keep business statistics accurate.",
+      "#exp-project-1 .project-overview": "<strong>Project Overview:</strong> Raise cardholder engagement and satisfaction with an integrated points platform—accounts, redemption, campaigns, and lucky-draw experiences—alongside operations reporting tests to keep business statistics accurate.",
       "#exp-project-1 li:nth-child(1)": "Led core testing for the points mall: account journeys, campaign surfaces, FUN Shop redemption, and Lucky Draw modules.",
       "#exp-project-1 li:nth-child(2)": "Ran end-to-end coverage across the points lifecycle, pairing the mobile app with back-office reporting to verify data accuracy and consistency.",
       "#exp-project-1 li:nth-child(3)": "Authored and executed functional, API, and regression suites; tracked defects with emphasis on points debits, reward fulfillment, and reporting logic.",
@@ -315,7 +315,7 @@
       ".contact-card .contact-item:nth-of-type(1) a": "联系我"
     },
     "html": {
-      "#exp-project-1 .project-overview": "<strong>项目概述：</strong>提升信用卡用户活跃度与客户满意度，构建集积分账户、积分兑换、营销活动及抽奖互动于一体的一站式积分运营平台；同时参与银行内部运营报表功能测试，保障业务数据统计准确性。",
+      "#exp-project-1 .project-overview": "<strong>项目概述：</strong>提升信用卡用户活跃度与客户满意度，构建集积分账户、积分兑换、营销活动及抽奖互动于一体的一站式积分运营平台；同时参与运营报表功能测试，保障业务数据统计准确性。",
       "#exp-project-1 li:nth-child(1)": "负责积分商城核心功能测试，包括积分账户页面、营销活动展示、FUN Shop 积分兑换及 Lucky Draw 抽奖活动等模块。",
       "#exp-project-1 li:nth-child(2)": "深入参与积分商城全流程测试，结合前端 APP 与后台报表数据，验证业务数据传递的准确性与一致性。",
       "#exp-project-1 li:nth-child(3)": "编写并执行功能测试、接口测试及回归测试，跟踪缺陷并重点验证积分扣减、奖励发放及报表统计等业务逻辑。",

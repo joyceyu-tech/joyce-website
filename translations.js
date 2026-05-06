@@ -67,8 +67,8 @@ const TRANSLATIONS = {
             "footer .footer-hint-text": "Best on desktop. In WeChat: … → Open in browser",
             ".contact-card h3": "Quick Contact",
             ".contact-card .contact-item:nth-of-type(1) a": "Contact Me",
-            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-content h3": "Smart Campus AI System",
-            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-description": "An AI application platform for campus scenarios, integrating Spring AI and large models to support assistant conversations, announcement Q&A, and RAG-based document retrieval.",
+            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-content h3": "AI Knowledge Base & Q&A Platform",
+            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-description": "An intelligent knowledge base and Q&A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features h4": "Key Achievements:",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features li:nth-child(1)": "Built an AI assistant with Spring AI, supporting conversational Q&A, prompt optimization, and conversation memory persistence in MySQL",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features li:nth-child(2)": "Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically",
@@ -101,7 +101,7 @@ const TRANSLATIONS = {
             "#projects .project-card[data-project-slug=\"o2o-city-ride\"] .btn-primary .btn-label": "Gitee"
         },
         "html": {
-            "#exp-project-1 .project-overview": "<strong>Project Overview:</strong> Raise cardholder engagement and satisfaction with an integrated points platform—accounts, redemption, campaigns, and lucky-draw experiences—alongside internal operations reporting tests to keep business statistics accurate.",
+            "#exp-project-1 .project-overview": "<strong>Project Overview:</strong> Raise cardholder engagement and satisfaction with an integrated points platform—accounts, redemption, campaigns, and lucky-draw experiences—alongside operations reporting tests to keep business statistics accurate.",
             "#exp-project-1 li:nth-child(1)": "Led core testing for the points mall: account journeys, campaign surfaces, FUN Shop redemption, and Lucky Draw modules.",
             "#exp-project-1 li:nth-child(2)": "Ran end-to-end coverage across the points lifecycle, pairing the mobile app with back-office reporting to verify data accuracy and consistency.",
             "#exp-project-1 li:nth-child(3)": "Authored and executed functional, API, and regression suites; tracked defects with emphasis on points debits, reward fulfillment, and reporting logic.",
@@ -182,8 +182,8 @@ const TRANSLATIONS = {
             "footer .footer-hint-text": "推荐电脑端打开，体验更佳",
             ".contact-card h3": "快速联系",
             ".contact-card .contact-item:nth-of-type(1) a": "联系我",
-            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-content h3": "智慧园区 AI 系统",
-            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-description": "面向园区场景的 AI 应用平台，基于 Spring AI 与大模型集成，支持 AI 助手、公告问答与基于 RAG 的文档检索。",
+            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-content h3": "AI 智能知识库与问答平台",
+            "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-description": "基于大语言模型构建的智能知识库与问答系统，结合 Spring AI 与向量检索等能力，提升信息检索质量与使用体验。",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features h4": "关键成果：",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features li:nth-child(1)": "基于 Spring AI 集成大模型，开发 AI 助手，实现对话问答、提示词优化与 MySQL 会话记忆存储",
             "#projects .project-card[data-project-slug=\"smart-campus-ai\"] .project-features li:nth-child(2)": "基于 Function Calling 实现用户信息自动采集与入库，并动态更新会话上下文",
@@ -216,7 +216,7 @@ const TRANSLATIONS = {
             "#projects .project-card[data-project-slug=\"o2o-city-ride\"] .btn-primary .btn-label": "Gitee"
         },
         "html": {
-            "#exp-project-1 .project-overview": "<strong>项目概述：</strong>提升信用卡用户活跃度与客户满意度，构建集积分账户、积分兑换、营销活动及抽奖互动于一体的一站式积分运营平台；同时参与银行内部运营报表功能测试，保障业务数据统计准确性。",
+            "#exp-project-1 .project-overview": "<strong>项目概述：</strong>提升信用卡用户活跃度与客户满意度，构建集积分账户、积分兑换、营销活动及抽奖互动于一体的一站式积分运营平台；同时参与运营报表功能测试，保障业务数据统计准确性。",
             "#exp-project-1 li:nth-child(1)": "负责积分商城核心功能测试，包括积分账户页面、营销活动展示、FUN Shop 积分兑换及 Lucky Draw 抽奖活动等模块。",
             "#exp-project-1 li:nth-child(2)": "深入参与积分商城全流程测试，结合前端 APP 与后台报表数据，验证业务数据传递的准确性与一致性。",
             "#exp-project-1 li:nth-child(3)": "编写并执行功能测试、接口测试及回归测试，跟踪缺陷并重点验证积分扣减、奖励发放及报表统计等业务逻辑。",
