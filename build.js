@@ -28,10 +28,13 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
-function assertPortfolioProject(project, index) {
+function assertPortfolioProject(project, index, categoryIds = null) {
   const prefix = `portfolioProjects[${index}]`;
   if (!project.slug || !/^[a-z0-9-]+$/.test(project.slug)) {
     throw new Error(`${prefix}: slug 必填，且只能包含小写字母、数字、连字符`);
+  }
+  if (categoryIds && (!project.category || !categoryIds.has(project.category))) {
+    throw new Error(`${prefix}: category 必须匹配 portfolioProjectCategories 中的 id`);
   }
   ['image', 'giteeUrl'].forEach((k) => {
     if (!project[k]) throw new Error(`${prefix}: 缺少 ${k}`);
@@ -64,16 +67,21 @@ function assertPortfolioProject(project, index) {
 /**
  * @returns {{ gridHtmlEn: string, enTextExtra: Record<string,string>, zhTextExtra: Record<string,string> }}
  */
-function buildPortfolioOutput(projects) {
+function buildPortfolioOutput(projects, categories) {
   if (!Array.isArray(projects)) {
     projects = [];
   }
+  if (!Array.isArray(categories)) {
+    categories = [];
+  }
   const enTextExtra = {};
   const zhTextExtra = {};
-  const cardHtmlParts = [];
+  const categoryHtmlParts = [];
+  const categoryIds = new Set(categories.map((category) => category.id));
+  const projectCardsByCategory = new Map(categories.map((category) => [category.id, []]));
 
   projects.forEach((project, index) => {
-    assertPortfolioProject(project, index);
+    assertPortfolioProject(project, index, categoryIds);
     const slug = project.slug;
     const sel = `#projects .project-card[data-project-slug="${slug}"]`;
 
@@ -104,7 +112,7 @@ function buildPortfolioOutput(projects) {
       ? ` srcset="${escapeHtml(project.mobileImage)} 640w, ${escapeHtml(project.image)} 1280w" sizes="(max-width: 768px) 100vw, 50vw"`
       : '';
 
-    cardHtmlParts.push(`            <div class="project-card" data-project-slug="${escapeHtml(slug)}">
+    const cardHtml = `                    <div class="project-card" data-project-slug="${escapeHtml(slug)}">
                 <div class="project-image project-image-ratio-3x2">
                     <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
                 </div>
@@ -127,16 +135,48 @@ ${featuresUlInner}
                         </a>
                     </div>
                 </div>
-            </div>`);
+            </div>`;
+    projectCardsByCategory.get(project.category).push(cardHtml);
   });
 
-  const gridHtmlEn = cardHtmlParts.join('\n\n');
+  categories.forEach((category) => {
+    if (!category.id || !/^[a-z0-9-]+$/.test(category.id)) {
+      throw new Error('portfolioProjectCategories: id 必填，且只能包含小写字母、数字、连字符');
+    }
+    ['en', 'zh'].forEach((lang) => {
+      if (!category.title?.[lang] || !category.description?.[lang]) {
+        throw new Error(`portfolioProjectCategories[${category.id}]: title.${lang} / description.${lang} 必填`);
+      }
+    });
+
+    const categorySel = `#projects .project-category[data-project-category="${category.id}"]`;
+    enTextExtra[`${categorySel} .project-category-title`] = category.title.en;
+    enTextExtra[`${categorySel} .project-category-description`] = category.description.en;
+    zhTextExtra[`${categorySel} .project-category-title`] = category.title.zh;
+    zhTextExtra[`${categorySel} .project-category-description`] = category.description.zh;
+
+    const cards = projectCardsByCategory.get(category.id) || [];
+    if (cards.length === 0) return;
+
+    categoryHtmlParts.push(`        <section class="project-category" data-project-category="${escapeHtml(category.id)}" aria-labelledby="project-category-${escapeHtml(category.id)}">
+            <div class="project-category-header">
+                <h3 class="project-category-title" id="project-category-${escapeHtml(category.id)}">${escapeHtml(category.title.en)}</h3>
+                <p class="project-category-description">${escapeHtml(category.description.en)}</p>
+            </div>
+            <div class="projects-grid">
+${cards.join('\n\n')}
+            </div>
+        </section>`);
+  });
+
+  const gridHtmlEn = categoryHtmlParts.join('\n\n');
   return { gridHtmlEn, enTextExtra, zhTextExtra };
 }
 
 const content = JSON.parse(fs.readFileSync(CONTENT_PATH, 'utf8'));
 const projects = content.portfolioProjects || [];
-const { gridHtmlEn, enTextExtra, zhTextExtra } = buildPortfolioOutput(projects);
+const categories = content.portfolioProjectCategories || [];
+const { gridHtmlEn, enTextExtra, zhTextExtra } = buildPortfolioOutput(projects, categories);
 
 const en = {
   ...content.en,

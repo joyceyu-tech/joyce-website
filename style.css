@@ -626,6 +626,37 @@ h2 {
 }
 
 /* ==================== 项目卡片网格 ==================== */
+.projects-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.project-category {
+    scroll-margin-top: 90px;
+}
+
+.project-category-header {
+    max-width: 820px;
+    margin: 0 auto 22px;
+    text-align: center;
+}
+
+.project-category-title {
+    color: #2c3e50;
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.project-category-description {
+    color: #5d6d7e;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
@@ -1538,6 +1569,24 @@ footer .footer-hint-icon {
     .skill-card p {
         font-size: 13px;
     }
+    .projects-showcase {
+        gap: 36px;
+    }
+
+    .project-category-header {
+        margin-bottom: 18px;
+        padding: 0 6px;
+    }
+
+    .project-category-title {
+        font-size: 20px;
+    }
+
+    .project-category-description {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
     .projects-grid {
         gap: 25px;
         min-width: 0; /* 允许在窄屏下正确收缩 */
@@ -1764,6 +1813,18 @@ footer .footer-hint-icon {
     
     h2 {
         font-size: 22px;
+    }
+
+    .projects-showcase {
+        gap: 30px;
+    }
+
+    .project-category-title {
+        font-size: 18px;
+    }
+
+    .project-category-description {
+        font-size: 12px;
     }
     
     .project-card {
