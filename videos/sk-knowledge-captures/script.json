@@ -1,0 +1,26 @@
+[
+  {
+    "key": "chat",
+    "url": "http://localhost:8080/chat",
+    "title": "对话",
+    "subtitle": "选择模型与知识库，发起上下文问答"
+  },
+  {
+    "key": "chatModel",
+    "url": "http://localhost:8080/chatModel",
+    "title": "对话模型",
+    "subtitle": "OpenAI 兼容模型动态接入"
+  },
+  {
+    "key": "knowledge",
+    "url": "http://localhost:8080/knowledge",
+    "title": "知识库管理",
+    "subtitle": "多知识库组织与检索隔离"
+  },
+  {
+    "key": "files",
+    "url": "http://localhost:8080/files",
+    "title": "文件管理",
+    "subtitle": "上传文档，进入知识处理流程"
+  }
+]

@@ -4,6 +4,7 @@
   "description": "Joyce's portfolio website - single source i18n",
   "scripts": {
     "build": "node build.js",
+    "preview": "node scripts/serve-static.js",
     "hook:install": "node scripts/install-pre-commit-hook.js"
   }
 }

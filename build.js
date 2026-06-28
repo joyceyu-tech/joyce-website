@@ -62,6 +62,28 @@ function assertPortfolioProject(project, index, categoryIds = null) {
   if (project.features.en.length !== project.features.zh.length) {
     throw new Error(`${prefix}: features.en 与 features.zh 条数须一致`);
   }
+  if (project.video) {
+    if (!project.video.src) {
+      throw new Error(`${prefix}: video.src 必填`);
+    }
+    ['label', 'caption'].forEach((key) => {
+      if (project.video[key] && (!project.video[key].en || !project.video[key].zh)) {
+        throw new Error(`${prefix}: video.${key}.en / video.${key}.zh 必须同时填写`);
+      }
+    });
+  }
+}
+
+function getVideoType(src) {
+  const extension = String(src).split('?')[0].split('#')[0].split('.').pop().toLowerCase();
+  const types = {
+    mp4: 'video/mp4',
+    webm: 'video/webm',
+    ogv: 'video/ogg',
+    ogg: 'video/ogg',
+    mov: 'video/quicktime'
+  };
+  return types[extension] || '';
 }
 
 /**
@@ -111,11 +133,22 @@ function buildPortfolioOutput(projects, categories) {
     const responsiveImageAttrs = project.mobileImage
       ? ` srcset="${escapeHtml(project.mobileImage)} 640w, ${escapeHtml(project.image)} 1280w" sizes="(max-width: 768px) 100vw, 50vw"`
       : '';
+    const videoPoster = project.video?.poster || project.image;
+    const videoType = project.video ? getVideoType(project.video.src) : '';
+    const videoTypeAttr = videoType ? ` type="${escapeHtml(videoType)}"` : '';
+    const mediaHtml = project.video
+      ? `                <div class="project-image project-media project-media-video">
+                    <video class="project-demo-video" controls preload="auto" poster="${escapeHtml(videoPoster)}" aria-label="${escapeHtml(project.title.en)} demo video">
+                        <source src="${escapeHtml(project.video.src)}"${videoTypeAttr}>
+                        Your browser does not support embedded videos.
+                    </video>
+                </div>`
+      : `                <div class="project-image project-image-ratio-3x2 project-media">
+                    <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
+                </div>`;
 
     const cardHtml = `                    <div class="project-card" data-project-slug="${escapeHtml(slug)}">
-                <div class="project-image project-image-ratio-3x2">
-                    <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
-                </div>
+${mediaHtml}
                 <div class="project-content">
                     <h3>${escapeHtml(project.title.en)}</h3>
                     <p class="project-description">${escapeHtml(project.description.en)}</p>

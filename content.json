@@ -181,6 +181,10 @@
         "en": "An intelligent private knowledge base and Q&A system built with Spring Boot, supporting document upload, vector retrieval, AI chat, RBAC permissions, and conversation history.",
         "zh": "基于 Spring Boot 构建的私有化智能知识库与问答系统，支持文档上传、向量检索、AI 对话、RBAC 权限与会话历史。"
       },
+      "video": {
+        "src": "videos/sk-knowledge-demo.mp4",
+        "poster": "videos/sk-knowledge-demo-poster.jpg"
+      },
       "featuresHeading": {
         "en": "Key Achievements:",
         "zh": "关键成果："

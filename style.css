@@ -733,6 +733,19 @@ h2 {
     transform: none;
 }
 
+.project-media-video {
+    height: auto;
+    aspect-ratio: 3 / 2;
+}
+
+.project-media-video .project-demo-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #16263f;
+    object-fit: cover;
+}
+
 .project-content {
     padding: 28px;
     display: flex;

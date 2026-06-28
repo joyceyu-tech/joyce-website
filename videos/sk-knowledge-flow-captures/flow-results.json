@@ -1,0 +1,45 @@
+[
+  {
+    "key": "01-chat-entry",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 对话 A Admin 对话历史 新对话 程序员知识库中的程序员主要做什么工作？ 对话 输入您的问题... 选择模型： Qwen/Qwen3-8B 选择知识库： 选择知识库 发送",
+    "url": "http://localhost:8080/chat"
+  },
+  {
+    "key": "02-files",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 文件管理 A Admin 请先选择知识库 点击或者拖动文件到该区域来上传 支持单个或批量上传 全部文件 回收站 文件名 知识库 类型 大小 创建时间 操作 程序员知识库（简版）.pdf 程序员知识库 PDF 422.4 KB 2026-06-28 22:17:51 下载 删除 程序员档案.pdf 程序员知识库 PDF 338.5 KB 2026-06-28 22:17:55 下载 删除 共 2 条 1 5 / 页 跳至",
+    "url": "http://localhost:8080/files"
+  },
+  {
+    "key": "03-knowledge",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 知识库管理 A Admin 添加知识库 程序员知识库 无描述 查看文件 测试空白知识库 无描述 查看文件",
+    "url": "http://localhost:8080/knowledge"
+  },
+  {
+    "key": "04-model",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 模型管理 A Admin 添加模型 刷新 模型名称 请求地址 密钥 描述 价格 分类 类型 备注 操作 Qwen/Qwen3-8B https://api.siliconflow.cn sk-******zsu ¥0.00 deepseek chat 共 1 条数据 1 10 / 页 跳至",
+    "url": "http://localhost:8080/chatModel"
+  },
+  {
+    "key": "05-chat-selected",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 对话 A Admin 对话历史 新对话 程序员知识库中的程序员主要做什么工作？ 对话 输入您的问题... 选择模型： Qwen/Qwen3-8B 选择知识库： 程序员知识库 发送",
+    "url": "http://localhost:8080/chat"
+  },
+  {
+    "key": "06-hit-typed",
+    "note": "typed before sending hit question"
+  },
+  {
+    "key": "07-rag-hit-result",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 对话 A Admin 对话历史 新对话 程序员知识库中的程序员主要做什么工作？ 程序员知识库中的程序员主要做什么工作？ 程序员知识库中的程序员主要做什么工作？ 我 我 几秒前 程序员知识库中的程序员主要做什么工作？ AI AI 助手 几秒前 程序员知识库中的程序员主要负责开发和维护企业内部的AI编程助手、RAG知识库系统、AIAgent以及智能问答系统等工作，具体包括自然语言生成代码、解释报错信息、提供代码优化建议、大语言模型（LLM）与Prompt优化、大模型接口集成、AI服务性能优化等任务。同时，他们还参与企业知识库平台的搭建，实现文档向量化、语义检索和智能问答，帮助员工快速获取技术文档和业务资料。 输入您的问题... 选择模型： Qwen/Qwen3-8B 选择知识库： 程序员知识库 发送",
+    "url": "http://localhost:8080/chat"
+  },
+  {
+    "key": "08-miss-typed",
+    "note": "typed before sending miss question"
+  },
+  {
+    "key": "09-rag-miss-result",
+    "text": "SK-Knowledge 对话 对话模型 知识库管理 文件管理 首页 / 对话 A Admin 对话历史 新对话 程序员知识库中的程序员主要做什么工作？ 程序员知识库中的程序员主要做什么工作？ 程序员知识库中的程序员主要做什么工作？ 我 我 几秒前 程序员知识库中的程序员主要做什么工作？ AI AI 助手 几秒前 程序员知识库中的程序员主要负责开发和维护企业内部的AI编程助手、RAG知识库系统、AIAgent以及智能问答系统等工作，具体包括自然语言生成代码、解释报错信息、提供代码优化建议、大语言模型（LLM）与Prompt优化、大模型接口集成、AI服务性能优化等任务。同时，他们还参与企业知识库平台的搭建，实现文档向量化、语义检索和智能问答，帮助员工快速获取技术文档和业务资料。 我 我 几秒前 这个知识库里有没有关于火车票退票规则的说明？ AI AI 助手 几秒前 知识库中没有关于火车票退票规则的说明。 输入您的问题... 选择模型： Qwen/Qwen3-8B 选择知识库： 程序员知识库 发送",
+    "url": "http://localhost:8080/chat"
+  }
+]
