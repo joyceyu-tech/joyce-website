@@ -283,9 +283,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const architectureSection = document.querySelector('.project-architecture');
     const imagePreview = document.getElementById('imagePreview');
     const imagePreviewImg = document.getElementById('imagePreviewImg');
+    const imagePreviewVideo = document.getElementById('imagePreviewVideo');
     const imagePreviewClose = document.getElementById('imagePreviewClose');
     const imagePreviewBackdrop = document.querySelector('.image-preview-backdrop');
     const architectureImages = document.querySelectorAll('.project-architecture-figure img');
+    const projectVideoTriggers = document.querySelectorAll('.project-video-trigger');
 
     function closeImagePreview() {
         if (!imagePreview || !imagePreviewImg) return;
@@ -293,11 +295,25 @@ document.addEventListener('DOMContentLoaded', function() {
         imagePreview.setAttribute('aria-hidden', 'true');
         imagePreviewImg.removeAttribute('src');
         imagePreviewImg.setAttribute('alt', '');
+        imagePreviewImg.removeAttribute('hidden');
+        if (imagePreviewVideo) {
+            imagePreviewVideo.pause();
+            imagePreviewVideo.removeAttribute('src');
+            imagePreviewVideo.removeAttribute('poster');
+            imagePreviewVideo.setAttribute('hidden', '');
+            imagePreviewVideo.load();
+        }
         document.body.classList.remove('preview-open');
     }
 
     function openImagePreview(img) {
         if (!imagePreview || !imagePreviewImg || !img) return;
+        if (imagePreviewVideo) {
+            imagePreviewVideo.pause();
+            imagePreviewVideo.removeAttribute('src');
+            imagePreviewVideo.setAttribute('hidden', '');
+        }
+        imagePreviewImg.removeAttribute('hidden');
         imagePreviewImg.setAttribute('src', img.currentSrc || img.src);
         imagePreviewImg.setAttribute('alt', img.getAttribute('alt') || '');
         imagePreview.classList.remove('hidden');
@@ -306,6 +322,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (imagePreviewClose) {
             imagePreviewClose.focus();
         }
+    }
+
+    function openVideoPreview(trigger) {
+        if (!imagePreview || !imagePreviewImg || !imagePreviewVideo || !trigger) return;
+        const src = trigger.getAttribute('data-video-src');
+        if (!src) return;
+        const poster = trigger.getAttribute('data-video-poster') || '';
+        imagePreviewImg.setAttribute('hidden', '');
+        imagePreviewImg.removeAttribute('src');
+        imagePreviewVideo.setAttribute('src', src);
+        if (poster) {
+            imagePreviewVideo.setAttribute('poster', poster);
+        }
+        imagePreviewVideo.removeAttribute('hidden');
+        imagePreview.classList.remove('hidden');
+        imagePreview.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('preview-open');
+        imagePreviewVideo.focus();
     }
 
     architectureImages.forEach(img => {
@@ -319,6 +353,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 openImagePreview(this);
             }
+        });
+    });
+
+    projectVideoTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            openVideoPreview(this);
         });
     });
 

@@ -156,56 +156,24 @@
 
     <section id="projects">
         <h2>Personal Projects</h2>
-        <p class="section-intro">Practice and notes across backend systems, distributed architectures, and AI-style applications.</p>
+        <p class="section-intro">Selected projects across AI applications, backend systems, distributed architectures, and business workflows.</p>
         <div class="projects-showcase">
         <section class="project-category" data-project-category="ai-rag" aria-labelledby="project-category-ai-rag">
             <div class="project-category-header">
-                <h3 class="project-category-title" id="project-category-ai-rag">AI &amp; RAG Practice</h3>
-                <p class="project-category-description">Spring AI applications, conversational workflows, multimodal chat, vector retrieval, and document Q&amp;A.</p>
+                <h3 class="project-category-title" id="project-category-ai-rag">AI &amp; RAG Projects</h3>
+                <p class="project-category-description">Production-style AI applications covering Spring AI, conversational workflows, multimodal chat, vector retrieval, and document Q&amp;A.</p>
             </div>
             <div class="projects-grid">
-                    <div class="project-card" data-project-slug="springai-demo">
-                <div class="project-image project-image-ratio-3x2 project-media">
-                    <img src="images/project-springai-demo.jpg" srcset="images/project-springai-demo-mobile.jpg 640w, images/project-springai-demo.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="Spring AI Demo cover" loading="lazy" decoding="async">
-                </div>
-                <div class="project-content">
-                    <h3>Spring AI Demo</h3>
-                    <p class="project-description">A frontend-backend separated Spring AI learning demo covering chatbots, multimodal image-text conversations, business Q&amp;A, conversation history, and PDF-based RAG.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">Spring AI</span>
-                        <span class="tech-tag">Vue 3</span>
-                        <span class="tech-tag">RAG</span>
-                        <span class="tech-tag">VectorStore</span>
-                        <span class="tech-tag">ChatMemory</span>
-                        <span class="tech-tag">PDF</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Achievements:</h4>
-                        <ul>
-                            <li>Built general chat, emotional-support simulation, and business customer-service scenarios with reusable conversation APIs</li>
-                            <li>Implemented multimodal chat by accepting prompt, chatId, and optional image files, then routing text-only and image-text requests appropriately</li>
-                            <li>Developed ChatPDF workflow that uploads PDF files, splits pages into documents, writes vectors into VectorStore, and filters retrieval by current session file</li>
-                            <li>Integrated ChatMemory with chatId-based conversation history for multi-turn dialogue and contextual PDF Q&amp;A</li>
-                        </ul>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/springai-demo.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
-                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
-                            </svg>
-                            <span class="btn-label">Gitee</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
                     <div class="project-card" data-project-slug="sk-knowledge">
                 <div class="project-image project-media project-media-video">
-                    <video class="project-demo-video" controls preload="auto" poster="videos/sk-knowledge-demo-poster.jpg" aria-label="SK Knowledge RAG Knowledge Base System demo video">
-                        <source src="videos/sk-knowledge-demo.mp4" type="video/mp4">
-                        Your browser does not support embedded videos.
-                    </video>
+                    <button class="project-video-trigger" type="button" data-video-src="videos/sk-knowledge-demo.mp4" data-video-type="video/mp4" data-video-poster="videos/sk-knowledge-demo-poster.jpg" aria-label="Play SK Knowledge RAG Knowledge Base System demo video">
+                        <img src="videos/sk-knowledge-demo-poster.jpg" alt="SK Knowledge RAG Knowledge Base System demo video cover" loading="lazy" decoding="async">
+                        <span class="project-video-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </span>
+                    </button>
                 </div>
                 <div class="project-content">
                     <h3>SK Knowledge RAG Knowledge Base System</h3>
@@ -264,8 +232,15 @@
             </div>
 
                     <div class="project-card" data-project-slug="smart-campus-ai">
-                <div class="project-image project-image-ratio-3x2 project-media">
-                    <img src="images/project-smart-campus-ai-system.jpg" srcset="images/project-smart-campus-ai-system-mobile.jpg 640w, images/project-smart-campus-ai-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="AI knowledge base and Q&amp;A platform cover" loading="lazy" decoding="async">
+                <div class="project-image project-media project-media-video">
+                    <button class="project-video-trigger" type="button" data-video-src="videos/campusai-demo.webm" data-video-type="video/webm" data-video-poster="images/project-smart-campus-ai-video-poster.jpg" aria-label="Play AI Knowledge Base &amp; Q&amp;A Platform demo video">
+                        <img src="images/project-smart-campus-ai-video-poster.jpg" alt="AI Knowledge Base &amp; Q&amp;A Platform demo video cover" loading="lazy" decoding="async">
+                        <span class="project-video-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </span>
+                    </button>
                 </div>
                 <div class="project-content">
                     <h3>AI Knowledge Base &amp; Q&amp;A Platform</h3>
@@ -286,6 +261,28 @@
                             <li>Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering</li>
                             <li>Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization</li>
                         </ul>
+                    </div>
+                    <div class="project-architecture">
+                        <div class="project-architecture-copy">
+                            <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
+                            <p class="project-architecture-intro">Two flows highlight the project design: the first explains how Spring AI coordinates tool calling for business actions, while the second shows how notices are indexed into a vector store for conversational Q&amp;A.</p>
+                        </div>
+                        <div class="project-architecture-grid">
+                            <figure class="project-architecture-figure">
+                                <img src="images/campusai-tool-calling-flow.png" alt="Tool calling interaction flow for the CampusAI assistant" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <strong class="project-architecture-title">Tool Calling Interaction Flow</strong>
+                                    <span class="project-architecture-caption">Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.</span>
+                                </figcaption>
+                            </figure>
+                            <figure class="project-architecture-figure">
+                                <img src="images/campusai-notice-rag-flow.png" alt="Conversational notice RAG flow for CampusAI" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <strong class="project-architecture-title">Conversational Notice RAG Flow</strong>
+                                    <span class="project-architecture-caption">Summarizes notice persistence, RabbitMQ-triggered indexing, embedding generation, vector storage, semantic retrieval, and answer generation.</span>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://gitee.com/joyceyu434840/campusai" class="btn-primary" target="_blank" rel="noopener noreferrer">
@@ -527,6 +524,7 @@
                 </svg>
             </button>
             <img id="imagePreviewImg" alt="">
+            <video class="image-preview-video" id="imagePreviewVideo" controls playsinline preload="metadata" hidden></video>
         </div>
     </div>
 

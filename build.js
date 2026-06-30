@@ -171,10 +171,14 @@ function buildPortfolioOutput(projects, categories) {
     const videoTypeAttr = videoType ? ` type="${escapeHtml(videoType)}"` : '';
     const mediaHtml = project.video
       ? `                <div class="project-image project-media project-media-video">
-                    <video class="project-demo-video" controls preload="auto" poster="${escapeHtml(videoPoster)}" aria-label="${escapeHtml(project.title.en)} demo video">
-                        <source src="${escapeHtml(project.video.src)}"${videoTypeAttr}>
-                        Your browser does not support embedded videos.
-                    </video>
+                    <button class="project-video-trigger" type="button" data-video-src="${escapeHtml(project.video.src)}" data-video-type="${escapeHtml(videoType)}" data-video-poster="${escapeHtml(videoPoster)}" aria-label="Play ${escapeHtml(project.title.en)} demo video">
+                        <img src="${escapeHtml(videoPoster)}" alt="${escapeHtml(project.title.en)} demo video cover" loading="lazy" decoding="async">
+                        <span class="project-video-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </span>
+                    </button>
                 </div>`
       : `                <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
