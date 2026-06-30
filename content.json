@@ -8,8 +8,8 @@
         "zh": "AI 与 RAG 项目"
       },
       "description": {
-        "en": "Production-style AI applications covering Spring AI, conversational workflows, multimodal chat, vector retrieval, and document Q&A.",
-        "zh": "围绕 Spring AI、对话流程、图文多模态、向量检索与文档问答构建的项目作品。"
+        "en": "Spring AI · RAG · Multimodal Chat · Vector Search · Document Q&A",
+        "zh": "Spring AI · RAG · 图文多模态 · 向量检索 · 文档问答"
       }
     },
     {
@@ -237,8 +237,8 @@
           "zh": "架构与能力说明"
         },
         "intro": {
-          "en": "Two flows highlight the project design: the first explains how Spring AI coordinates tool calling for business actions, while the second shows how notices are indexed into a vector store for conversational Q&A.",
-          "zh": "这里用两张流程图说明项目设计：第一张展示 Spring AI 如何编排 Tool Calling 完成业务动作，第二张展示公告数据如何进入向量库并支持对话式问答。"
+          "en": "Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&A.",
+          "zh": "这里用两张流程图说明项目设计：第一张展示 Spring AI 如何编排 Tool Calling 完成业务动作，第二张整合公告索引一致性与对话式 RAG 问答链路。"
         },
         "diagrams": [
           {
@@ -257,18 +257,18 @@
             }
           },
           {
-            "image": "images/campusai-notice-rag-flow.png",
+            "image": "images/campusai-notice-lifecycle-flow-v2.png",
             "title": {
-              "en": "Conversational Notice RAG Flow",
-              "zh": "对话式公告 RAG 流程"
+              "en": "Notice Knowledge Lifecycle & RAG Q&A",
+              "zh": "公告知识生命周期与 RAG 问答"
             },
             "caption": {
-              "en": "Summarizes notice persistence, RabbitMQ-triggered indexing, embedding generation, vector storage, semantic retrieval, and answer generation.",
-              "zh": "概括公告入库、RabbitMQ 触发索引、文本向量化、向量存储、语义召回与回答生成的链路。"
+              "en": "Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.",
+              "zh": "把公告 CRUD 同步、RabbitMQ 异步索引、document_id 向量清理、语义召回与大模型回答整合到同一张生命周期图中。"
             },
             "alt": {
-              "en": "Conversational notice RAG flow for CampusAI",
-              "zh": "CampusAI 对话式公告 RAG 流程图"
+              "en": "Notice knowledge lifecycle and RAG Q&A flow for CampusAI",
+              "zh": "CampusAI 公告知识生命周期与 RAG 问答流程图"
             }
           }
         ]
