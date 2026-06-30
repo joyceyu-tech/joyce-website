@@ -679,6 +679,10 @@ h2 {
     box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
 }
 
+.project-card[data-project-slug="sk-knowledge"] {
+    grid-column: 1 / -1;
+}
+
 .project-image {
     position: relative;
     width: 100%;
@@ -828,6 +832,70 @@ h2 {
 
 .project-features li:last-child {
     margin-bottom: 0;
+}
+
+.project-architecture {
+    margin-bottom: 22px;
+    padding-top: 4px;
+}
+
+.project-architecture-copy {
+    margin-bottom: 14px;
+}
+
+.project-architecture-heading {
+    color: #667eea;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-architecture-intro {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.project-architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.project-architecture-figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.project-architecture-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e6e9f2;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: zoom-in;
+}
+
+.project-architecture-figure figcaption {
+    display: grid;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.project-architecture-title {
+    color: #2c3e50;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.project-architecture-caption {
+    color: #5d6d7e;
+    font-size: 12px;
+    line-height: 1.65;
 }
 
 /* 项目链接按钮 */
@@ -1066,6 +1134,82 @@ footer .footer-hint-icon {
 .back-to-top svg {
     width: 24px;
     height: 24px;
+}
+
+body.architecture-focus .contact-toggle,
+body.architecture-focus .back-to-top,
+body.preview-open .contact-toggle,
+body.preview-open .back-to-top,
+body.preview-open .lang-switch-floating,
+body.preview-open .top-banner {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.image-preview {
+    position: fixed;
+    inset: 0;
+    z-index: 11000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+}
+
+.image-preview.hidden {
+    display: none;
+}
+
+.image-preview-backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    padding: 0;
+    background: rgba(18, 26, 43, 0.78);
+    cursor: zoom-out;
+}
+
+.image-preview-dialog {
+    position: relative;
+    width: min(1120px, 100%);
+    max-height: calc(100vh - 44px);
+    overflow: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.image-preview-dialog img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.image-preview-close {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 8px auto;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(18, 26, 43, 0.78);
+    cursor: pointer;
+}
+
+.image-preview-close svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
 }
 
 /* ==================== 滚动进度条 ==================== */
@@ -1620,6 +1764,26 @@ footer .footer-hint-icon {
     }
     .project-card:hover {
         transform: none;
+    }
+    .project-architecture-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .image-preview {
+        padding: 12px;
+    }
+    .image-preview-dialog {
+        max-height: calc(100vh - 24px);
+        border-radius: 8px;
+    }
+    .image-preview-dialog img {
+        width: max(720px, 100%);
+        max-width: none;
+    }
+    .image-preview-close {
+        top: 10px;
+        width: 38px;
+        height: 38px;
     }
     .project-image {
         min-width: 0;

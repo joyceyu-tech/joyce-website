@@ -183,6 +183,19 @@
         </svg>
     </button>
 
+    <div class="image-preview hidden" id="imagePreview" aria-hidden="true">
+        <button class="image-preview-backdrop" type="button" aria-label="Close image preview"></button>
+        <div class="image-preview-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+            <button class="image-preview-close" id="imagePreviewClose" type="button" aria-label="Close image preview">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <img id="imagePreviewImg" alt="">
+        </div>
+    </div>
+
     <div class="contact-sidebar hidden" id="contactSidebar">
         <div class="contact-card">
             <button class="toggle-contact-btn" id="toggleContactBtn" aria-label="Toggle contact panel">

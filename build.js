@@ -72,6 +72,25 @@ function assertPortfolioProject(project, index, categoryIds = null) {
       }
     });
   }
+  if (project.architecture) {
+    ['en', 'zh'].forEach((lang) => {
+      if (!project.architecture.heading?.[lang] || !project.architecture.intro?.[lang]) {
+        throw new Error(`${prefix}: architecture.heading.${lang} / architecture.intro.${lang} 必填`);
+      }
+    });
+    if (!Array.isArray(project.architecture.diagrams) || project.architecture.diagrams.length === 0) {
+      throw new Error(`${prefix}: architecture.diagrams 必须为非空数组`);
+    }
+    project.architecture.diagrams.forEach((diagram, diagramIndex) => {
+      const diagramPrefix = `${prefix}.architecture.diagrams[${diagramIndex}]`;
+      if (!diagram.image) throw new Error(`${diagramPrefix}: image 必填`);
+      ['en', 'zh'].forEach((lang) => {
+        if (!diagram.title?.[lang] || !diagram.caption?.[lang] || !diagram.alt?.[lang]) {
+          throw new Error(`${diagramPrefix}: title.${lang} / caption.${lang} / alt.${lang} 必填`);
+        }
+      });
+    });
+  }
 }
 
 function getVideoType(src) {
@@ -122,6 +141,20 @@ function buildPortfolioOutput(projects, categories) {
       zhTextExtra[`${sel} .project-features li:nth-child(${i + 1})`] = line;
     });
     zhTextExtra[`${sel} .btn-primary .btn-label`] = project.linkLabel.zh;
+    if (project.architecture) {
+      enTextExtra[`${sel} .project-architecture-heading`] = project.architecture.heading.en;
+      enTextExtra[`${sel} .project-architecture-intro`] = project.architecture.intro.en;
+      zhTextExtra[`${sel} .project-architecture-heading`] = project.architecture.heading.zh;
+      zhTextExtra[`${sel} .project-architecture-intro`] = project.architecture.intro.zh;
+
+      project.architecture.diagrams.forEach((diagram, i) => {
+        const diagramSel = `${sel} .project-architecture-figure:nth-child(${i + 1})`;
+        enTextExtra[`${diagramSel} .project-architecture-title`] = diagram.title.en;
+        enTextExtra[`${diagramSel} .project-architecture-caption`] = diagram.caption.en;
+        zhTextExtra[`${diagramSel} .project-architecture-title`] = diagram.title.zh;
+        zhTextExtra[`${diagramSel} .project-architecture-caption`] = diagram.caption.zh;
+      });
+    }
 
     const techStackInner = project.techTags
       .map((t) => `                        <span class="tech-tag">${escapeHtml(t)}</span>`)
@@ -146,6 +179,24 @@ function buildPortfolioOutput(projects, categories) {
       : `                <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
                 </div>`;
+    const architectureHtml = project.architecture
+      ? `                    <div class="project-architecture">
+                        <div class="project-architecture-copy">
+                            <h4 class="project-architecture-heading">${escapeHtml(project.architecture.heading.en)}</h4>
+                            <p class="project-architecture-intro">${escapeHtml(project.architecture.intro.en)}</p>
+                        </div>
+                        <div class="project-architecture-grid">
+${project.architecture.diagrams.map((diagram) => `                            <figure class="project-architecture-figure">
+                                <img src="${escapeHtml(diagram.image)}" alt="${escapeHtml(diagram.alt.en)}" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <strong class="project-architecture-title">${escapeHtml(diagram.title.en)}</strong>
+                                    <span class="project-architecture-caption">${escapeHtml(diagram.caption.en)}</span>
+                                </figcaption>
+                            </figure>`).join('\n')}
+                        </div>
+                    </div>
+`
+      : '';
 
     const cardHtml = `                    <div class="project-card" data-project-slug="${escapeHtml(slug)}">
 ${mediaHtml}
@@ -161,7 +212,7 @@ ${techStackInner}
 ${featuresUlInner}
                         </ul>
                     </div>
-                    <div class="project-links">
+${architectureHtml}                    <div class="project-links">
                         <a href="${escapeHtml(project.giteeUrl)}" class="btn-primary" target="_blank" rel="noopener noreferrer">
                             ${GITEE_ICON_SVG}
                             <span class="btn-label">${escapeHtml(project.linkLabel.en)}</span>

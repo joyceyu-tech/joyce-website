@@ -185,6 +185,48 @@
         "src": "videos/sk-knowledge-demo.mp4",
         "poster": "videos/sk-knowledge-demo-poster.jpg"
       },
+      "architecture": {
+        "heading": {
+          "en": "Architecture & Capability Notes",
+          "zh": "架构与能力说明"
+        },
+        "intro": {
+          "en": "Two maps make the project easier to read: the first clarifies the product capabilities, and the second summarizes the backend, storage, retrieval, task, and security stack.",
+          "zh": "这里用两张图把项目讲清楚：第一张展示系统功能边界，第二张概括后端、存储、检索、任务处理与安全认证等技术组成。"
+        },
+        "diagrams": [
+          {
+            "image": "images/sk-knowledge-function-map.png",
+            "title": {
+              "en": "Capability Map",
+              "zh": "功能点总览"
+            },
+            "caption": {
+              "en": "Covers multi-turn chat, model selection, knowledge-base management, document recall, file chunking, vector processing, memory, and recycle-bin flows.",
+              "zh": "覆盖多轮对话、模型选择、知识库管理、文档召回、文件分块、向量处理、记忆信息与回收站等核心能力。"
+            },
+            "alt": {
+              "en": "Mind map of SK Knowledge product capabilities",
+              "zh": "SK Knowledge 项目功能点思维导图"
+            }
+          },
+          {
+            "image": "images/sk-knowledge-technology-map.png",
+            "title": {
+              "en": "Technology Map",
+              "zh": "技术点总览"
+            },
+            "caption": {
+              "en": "Shows Spring Boot, Spring Security, Spring AI, Weaviate, Redis, MongoDB, MinIO, Tika, Temporal Saga, SSE, and document chunking.",
+              "zh": "展示 Spring Boot、Spring Security、Spring AI、Weaviate、Redis、MongoDB、MinIO、Tika、Temporal Saga、SSE 与文档分割等实现要点。"
+            },
+            "alt": {
+              "en": "Mind map of SK Knowledge technical architecture",
+              "zh": "SK Knowledge 项目技术点思维导图"
+            }
+          }
+        ]
+      },
       "featuresHeading": {
         "en": "Key Achievements:",
         "zh": "关键成果："

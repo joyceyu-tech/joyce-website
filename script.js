@@ -279,8 +279,77 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.borderLeftColor = borderColorByIndex;
     });
 
-    // ==================== 7. 项目图片（手机端不提供点击放大，用户可直接双指缩放页面） ====================
-    // 已移除 lightbox 相关逻辑
+    // ==================== 7. 架构图查看体验 ====================
+    const architectureSection = document.querySelector('.project-architecture');
+    const imagePreview = document.getElementById('imagePreview');
+    const imagePreviewImg = document.getElementById('imagePreviewImg');
+    const imagePreviewClose = document.getElementById('imagePreviewClose');
+    const imagePreviewBackdrop = document.querySelector('.image-preview-backdrop');
+    const architectureImages = document.querySelectorAll('.project-architecture-figure img');
+
+    function closeImagePreview() {
+        if (!imagePreview || !imagePreviewImg) return;
+        imagePreview.classList.add('hidden');
+        imagePreview.setAttribute('aria-hidden', 'true');
+        imagePreviewImg.removeAttribute('src');
+        imagePreviewImg.setAttribute('alt', '');
+        document.body.classList.remove('preview-open');
+    }
+
+    function openImagePreview(img) {
+        if (!imagePreview || !imagePreviewImg || !img) return;
+        imagePreviewImg.setAttribute('src', img.currentSrc || img.src);
+        imagePreviewImg.setAttribute('alt', img.getAttribute('alt') || '');
+        imagePreview.classList.remove('hidden');
+        imagePreview.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('preview-open');
+        if (imagePreviewClose) {
+            imagePreviewClose.focus();
+        }
+    }
+
+    architectureImages.forEach(img => {
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.addEventListener('click', function() {
+            openImagePreview(this);
+        });
+        img.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openImagePreview(this);
+            }
+        });
+    });
+
+    if (imagePreviewClose) {
+        imagePreviewClose.addEventListener('click', closeImagePreview);
+    }
+    if (imagePreviewBackdrop) {
+        imagePreviewBackdrop.addEventListener('click', closeImagePreview);
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeImagePreview();
+        }
+    });
+
+    function updateArchitectureFocus(entries) {
+        const isFocused = entries.some(entry => entry.isIntersecting && entry.intersectionRatio > 0.18);
+        document.body.classList.toggle('architecture-focus', isMobileViewport.matches && isFocused);
+    }
+
+    if (architectureSection && 'IntersectionObserver' in window) {
+        const architectureObserver = new IntersectionObserver(updateArchitectureFocus, {
+            threshold: [0, 0.18, 0.5]
+        });
+        architectureObserver.observe(architectureSection);
+        onMediaQueryChange(isMobileViewport, function() {
+            if (!isMobileViewport.matches) {
+                document.body.classList.remove('architecture-focus');
+            }
+        });
+    }
 
     // ==================== 滚动事件监听 ====================
     let scrollTimeout;
