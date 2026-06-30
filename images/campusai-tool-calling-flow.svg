@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="900" viewBox="0 0 1460 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tool Calling Interaction Flow</title>
+  <desc id="desc">Tool calling interaction flow with user, AI app, LLM, and business APIs lanes. Text has been spaced to avoid touching borders or arrows.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#eaf1fb"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M2 2 L11 6.5 L2 11 Z" fill="#138ee5"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M2 2 L11 6.5 L2 11 Z" fill="#8a63ff"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M2 2 L11 6.5 L2 11 Z" fill="#19a76f"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto">
+      <path d="M2 2 L11 6.5 L2 11 Z" fill="#f39a22"/>
+    </marker>
+  </defs>
+
+  <rect width="1460" height="900" fill="url(#bg)"/>
+  <text x="34" y="66" fill="#14213d" font-family="Arial, sans-serif" font-size="42" font-weight="400">Tool Calling Interaction Flow</text>
+  <text x="36" y="104" fill="#718299" font-family="Arial, sans-serif" font-size="24">AI 应用根据用户意图规划工具调用，并把执行结果回填给大模型生成最终回答</text>
+
+  <rect x="28" y="148" width="1404" height="702" rx="26" fill="#ffffff" stroke="#d9e4f2" stroke-width="2"/>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="78" y="184" width="220" height="50" rx="14" fill="#f8fbff" stroke="#1378ff" stroke-width="3"/>
+    <text x="188" y="218" text-anchor="middle" fill="#1378ff" font-size="25">User</text>
+    <rect x="350" y="184" width="220" height="50" rx="14" fill="#fbfaff" stroke="#8a63ff" stroke-width="3"/>
+    <text x="460" y="218" text-anchor="middle" fill="#8a63ff" font-size="25">AI App</text>
+    <rect x="940" y="184" width="220" height="50" rx="14" fill="#f4fcff" stroke="#13a6df" stroke-width="3"/>
+    <text x="1050" y="218" text-anchor="middle" fill="#13a6df" font-size="25">LLM</text>
+    <rect x="1188" y="184" width="226" height="50" rx="14" fill="#f6fff9" stroke="#19af72" stroke-width="3"/>
+    <text x="1301" y="218" text-anchor="middle" fill="#19af72" font-size="25">Business APIs</text>
+
+    <g stroke="#c9d8ea" stroke-width="3">
+      <line x1="188" y1="248" x2="188" y2="804"/>
+      <line x1="460" y1="248" x2="460" y2="804"/>
+      <line x1="1050" y1="248" x2="1050" y2="804"/>
+      <line x1="1301" y1="248" x2="1301" y2="804"/>
+    </g>
+
+    <g stroke="#1378ff" stroke-width="4" stroke-linecap="round">
+      <circle cx="128" cy="340" r="25" fill="none"/>
+      <line x1="128" y1="365" x2="128" y2="465"/>
+      <line x1="78" y1="410" x2="178" y2="410"/>
+      <line x1="128" y1="465" x2="82" y2="535"/>
+      <line x1="128" y1="465" x2="174" y2="535"/>
+    </g>
+
+    <g>
+      <rect x="246" y="278" width="310" height="128" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="238" y="278" width="8" height="128" rx="4" fill="#1378ff"/>
+      <text x="276" y="323" fill="#27364d" font-size="25" font-weight="700">1. 用户提问</text>
+      <text x="276" y="358" fill="#596b80" font-size="20">输入自然语言问题</text>
+      <text x="276" y="388" fill="#596b80" font-size="20">携带当前会话上下文</text>
+    </g>
+
+    <g>
+      <rect x="286" y="458" width="350" height="132" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="278" y="458" width="8" height="132" rx="4" fill="#8a63ff"/>
+      <text x="320" y="504" fill="#27364d" font-size="25" font-weight="700">2. 构造 Prompt</text>
+      <text x="320" y="541" fill="#596b80" font-size="20">系统提示词 + Tool 定义</text>
+      <text x="320" y="571" fill="#596b80" font-size="20">历史消息与业务约束</text>
+    </g>
+
+    <g>
+      <rect x="790" y="278" width="352" height="128" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="782" y="278" width="8" height="128" rx="4" fill="#13a6df"/>
+      <text x="820" y="323" fill="#27364d" font-size="25" font-weight="700">3. 任务分析</text>
+      <text x="820" y="358" fill="#596b80" font-size="20">判断是否需要工具</text>
+      <text x="820" y="388" fill="#596b80" font-size="20">生成 Tool name 与参数</text>
+    </g>
+
+    <g>
+      <rect x="1160" y="458" width="230" height="132" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="1152" y="458" width="8" height="132" rx="4" fill="#19af72"/>
+      <text x="1190" y="504" fill="#27364d" font-size="25" font-weight="700">4. 执行业务工具</text>
+      <text x="1190" y="541" fill="#596b80" font-size="20">查询 / 写库 / 调接口</text>
+      <text x="1190" y="571" fill="#596b80" font-size="20">返回结构化结果</text>
+    </g>
+
+    <g>
+      <rect x="770" y="642" width="370" height="132" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="762" y="642" width="8" height="132" rx="4" fill="#13a6df"/>
+      <text x="805" y="688" fill="#27364d" font-size="25" font-weight="700">5. 汇总生成回答</text>
+      <text x="805" y="725" fill="#596b80" font-size="20">把工具结果拼接回 Prompt</text>
+      <text x="805" y="755" fill="#596b80" font-size="20">由大模型生成最终响应</text>
+    </g>
+
+    <g>
+      <rect x="246" y="642" width="330" height="132" rx="16" fill="#fcfeff" stroke="#cfe0f2" stroke-width="2"/>
+      <rect x="238" y="642" width="8" height="132" rx="4" fill="#1378ff"/>
+      <text x="280" y="688" fill="#27364d" font-size="25" font-weight="700">6. 返回用户</text>
+      <text x="280" y="725" fill="#596b80" font-size="20">输出自然语言答案</text>
+      <text x="280" y="755" fill="#596b80" font-size="20">必要时更新会话记忆</text>
+    </g>
+
+    <g>
+      <rect x="640" y="442" width="410" height="126" rx="18" fill="#fffdf4" stroke="#f39a22" stroke-width="2"/>
+      <text x="680" y="490" fill="#e47c12" font-size="27" font-weight="700">循环执行</text>
+      <text x="680" y="528" fill="#675841" font-size="20">直到任务完成或不再需要调用工具</text>
+    </g>
+
+    <line x1="178" y1="370" x2="238" y2="345" stroke="#1378ff" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <line x1="556" y1="342" x2="780" y2="342" stroke="#8a63ff" stroke-width="4" marker-end="url(#arrowPurple)"/>
+    <rect x="590" y="312" width="170" height="38" rx="19" fill="#ffffff" stroke="#8a63ff" stroke-width="2"/>
+    <text x="675" y="337" text-anchor="middle" fill="#8a63ff" font-size="17">Prompt + tools</text>
+
+    <path d="M1130 350 C1170 372 1196 405 1214 452" fill="none" stroke="#13a6df" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <rect x="1124" y="390" width="112" height="38" rx="19" fill="#ffffff" stroke="#13a6df" stroke-width="2"/>
+    <text x="1180" y="415" text-anchor="middle" fill="#13a6df" font-size="17">Tool call</text>
+
+    <path d="M1160 590 C1118 610 1100 624 1082 642" fill="none" stroke="#19af72" stroke-width="4" marker-end="url(#arrowGreen)"/>
+    <rect x="1040" y="586" width="132" height="38" rx="19" fill="#ffffff" stroke="#19af72" stroke-width="2"/>
+    <text x="1106" y="611" text-anchor="middle" fill="#19af72" font-size="17">Result JSON</text>
+
+    <line x1="770" y1="708" x2="576" y2="708" stroke="#13a6df" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <line x1="246" y1="708" x2="178" y2="708" stroke="#1378ff" stroke-width="4" marker-end="url(#arrowBlue)"/>
+    <line x1="1050" y1="502" x2="1148" y2="502" stroke="#f39a22" stroke-width="3" marker-end="url(#arrowOrange)"/>
+    <path d="M845 442 C850 420 868 407 898 404" fill="none" stroke="#f39a22" stroke-width="3" marker-end="url(#arrowOrange)"/>
+
+    <g font-size="17">
+      <rect x="60" y="806" width="108" height="38" rx="19" fill="#ffffff" stroke="#1378ff" stroke-width="2"/>
+      <text x="114" y="831" text-anchor="middle" fill="#1378ff">Spring AI</text>
+      <rect x="184" y="806" width="164" height="38" rx="19" fill="#ffffff" stroke="#8a63ff" stroke-width="2"/>
+      <text x="266" y="831" text-anchor="middle" fill="#8a63ff">Function Calling</text>
+      <rect x="366" y="806" width="218" height="38" rx="19" fill="#ffffff" stroke="#13a6df" stroke-width="2"/>
+      <text x="475" y="831" text-anchor="middle" fill="#13a6df">Prompt Orchestration</text>
+      <rect x="606" y="806" width="224" height="38" rx="19" fill="#ffffff" stroke="#19af72" stroke-width="2"/>
+      <text x="718" y="831" text-anchor="middle" fill="#19af72">Conversation Memory</text>
+    </g>
+  </g>
+</svg>

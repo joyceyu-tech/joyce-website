@@ -164,6 +164,70 @@
                 <p class="project-category-description">Spring AI · RAG · Multimodal Chat · Vector Search · Document Q&amp;A</p>
             </div>
             <div class="projects-grid">
+                    <div class="project-card" data-project-slug="smart-campus-ai">
+                <div class="project-image project-media project-media-video">
+                    <button class="project-video-trigger" type="button" data-video-src="videos/campusai-demo.webm" data-video-type="video/webm" data-video-poster="images/project-smart-campus-ai-video-poster.jpg" aria-label="Play AI Knowledge Base &amp; Q&amp;A Platform demo video">
+                        <img src="images/project-smart-campus-ai-video-poster.jpg" alt="AI Knowledge Base &amp; Q&amp;A Platform demo video cover" loading="lazy" decoding="async">
+                        <span class="project-video-play" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="project-content">
+                    <h3>AI Knowledge Base &amp; Q&amp;A Platform</h3>
+                    <p class="project-description">An intelligent knowledge base and Q&amp;A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Spring AI</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">MinIO</span>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Achievements:</h4>
+                        <ul>
+                            <li>Built an AI assistant with Spring AI, supporting conversational Q&amp;A, prompt optimization, and conversation memory persistence in MySQL</li>
+                            <li>Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically</li>
+                            <li>Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering</li>
+                            <li>Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization</li>
+                        </ul>
+                    </div>
+                    <div class="project-architecture">
+                        <div class="project-architecture-copy">
+                            <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
+                            <p class="project-architecture-intro">Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&amp;A.</p>
+                        </div>
+                        <div class="project-architecture-grid">
+                            <figure class="project-architecture-figure">
+                                <img src="images/campusai-tool-calling-flow.svg" alt="Tool calling interaction flow for the CampusAI assistant" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <strong class="project-architecture-title">Tool Calling Interaction Flow</strong>
+                                    <span class="project-architecture-caption">Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.</span>
+                                </figcaption>
+                            </figure>
+                            <figure class="project-architecture-figure">
+                                <img src="images/campusai-notice-lifecycle-flow-v2.png" alt="Notice knowledge lifecycle and RAG Q&amp;A flow for CampusAI" loading="lazy" decoding="async">
+                                <figcaption>
+                                    <strong class="project-architecture-title">Notice Knowledge Lifecycle &amp; RAG Q&amp;A</strong>
+                                    <span class="project-architecture-caption">Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.</span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://gitee.com/joyceyu434840/campusai" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
+                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
+                            </svg>
+                            <span class="btn-label">Gitee</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
                     <div class="project-card" data-project-slug="sk-knowledge">
                 <div class="project-image project-media project-media-video">
                     <button class="project-video-trigger" type="button" data-video-src="videos/sk-knowledge-demo.mp4" data-video-type="video/mp4" data-video-poster="videos/sk-knowledge-demo-poster.jpg" aria-label="Play SK Knowledge RAG Knowledge Base System demo video">
@@ -231,61 +295,47 @@
                 </div>
             </div>
 
-                    <div class="project-card" data-project-slug="smart-campus-ai">
-                <div class="project-image project-media project-media-video">
-                    <button class="project-video-trigger" type="button" data-video-src="videos/campusai-demo.webm" data-video-type="video/webm" data-video-poster="images/project-smart-campus-ai-video-poster.jpg" aria-label="Play AI Knowledge Base &amp; Q&amp;A Platform demo video">
-                        <img src="images/project-smart-campus-ai-video-poster.jpg" alt="AI Knowledge Base &amp; Q&amp;A Platform demo video cover" loading="lazy" decoding="async">
-                        <span class="project-video-play" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </span>
-                    </button>
+                    <div class="project-card" data-project-slug="sk-ai">
+                <div class="project-image project-image-ratio-3x2 project-media">
+                    <img src="images/project-sk-ai-system.svg" alt="SK-AI intelligent financial advisor system cover" loading="lazy" decoding="async">
                 </div>
                 <div class="project-content">
-                    <h3>AI Knowledge Base &amp; Q&amp;A Platform</h3>
-                    <p class="project-description">An intelligent knowledge base and Q&amp;A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.</p>
+                    <h3>SK-AI Intelligent Financial Advisor</h3>
+                    <p class="project-description">An upper-layer financial AI Agent that can connect with SK Knowledge for RAG-based knowledge retrieval, then orchestrates reasoning, financial tools, market data, and streaming advisory responses.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Spring Boot</span>
                         <span class="tech-tag">Spring AI</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">RabbitMQ</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">MinIO</span>
+                        <span class="tech-tag">Agent</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">REST API</span>
                     </div>
                     <div class="project-features">
                         <h4>Key Achievements:</h4>
                         <ul>
-                            <li>Built an AI assistant with Spring AI, supporting conversational Q&amp;A, prompt optimization, and conversation memory persistence in MySQL</li>
-                            <li>Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically</li>
-                            <li>Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering</li>
-                            <li>Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization</li>
+                            <li>Built a Maven multi-module, DDD-style architecture with API, Agent, infrastructure, framework, and domain layers</li>
+                            <li>Designed a two-layer Skill storage model with built-in read-only skills and external overridable skills, supporting dynamic loading by Agent</li>
+                            <li>Combined LLM reasoning with a Java + Python financial toolchain for DCF valuation, technical indicators, VaR, and portfolio optimization</li>
+                            <li>Orchestrated SK Knowledge RAG recall, MCP market data, audit tracing, multimodal chat, and SSE streaming responses for financial advisory scenarios</li>
                         </ul>
                     </div>
                     <div class="project-architecture">
                         <div class="project-architecture-copy">
                             <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
-                            <p class="project-architecture-intro">Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&amp;A.</p>
+                            <p class="project-architecture-intro">This overview shows how the project combines a layered Agent structure with SK Knowledge RAG recall, dynamic Skill loading, Java + Python financial tools, MCP market data, audit tracing, and SSE streaming output.</p>
                         </div>
                         <div class="project-architecture-grid">
                             <figure class="project-architecture-figure">
-                                <img src="images/campusai-tool-calling-flow.png" alt="Tool calling interaction flow for the CampusAI assistant" loading="lazy" decoding="async">
+                                <img src="images/sk-ai-architecture-overview.svg" alt="SK-AI layered Agent and Skill orchestration architecture overview" loading="lazy" decoding="async">
                                 <figcaption>
-                                    <strong class="project-architecture-title">Tool Calling Interaction Flow</strong>
-                                    <span class="project-architecture-caption">Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.</span>
-                                </figcaption>
-                            </figure>
-                            <figure class="project-architecture-figure">
-                                <img src="images/campusai-notice-lifecycle-flow-v2.png" alt="Notice knowledge lifecycle and RAG Q&amp;A flow for CampusAI" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Notice Knowledge Lifecycle &amp; RAG Q&amp;A</strong>
-                                    <span class="project-architecture-caption">Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.</span>
+                                    <strong class="project-architecture-title">Layered Agent &amp; Skill Flow</strong>
+                                    <span class="project-architecture-caption">Summarizes DDD-style modules, two-layer Skill loading, Java + Python financial tools, SK Knowledge RAG recall, MCP market data, audit logs, and SSE output.</span>
                                 </figcaption>
                             </figure>
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/campusai" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/sk-ai.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>

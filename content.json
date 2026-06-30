@@ -121,6 +121,94 @@
       }
     },
     {
+      "slug": "smart-campus-ai",
+      "category": "ai-rag",
+      "image": "images/project-smart-campus-ai-system.jpg",
+      "mobileImage": "images/project-smart-campus-ai-system-mobile.jpg",
+      "imageAlt": {
+        "en": "AI knowledge base and Q&A platform cover",
+        "zh": "AI 智能知识库与问答平台封面"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/campusai",
+      "techTags": ["Spring Boot", "Spring AI", "Redis", "RabbitMQ", "MySQL", "MinIO"],
+      "title": {
+        "en": "AI Knowledge Base & Q&A Platform",
+        "zh": "AI 智能知识库与问答平台"
+      },
+      "description": {
+        "en": "An intelligent knowledge base and Q&A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.",
+        "zh": "基于大语言模型构建的智能知识库与问答系统，结合 Spring AI 与向量检索等能力，提升信息检索质量与使用体验。"
+      },
+      "video": {
+        "src": "videos/campusai-demo.webm",
+        "poster": "images/project-smart-campus-ai-video-poster.jpg"
+      },
+      "architecture": {
+        "heading": {
+          "en": "Architecture & Capability Notes",
+          "zh": "架构与能力说明"
+        },
+        "intro": {
+          "en": "Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&A.",
+          "zh": "这里用两张流程图说明项目设计：第一张展示 Spring AI 如何编排 Tool Calling 完成业务动作，第二张整合公告索引一致性与对话式 RAG 问答链路。"
+        },
+        "diagrams": [
+          {
+            "image": "images/campusai-tool-calling-flow.svg",
+            "title": {
+              "en": "Tool Calling Interaction Flow",
+              "zh": "Tool Calling 交互流程"
+            },
+            "caption": {
+              "en": "Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.",
+              "zh": "覆盖用户提问、Prompt 构造、工具选择、业务接口执行、结果回填与大模型生成最终回答的完整闭环。"
+            },
+            "alt": {
+              "en": "Tool calling interaction flow for the CampusAI assistant",
+              "zh": "CampusAI 智能助手 Tool Calling 交互流程图"
+            }
+          },
+          {
+            "image": "images/campusai-notice-lifecycle-flow-v2.png",
+            "title": {
+              "en": "Notice Knowledge Lifecycle & RAG Q&A",
+              "zh": "公告知识生命周期与 RAG 问答"
+            },
+            "caption": {
+              "en": "Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.",
+              "zh": "把公告 CRUD 同步、RabbitMQ 异步索引、document_id 向量清理、语义召回与大模型回答整合到同一张生命周期图中。"
+            },
+            "alt": {
+              "en": "Notice knowledge lifecycle and RAG Q&A flow for CampusAI",
+              "zh": "CampusAI 公告知识生命周期与 RAG 问答流程图"
+            }
+          }
+        ]
+      },
+      "featuresHeading": {
+        "en": "Key Achievements:",
+        "zh": "关键成果："
+      },
+      "features": {
+        "en": [
+          "Built an AI assistant with Spring AI, supporting conversational Q&A, prompt optimization, and conversation memory persistence in MySQL",
+          "Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically",
+          "Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering",
+          "Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization"
+        ],
+        "zh": [
+          "基于 Spring AI 集成大模型，开发 AI 助手，实现对话问答、提示词优化与 MySQL 会话记忆存储",
+          "基于 Function Calling 实现用户信息自动采集与入库，并动态更新会话上下文",
+          "实现对话式公告系统，完成公告向量化存储与检索，支持自然语言问答",
+          "基于 Redis Stack 构建 RAG 知识库，结合向量检索与大模型生成，实现文档智能检索与总结"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    },
+    {
       "slug": "sk-knowledge",
       "category": "ai-rag",
       "image": "images/project-sk-knowledge-system.jpg",
@@ -209,27 +297,22 @@
       }
     },
     {
-      "slug": "smart-campus-ai",
+      "slug": "sk-ai",
       "category": "ai-rag",
-      "image": "images/project-smart-campus-ai-system.jpg",
-      "mobileImage": "images/project-smart-campus-ai-system-mobile.jpg",
+      "image": "images/project-sk-ai-system.svg",
       "imageAlt": {
-        "en": "AI knowledge base and Q&A platform cover",
-        "zh": "AI 智能知识库与问答平台封面"
+        "en": "SK-AI intelligent financial advisor system cover",
+        "zh": "SK-AI 金融智能助手系统封面"
       },
-      "giteeUrl": "https://gitee.com/joyceyu434840/campusai",
-      "techTags": ["Spring Boot", "Spring AI", "Redis", "RabbitMQ", "MySQL", "MinIO"],
+      "giteeUrl": "https://gitee.com/joyceyu434840/sk-ai.git",
+      "techTags": ["Spring Boot", "Spring AI", "Agent", "MCP", "Python", "REST API"],
       "title": {
-        "en": "AI Knowledge Base & Q&A Platform",
-        "zh": "AI 智能知识库与问答平台"
+        "en": "SK-AI Intelligent Financial Advisor",
+        "zh": "SK-AI 金融智能助手"
       },
       "description": {
-        "en": "An intelligent knowledge base and Q&A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.",
-        "zh": "基于大语言模型构建的智能知识库与问答系统，结合 Spring AI 与向量检索等能力，提升信息检索质量与使用体验。"
-      },
-      "video": {
-        "src": "videos/campusai-demo.webm",
-        "poster": "images/project-smart-campus-ai-video-poster.jpg"
+        "en": "An upper-layer financial AI Agent that can connect with SK Knowledge for RAG-based knowledge retrieval, then orchestrates reasoning, financial tools, market data, and streaming advisory responses.",
+        "zh": "面向 SK Knowledge 智能知识库问答系统的上层金融 AI Agent，可接入其 RAG 知识检索能力，并编排推理、金融工具、市场数据与流式顾问回答。"
       },
       "architecture": {
         "heading": {
@@ -237,38 +320,23 @@
           "zh": "架构与能力说明"
         },
         "intro": {
-          "en": "Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&A.",
-          "zh": "这里用两张流程图说明项目设计：第一张展示 Spring AI 如何编排 Tool Calling 完成业务动作，第二张整合公告索引一致性与对话式 RAG 问答链路。"
+          "en": "This overview shows how the project combines a layered Agent structure with SK Knowledge RAG recall, dynamic Skill loading, Java + Python financial tools, MCP market data, audit tracing, and SSE streaming output.",
+          "zh": "这里用一张架构图说明项目设计：分层 Agent 结构结合 SK Knowledge RAG 召回、动态 Skill 加载、Java + Python 金融工具、MCP 市场数据、审计追踪与 SSE 流式输出。"
         },
         "diagrams": [
           {
-            "image": "images/campusai-tool-calling-flow.png",
+            "image": "images/sk-ai-architecture-overview.svg",
             "title": {
-              "en": "Tool Calling Interaction Flow",
-              "zh": "Tool Calling 交互流程"
+              "en": "Layered Agent & Skill Flow",
+              "zh": "分层 Agent 与 Skill 编排"
             },
             "caption": {
-              "en": "Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.",
-              "zh": "覆盖用户提问、Prompt 构造、工具选择、业务接口执行、结果回填与大模型生成最终回答的完整闭环。"
+              "en": "Summarizes DDD-style modules, two-layer Skill loading, Java + Python financial tools, SK Knowledge RAG recall, MCP market data, audit logs, and SSE output.",
+              "zh": "概括 DDD 分层模块、双层 Skill 加载、Java + Python 金融工具、SK Knowledge RAG 召回、MCP 市场数据、审计日志与 SSE 输出。"
             },
             "alt": {
-              "en": "Tool calling interaction flow for the CampusAI assistant",
-              "zh": "CampusAI 智能助手 Tool Calling 交互流程图"
-            }
-          },
-          {
-            "image": "images/campusai-notice-lifecycle-flow-v2.png",
-            "title": {
-              "en": "Notice Knowledge Lifecycle & RAG Q&A",
-              "zh": "公告知识生命周期与 RAG 问答"
-            },
-            "caption": {
-              "en": "Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.",
-              "zh": "把公告 CRUD 同步、RabbitMQ 异步索引、document_id 向量清理、语义召回与大模型回答整合到同一张生命周期图中。"
-            },
-            "alt": {
-              "en": "Notice knowledge lifecycle and RAG Q&A flow for CampusAI",
-              "zh": "CampusAI 公告知识生命周期与 RAG 问答流程图"
+              "en": "SK-AI layered Agent and Skill orchestration architecture overview",
+              "zh": "SK-AI 分层 Agent 与 Skill 编排架构总览图"
             }
           }
         ]
@@ -279,16 +347,16 @@
       },
       "features": {
         "en": [
-          "Built an AI assistant with Spring AI, supporting conversational Q&A, prompt optimization, and conversation memory persistence in MySQL",
-          "Implemented Function Calling to collect user information automatically, write it into the database, and update session context dynamically",
-          "Developed a conversational announcement system with vectorized storage and retrieval, enabling natural-language question answering",
-          "Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization"
+          "Built a Maven multi-module, DDD-style architecture with API, Agent, infrastructure, framework, and domain layers",
+          "Designed a two-layer Skill storage model with built-in read-only skills and external overridable skills, supporting dynamic loading by Agent",
+          "Combined LLM reasoning with a Java + Python financial toolchain for DCF valuation, technical indicators, VaR, and portfolio optimization",
+          "Orchestrated SK Knowledge RAG recall, MCP market data, audit tracing, multimodal chat, and SSE streaming responses for financial advisory scenarios"
         ],
         "zh": [
-          "基于 Spring AI 集成大模型，开发 AI 助手，实现对话问答、提示词优化与 MySQL 会话记忆存储",
-          "基于 Function Calling 实现用户信息自动采集与入库，并动态更新会话上下文",
-          "实现对话式公告系统，完成公告向量化存储与检索，支持自然语言问答",
-          "基于 Redis Stack 构建 RAG 知识库，结合向量检索与大模型生成，实现文档智能检索与总结"
+          "采用 Maven 多模块与 DDD 分层设计，拆分 API、Agent、基础设施、核心框架与领域模型层",
+          "设计双层 Skill 存储模型，内置 Skill 只读、外部 Skill 可覆盖，并支持 Agent 动态加载",
+          "结合 LLM 推理与 Java + Python 金融工具链，支持 DCF 估值、技术指标、VaR 与组合优化",
+          "编排 SK Knowledge RAG 召回、MCP 市场数据、审计追踪、多模态对话与 SSE 流式返回，支撑金融顾问场景"
         ]
       },
       "linkLabel": {

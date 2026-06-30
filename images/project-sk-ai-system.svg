@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="853" viewBox="0 0 1280 853" role="img" aria-labelledby="title desc">
+  <title id="title">SK-AI Intelligent Financial Advisor</title>
+  <desc id="desc">A portfolio project cover showing a financial AI assistant dashboard with market analysis, risk signals, and agent workflow elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10233b"/>
+      <stop offset="0.48" stop-color="#14545c"/>
+      <stop offset="1" stop-color="#ecb84d"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fbff" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#dce8ef" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#07192b" flood-opacity="0.26"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="853" fill="url(#bg)"/>
+  <path d="M0 610 C170 548 274 666 454 604 C651 536 739 371 934 394 C1089 413 1184 513 1280 470 L1280 853 L0 853 Z" fill="#f3f7f2" opacity="0.22"/>
+  <path d="M66 178 H1214" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2"/>
+  <path d="M66 675 H1214" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  <g transform="translate(128 92)" filter="url(#shadow)">
+    <rect width="1024" height="648" rx="26" fill="url(#panel)"/>
+    <rect x="34" y="34" width="956" height="78" rx="18" fill="#10233b"/>
+    <text x="62" y="84" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">SK-AI Financial Advisor</text>
+    <text x="748" y="82" fill="#fedb84" font-family="Arial, sans-serif" font-size="20" font-weight="700">Spring AI Agent</text>
+    <rect x="54" y="152" width="302" height="188" rx="18" fill="#ffffff"/>
+    <text x="78" y="194" fill="#10233b" font-family="Arial, sans-serif" font-size="24" font-weight="700">Investment Analysis</text>
+    <polyline points="82,286 126,252 174,266 226,216 280,238 326,190" fill="none" stroke="#198f77" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="326" cy="190" r="9" fill="#198f77"/>
+    <text x="78" y="320" fill="#577083" font-family="Arial, sans-serif" font-size="18">DCF · RSI · MACD · Portfolio</text>
+    <rect x="390" y="152" width="262" height="188" rx="18" fill="#ffffff"/>
+    <text x="414" y="194" fill="#10233b" font-family="Arial, sans-serif" font-size="24" font-weight="700">Risk Control</text>
+    <circle cx="521" cy="258" r="54" fill="#f7efe0"/>
+    <path d="M521 210 L566 294 H476 Z" fill="#d85f45"/>
+    <rect x="512" y="237" width="18" height="40" rx="6" fill="#ffffff"/>
+    <circle cx="521" cy="288" r="9" fill="#ffffff"/>
+    <text x="414" y="320" fill="#577083" font-family="Arial, sans-serif" font-size="18">VaR · Stress Test · Audit</text>
+    <rect x="686" y="152" width="284" height="188" rx="18" fill="#ffffff"/>
+    <text x="710" y="194" fill="#10233b" font-family="Arial, sans-serif" font-size="24" font-weight="700">MCP Market Data</text>
+    <rect x="724" y="236" width="46" height="72" rx="8" fill="#ecb84d"/>
+    <rect x="792" y="214" width="46" height="94" rx="8" fill="#198f77"/>
+    <rect x="860" y="252" width="46" height="56" rx="8" fill="#5f78ba"/>
+    <text x="710" y="320" fill="#577083" font-family="Arial, sans-serif" font-size="18">Real-time tools and skills</text>
+    <rect x="54" y="386" width="916" height="206" rx="20" fill="#10233b"/>
+    <text x="84" y="436" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">Agent workflow</text>
+    <g font-family="Arial, sans-serif" font-size="19" font-weight="700">
+      <rect x="86" y="478" width="176" height="58" rx="16" fill="#ffffff"/>
+      <text x="132" y="514" fill="#10233b">User Query</text>
+      <path d="M282 507 H346" stroke="#fedb84" stroke-width="6" stroke-linecap="round"/>
+      <path d="M346 507 l-18 -12 v24 z" fill="#fedb84"/>
+      <rect x="366" y="478" width="206" height="58" rx="16" fill="#ffffff"/>
+      <text x="406" y="514" fill="#10233b">Advisor Agent</text>
+      <path d="M592 507 H656" stroke="#fedb84" stroke-width="6" stroke-linecap="round"/>
+      <path d="M656 507 l-18 -12 v24 z" fill="#fedb84"/>
+      <rect x="676" y="478" width="244" height="58" rx="16" fill="#ffffff"/>
+      <text x="714" y="514" fill="#10233b">Financial Tools</text>
+    </g>
+    <text x="84" y="568" fill="#c4d3df" font-family="Arial, sans-serif" font-size="19">Streaming chat · Multimodal input · Dynamic skills · Quant analysis</text>
+  </g>
+</svg>

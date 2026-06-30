@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">SK-AI Architecture Overview</title>
+  <desc id="desc">Overview of SK-AI layered Agent architecture, Skill loading, RAG recall, financial tools, Python scripts, MCP market data, audit logs, and SSE streaming response.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10233b"/>
+      <stop offset="1" stop-color="#16646b"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef7f6"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#fedb84"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#07192b" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="760" rx="28" fill="url(#bg)"/>
+  <text x="70" y="76" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="700">SK-AI Architecture Overview</text>
+  <text x="72" y="116" fill="#c7d6df" font-family="Arial, sans-serif" font-size="22">Layered Agent + RAG recall + dynamic Skills + financial toolchain</text>
+
+  <g transform="translate(72 158)" filter="url(#shadow)" font-family="Arial, sans-serif">
+    <rect width="1136" height="502" rx="26" fill="url(#panel)"/>
+
+    <text x="44" y="52" fill="#10233b" font-size="24" font-weight="700">DDD / Maven Modules</text>
+    <rect x="44" y="78" width="248" height="52" rx="14" fill="#1b75d0"/>
+    <text x="72" y="112" fill="#ffffff" font-size="19" font-weight="700">API / REST / SSE</text>
+    <rect x="44" y="146" width="248" height="52" rx="14" fill="#16a085"/>
+    <text x="72" y="180" fill="#ffffff" font-size="19" font-weight="700">Agent Orchestration</text>
+    <rect x="44" y="214" width="248" height="52" rx="14" fill="#f0c419"/>
+    <text x="72" y="248" fill="#10233b" font-size="19" font-weight="700">Infrastructure</text>
+    <rect x="44" y="282" width="118" height="48" rx="13" fill="#ef5350"/>
+    <text x="66" y="313" fill="#ffffff" font-size="17" font-weight="700">Framework</text>
+    <rect x="174" y="282" width="118" height="48" rx="13" fill="#4aa3df"/>
+    <text x="206" y="313" fill="#ffffff" font-size="17" font-weight="700">Domain</text>
+
+    <rect x="394" y="70" width="346" height="316" rx="24" fill="#10233b"/>
+    <text x="438" y="120" fill="#ffffff" font-size="26" font-weight="700">Financial Advisor Agent</text>
+    <text x="480" y="158" fill="#c7d6df" font-size="18">plan · reason · respond</text>
+    <rect x="448" y="196" width="238" height="48" rx="14" fill="#ffffff"/>
+    <text x="494" y="227" fill="#10233b" font-size="18" font-weight="700">LLM Reasoning</text>
+    <rect x="448" y="262" width="238" height="48" rx="14" fill="#ffffff"/>
+    <text x="488" y="293" fill="#10233b" font-size="18" font-weight="700">Dynamic Skill Loader</text>
+    <rect x="448" y="328" width="238" height="48" rx="14" fill="#ffffff"/>
+    <text x="486" y="359" fill="#10233b" font-size="18" font-weight="700">Audit + Context Trace</text>
+
+    <rect x="850" y="58" width="232" height="68" rx="18" fill="#fff7dc" stroke="#f0c419" stroke-width="3"/>
+    <text x="884" y="88" fill="#10233b" font-size="20" font-weight="700">SK Knowledge</text>
+    <text x="904" y="112" fill="#5d6d7e" font-size="17">RAG recall base</text>
+
+    <rect x="850" y="152" width="232" height="68" rx="18" fill="#e9fff8" stroke="#16a085" stroke-width="3"/>
+    <text x="884" y="182" fill="#10233b" font-size="20" font-weight="700">Skill Repository</text>
+    <text x="878" y="206" fill="#5d6d7e" font-size="17">built-in + external</text>
+
+    <rect x="850" y="246" width="232" height="68" rx="18" fill="#eef8ff" stroke="#4aa3df" stroke-width="3"/>
+    <text x="892" y="276" fill="#10233b" font-size="20" font-weight="700">Toolchain</text>
+    <text x="876" y="300" fill="#5d6d7e" font-size="17">Java + Python finance</text>
+
+    <rect x="850" y="340" width="232" height="68" rx="18" fill="#fff0ef" stroke="#ef5350" stroke-width="3"/>
+    <text x="902" y="370" fill="#10233b" font-size="20" font-weight="700">MCP Data</text>
+    <text x="904" y="394" fill="#5d6d7e" font-size="17">market context</text>
+
+    <path d="M300 172 H386" stroke="#fedb84" stroke-width="7" marker-end="url(#arrow)"/>
+    <path d="M740 228 C782 106 806 92 840 92" stroke="#fedb84" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740 242 C788 186 806 186 840 186" stroke="#fedb84" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740 260 C790 280 806 280 840 280" stroke="#fedb84" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740 282 C786 356 806 374 840 374" stroke="#fedb84" stroke-width="6" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="398" y="428" width="740" height="48" rx="16" fill="#ffffff" stroke="#cfd9e1"/>
+    <text x="430" y="459" fill="#10233b" font-size="19" font-weight="700">Output:</text>
+    <text x="512" y="459" fill="#526779" font-size="18">multimodal chat · financial analysis · audit log · SSE streaming response</text>
+  </g>
+</svg>
