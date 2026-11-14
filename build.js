@@ -62,16 +62,6 @@ function assertPortfolioProject(project, index, categoryIds = null) {
   if (project.features.en.length !== project.features.zh.length) {
     throw new Error(`${prefix}: features.en 与 features.zh 条数须一致`);
   }
-  if (project.video) {
-    if (!project.video.src) {
-      throw new Error(`${prefix}: video.src 必填`);
-    }
-    ['label', 'caption'].forEach((key) => {
-      if (project.video[key] && (!project.video[key].en || !project.video[key].zh)) {
-        throw new Error(`${prefix}: video.${key}.en / video.${key}.zh 必须同时填写`);
-      }
-    });
-  }
   if (project.architecture) {
     ['en', 'zh'].forEach((lang) => {
       if (!project.architecture.heading?.[lang] || !project.architecture.intro?.[lang]) {
@@ -93,16 +83,34 @@ function assertPortfolioProject(project, index, categoryIds = null) {
   }
 }
 
-function getVideoType(src) {
-  const extension = String(src).split('?')[0].split('#')[0].split('.').pop().toLowerCase();
-  const types = {
-    mp4: 'video/mp4',
-    webm: 'video/webm',
-    ogv: 'video/ogg',
-    ogg: 'video/ogg',
-    mov: 'video/quicktime'
-  };
-  return types[extension] || '';
+function galleryLabel(en, zh) {
+  return `aria-label="${escapeHtml(en)}" data-gallery-label-en="${escapeHtml(en)}" data-gallery-label-zh="${escapeHtml(zh)}"`;
+}
+
+function buildProjectGallery(project) {
+  const slides = [
+    { image: project.image, alt: project.imageAlt, title: { en: 'Project overview', zh: '项目概览' } },
+    ...project.architecture.diagrams
+  ];
+  const arrow = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>`;
+  return `                <div class="project-gallery" role="region" aria-roledescription="carousel" ${galleryLabel(`${project.title.en} project images`, `${project.title.zh}项目介绍轮播`)}>
+                    <div class="project-gallery-stage">
+${slides.map((slide, i) => `                        <button class="project-gallery-slide" type="button" data-gallery-slide${i ? ' hidden' : ''} ${galleryLabel(`Enlarge: ${slide.title.en}`, `放大查看：${slide.title.zh}`)}>
+                            <img src="${escapeHtml(slide.image)}" alt="${escapeHtml(slide.alt.en)}" data-gallery-alt-en="${escapeHtml(slide.alt.en)}" data-gallery-alt-zh="${escapeHtml(slide.alt.zh)}" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>`).join('\n')}
+                    </div>
+                    <div class="project-gallery-controls">
+                        <span class="project-gallery-count" role="status" aria-live="polite" aria-atomic="true"><span data-gallery-current>01</span><span class="project-gallery-total"> / ${String(slides.length).padStart(2, '0')}</span></span>
+                        <div class="project-gallery-dots" role="group" ${galleryLabel('Choose project image', '选择项目介绍图')}>
+${slides.map((slide, i) => `                            <button type="button" class="project-gallery-dot" data-gallery-index="${i}" aria-pressed="${i === 0}" ${galleryLabel(`Show image ${i + 1}: ${slide.title.en}`, `查看第 ${i + 1} 张：${slide.title.zh}`)}><span></span></button>`).join('\n')}
+                        </div>
+                        <div class="project-gallery-arrows">
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-prev ${galleryLabel('Previous image', '上一张')}>${arrow}</button>
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-next ${galleryLabel('Next image', '下一张')}>${arrow}</button>
+                        </div>
+                    </div>
+                </div>`;
 }
 
 /**
@@ -125,6 +133,7 @@ function buildPortfolioOutput(projects, categories) {
     assertPortfolioProject(project, index, categoryIds);
     const slug = project.slug;
     const sel = `#projects .project-card[data-project-slug="${slug}"]`;
+    const isCarousel = project.architecture?.presentation === 'carousel';
 
     enTextExtra[`${sel} .project-content h3`] = project.title.en;
     enTextExtra[`${sel} .project-description`] = project.description.en;
@@ -141,13 +150,14 @@ function buildPortfolioOutput(projects, categories) {
       zhTextExtra[`${sel} .project-features li:nth-child(${i + 1})`] = line;
     });
     zhTextExtra[`${sel} .btn-primary .btn-label`] = project.linkLabel.zh;
-    if (project.architecture) {
+    if (project.architecture && !isCarousel) {
       enTextExtra[`${sel} .project-architecture-heading`] = project.architecture.heading.en;
       enTextExtra[`${sel} .project-architecture-intro`] = project.architecture.intro.en;
       zhTextExtra[`${sel} .project-architecture-heading`] = project.architecture.heading.zh;
       zhTextExtra[`${sel} .project-architecture-intro`] = project.architecture.intro.zh;
 
       project.architecture.diagrams.forEach((diagram, i) => {
+        if (project.architecture.showCaptions === false) return;
         const diagramSel = `${sel} .project-architecture-figure:nth-child(${i + 1})`;
         enTextExtra[`${diagramSel} .project-architecture-title`] = diagram.title.en;
         enTextExtra[`${diagramSel} .project-architecture-caption`] = diagram.caption.en;
@@ -166,24 +176,12 @@ function buildPortfolioOutput(projects, categories) {
     const responsiveImageAttrs = project.mobileImage
       ? ` srcset="${escapeHtml(project.mobileImage)} 640w, ${escapeHtml(project.image)} 1280w" sizes="(max-width: 768px) 100vw, 50vw"`
       : '';
-    const videoPoster = project.video?.poster || project.image;
-    const videoType = project.video ? getVideoType(project.video.src) : '';
-    const videoTypeAttr = videoType ? ` type="${escapeHtml(videoType)}"` : '';
-    const mediaHtml = project.video
-      ? `                <div class="project-image project-media project-media-video">
-                    <button class="project-video-trigger" type="button" data-video-src="${escapeHtml(project.video.src)}" data-video-type="${escapeHtml(videoType)}" data-video-poster="${escapeHtml(videoPoster)}" aria-label="Play ${escapeHtml(project.title.en)} demo video">
-                        <img src="${escapeHtml(videoPoster)}" alt="${escapeHtml(project.title.en)} demo video cover" loading="lazy" decoding="async">
-                        <span class="project-video-play" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </div>`
+    const mediaHtml = isCarousel
+      ? buildProjectGallery(project)
       : `                <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="${escapeHtml(project.image)}"${responsiveImageAttrs} alt="${escapeHtml(project.imageAlt.en)}" loading="lazy" decoding="async">
                 </div>`;
-    const architectureHtml = project.architecture
+    const architectureHtml = project.architecture && !isCarousel
       ? `                    <div class="project-architecture">
                         <div class="project-architecture-copy">
                             <h4 class="project-architecture-heading">${escapeHtml(project.architecture.heading.en)}</h4>
@@ -192,17 +190,17 @@ function buildPortfolioOutput(projects, categories) {
                         <div class="project-architecture-grid">
 ${project.architecture.diagrams.map((diagram) => `                            <figure class="project-architecture-figure">
                                 <img src="${escapeHtml(diagram.image)}" alt="${escapeHtml(diagram.alt.en)}" loading="lazy" decoding="async">
-                                <figcaption>
+${project.architecture.showCaptions === false ? '' : `                                <figcaption>
                                     <strong class="project-architecture-title">${escapeHtml(diagram.title.en)}</strong>
                                     <span class="project-architecture-caption">${escapeHtml(diagram.caption.en)}</span>
-                                </figcaption>
+                                </figcaption>`}
                             </figure>`).join('\n')}
                         </div>
                     </div>
 `
       : '';
 
-    const cardHtml = `                    <div class="project-card" data-project-slug="${escapeHtml(slug)}">
+    const cardHtml = `                    <div class="project-card" id="project-${escapeHtml(slug)}" data-project-slug="${escapeHtml(slug)}">
 ${mediaHtml}
                 <div class="project-content">
                     <h3>${escapeHtml(project.title.en)}</h3>
@@ -217,7 +215,7 @@ ${featuresUlInner}
                         </ul>
                     </div>
 ${architectureHtml}                    <div class="project-links">
-                        <a href="${escapeHtml(project.giteeUrl)}" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="${escapeHtml(project.giteeUrl)}" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             ${GITEE_ICON_SVG}
                             <span class="btn-label">${escapeHtml(project.linkLabel.en)}</span>
                         </a>

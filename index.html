@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>Joyce | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joyce's portfolio: Business QA at HSBC Software Development, ISTQB Certified Tester; Java backend projects, Python foundation, Spring AI practice, and future LangChain learning.">
+    <meta name="description" content="Joyce's portfolio: Business QA at HSBC Software Development, ISTQB Certified Tester; Java backend projects, Spring AI practice, and AI application development.">
     <link rel="canonical" href="https://joyceyu.dpdns.org/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Joyce | Portfolio">
-    <meta property="og:description" content="Business QA · ISTQB · Java backend · Python · Spring AI">
+    <meta property="og:description" content="Business QA · ISTQB · Java backend · Spring AI">
     <meta property="og:url" content="https://joyceyu.dpdns.org/">
     <meta property="og:image" content="https://joyceyu.dpdns.org/images/avatar.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Joyce | Portfolio">
-    <meta name="twitter:description" content="Business QA · ISTQB · Java backend · Python · Spring AI">
+    <meta name="twitter:description" content="Business QA · ISTQB · Java backend · Spring AI">
     <meta name="twitter:image" content="https://joyceyu.dpdns.org/images/avatar.jpg">
     <link rel="icon" type="image/jpeg" href="images/avatar.jpg">
     <link rel="stylesheet" href="style.css">
@@ -21,24 +21,31 @@
 <body>
     <div class="top-banner" id="topBanner" role="region" aria-label="Viewing tip" hidden>
         <span class="top-banner-text">Best viewed on desktop</span>
-        <button type="button" class="top-banner-close" id="topBannerClose" aria-label="Close">Got it</button>
+        <button type="button" class="ui-button ui-button--secondary top-banner-close" id="topBannerClose" aria-label="Close">Got it</button>
     </div>
+    <nav class="nav-bar" aria-label="Primary navigation">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Portfolio</a>
+    </nav>
+
     <header>
         <div class="header-content">
             <div class="lang-switch-floating" role="group" aria-label="Language switch">
-                <a class="lang-toggle" id="langZh" href="?lang=zh" aria-label="切换到中文">中文</a>
-                <a class="lang-toggle" id="langEn" href="?lang=en" aria-label="Switch to English">EN</a>
+                <a class="ui-button ui-button--secondary lang-toggle" id="langZh" href="?lang=zh" aria-label="切换到中文">中文</a>
+                <a class="ui-button ui-button--secondary lang-toggle" id="langEn" href="?lang=en" aria-label="Switch to English">EN</a>
             </div>
             <div class="hero-grid">
             <div class="hero-text">
                 <p class="hero-badge">Open to Software Engineer opportunities</p>
                 <h1>Hi, I'm Joyce</h1>
                 <p class="subtitle">Business QA at HSBC Software Development · ISTQB Certified Tester · AI application engineering direction</p>
-                <p class="tagline">I bring a testing mindset, Java backend foundation, and Python skills to reliable delivery, with my current growth focused on AI application development.</p>
+                <p class="tagline">I bring a testing mindset and Java backend foundation to reliable delivery, with my current growth focused on AI application development.</p>
                 <div class="hero-actions">
-                    <a href="#experience" class="hero-btn hero-btn-primary hero-cta-experience">Work experience</a>
-                    <a href="#projects" class="hero-btn hero-btn-secondary hero-cta-portfolio">Personal projects</a>
-                    <a href="https://github.com/joyceyu-tech/joyce-website" class="hero-btn hero-btn-secondary hero-btn-github" target="_blank" rel="noopener noreferrer" title="View this portfolio source on GitHub">GitHub</a>
+                    <a href="#experience" class="ui-button ui-button--primary hero-btn hero-btn-primary hero-cta-experience">Work experience</a>
+                    <a href="#projects" class="ui-button ui-button--secondary hero-btn hero-btn-secondary hero-cta-portfolio">Personal projects</a>
+                    <a href="https://github.com/joyceyu-tech/joyce-website" class="ui-button ui-button--secondary hero-btn hero-btn-secondary hero-btn-github" target="_blank" rel="noopener noreferrer" title="View this portfolio source on GitHub">GitHub</a>
                 </div>
             </div>
             <div class="profile-container hero-profile">
@@ -50,13 +57,6 @@
         </div>
     </header>
 
-    <nav class="nav-bar">
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Portfolio</a>
-    </nav>
-
     <main id="main-content">
     <section id="about">
         <h2>About Me</h2>
@@ -64,14 +64,14 @@
         <div class="about-grid">
             <div class="about-content about-summary">
                 <p>I work in software testing at HSBC Software Development (Guangdong) and hold ISTQB certification, with a Master's in Technology and Engineering Management. Day to day I run end-to-end testing across banking systems—especially card and points journeys—where accuracy, data consistency, and customer impact matter.</p>
-                <p>Alongside testing delivery, Java is my existing backend foundation, so my current hands-on projects still build on the traditional Java/Spring stack. At the same time, I am expanding toward the Python AI application ecosystem, with LangChain and AI engineering workflows as my next learning focus.</p>
+                <p>Alongside testing delivery, Java is my existing backend foundation, so my current hands-on projects build on the traditional Java/Spring stack. At the same time, I am expanding toward AI application development and engineering workflows.</p>
             </div>
             <div class="about-content about-focus">
                 <h3>Current Growth Focus</h3>
                 <ul class="about-list">
                     <li>Focusing on AI application development with Spring AI, RAG, knowledge-base Q&A, and model service integration</li>
                     <li>Continuing Java backend practice through existing project experience, Spring Boot, API design, persistence integration, and system design</li>
-                    <li>Expanding into the Python AI application ecosystem, with LangChain as a key next learning direction</li>
+                    <li>Expanding into AI application development and engineering workflows</li>
                 </ul>
             </div>
         </div>
@@ -79,11 +79,11 @@
 
     <section id="skills">
         <h2>Technical Skills</h2>
-        <p class="section-intro">AI application development is my leading technical growth focus, while quality assurance remains my professional foundation. I combine Spring AI and Java/Spring backend practice with end-to-end testing, API validation, regression coverage, data consistency checks, and banking-domain delivery experience.</p>
+        <p class="section-intro">AI application development is my current growth focus, while testing and quality assurance remain my professional foundation. I combine Spring AI, Java/Spring backend practice, Agent orchestration, tool calling, RAG retrieval, and end-to-end testing experience.</p>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>AI Applications & RAG</h3>
-                <p>Hands-on with Spring AI and LLM application patterns, including chat APIs, multimodal conversation, ChatPDF, vector retrieval, knowledge-base Q&A, conversation memory, and OpenAI-compatible model integration.</p>
+                <h3>AI Applications & Agents</h3>
+                <p>Hands-on with Spring AI and LLM application patterns, including conversational Q&A, Agent orchestration, tool calling, RAG knowledge bases, vector retrieval, conversation memory, and model service integration.</p>
             </div>
             <div class="skill-card">
                 <h3>Testing & Quality Assurance</h3>
@@ -123,12 +123,20 @@
             </div>
 
             <div class="project" id="exp-project-1">
-                <h4>Project 1: Hang Seng Bank FUN Center Credit Card Points Mall</h4>
-                <p class="project-overview"><strong>Project Overview:</strong> Raise cardholder engagement and satisfaction with an integrated points platform—accounts, redemption, campaigns, and lucky-draw experiences—alongside operations reporting tests to keep business statistics accurate.</p>
+                <h4>Hang Seng Bank FUN Center Credit Card Points Mall</h4>
                 <ul>
                     <li>Led core testing for the points mall: account journeys, campaign surfaces, FUN Shop redemption, and Lucky Draw modules.</li>
                     <li>Ran end-to-end coverage across the points lifecycle, pairing the mobile app with back-office reporting to verify data accuracy and consistency.</li>
                     <li>Authored and executed functional, API, and regression suites; tracked defects with emphasis on points debits, reward fulfillment, and reporting logic.</li>
+                </ul>
+            </div>
+
+            <div class="project" id="exp-project-2">
+                <h4>P Loan</h4>
+                <ul>
+                    <li>Participated in functional testing for the P Loan lending journey, covering application and approval flows.</li>
+                    <li>Verified loan data and status changes across front-end channels, back-office systems, and related reports.</li>
+                    <li>Executed API and regression testing for key lending scenarios, tracking defects through verification and closure.</li>
                 </ul>
             </div>
         </div>
@@ -145,7 +153,6 @@
 
             <div class="project" id="exp-project-4">
                 <h4>OCT Integrated Water–Electricity & Infrastructure Management Platform (incl. Metro Energy Operations subsystem)</h4>
-                <p class="project-overview"><strong>Project Overview:</strong> OCT integrated water–electricity and infrastructure management platform, including the metro energy operations subsystem, spanning billing and intelligent O&M monitoring.</p>
                 <ul>
                     <li>Owned end-to-end billing testing—rules, charging, invoicing, and reconciliation—to protect logic and data consistency; extended coverage to customer and asset management modules, including exception paths.</li>
                     <li>Tested the intelligent O&M monitoring stack (equipment monitoring, energy management, alarms, analytics microservices) and supported environment setup plus regression passes to reproduce and verify complex scenarios faster.</li>
@@ -160,24 +167,47 @@
         <div class="projects-showcase">
         <section class="project-category" data-project-category="ai-rag" aria-labelledby="project-category-ai-rag">
             <div class="project-category-header">
-                <h3 class="project-category-title" id="project-category-ai-rag">AI &amp; RAG Projects</h3>
-                <p class="project-category-description">Spring AI · RAG · Multimodal Chat · Vector Search · Document Q&amp;A</p>
+                <h3 class="project-category-title" id="project-category-ai-rag">AI Applications &amp; Agent Projects</h3>
+                <p class="project-category-description">Spring AI · AI Agents · Tool Calling · RAG Knowledge Bases · Vector Retrieval</p>
             </div>
             <div class="projects-grid">
-                    <div class="project-card" data-project-slug="smart-campus-ai">
-                <div class="project-image project-media project-media-video">
-                    <button class="project-video-trigger" type="button" data-video-src="videos/campusai-demo.webm" data-video-type="video/webm" data-video-poster="images/project-smart-campus-ai-video-poster.jpg" aria-label="Play AI Knowledge Base &amp; Q&amp;A Platform demo video">
-                        <img src="images/project-smart-campus-ai-video-poster.jpg" alt="AI Knowledge Base &amp; Q&amp;A Platform demo video cover" loading="lazy" decoding="async">
-                        <span class="project-video-play" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </span>
-                    </button>
+                    <div class="project-card" id="project-smart-campus-ai" data-project-slug="smart-campus-ai">
+                <div class="project-gallery" role="region" aria-roledescription="carousel" aria-label="CampusAI Campus AI Assistant project images" data-gallery-label-en="CampusAI Campus AI Assistant project images" data-gallery-label-zh="CampusAI 园区智能助手项目介绍轮播">
+                    <div class="project-gallery-stage">
+                        <button class="project-gallery-slide" type="button" data-gallery-slide aria-label="Enlarge: Project overview" data-gallery-label-en="Enlarge: Project overview" data-gallery-label-zh="放大查看：项目概览">
+                            <img src="images/campusai-product-showcase.svg" alt="CampusAI product interface design showing chat, tool calling, and conversation memory" data-gallery-alt-en="CampusAI product interface design showing chat, tool calling, and conversation memory" data-gallery-alt-zh="CampusAI 产品界面设计：智能对话、工具调用与会话记忆" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                        <button class="project-gallery-slide" type="button" data-gallery-slide hidden aria-label="Enlarge: Service architecture" data-gallery-label-en="Enlarge: Service architecture" data-gallery-label-zh="放大查看：系统架构总览">
+                            <img src="images/campusai-system-architecture.svg" alt="CampusAI system architecture: Vue, Spring AI, RuoYi, RabbitMQ, MySQL, Redis Stack, MinIO, and model services" data-gallery-alt-en="CampusAI system architecture: Vue, Spring AI, RuoYi, RabbitMQ, MySQL, Redis Stack, MinIO, and model services" data-gallery-alt-zh="CampusAI 系统架构：Vue、Spring AI、若依、RabbitMQ、MySQL、Redis Stack、MinIO 与模型服务" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                        <button class="project-gallery-slide" type="button" data-gallery-slide hidden aria-label="Enlarge: Tool calling loop" data-gallery-label-en="Enlarge: Tool calling loop" data-gallery-label-zh="放大查看：工具调用闭环">
+                            <img src="images/campusai-tool-calling-flow.svg" alt="CampusAI tool calling design from user context and prompt assembly to tool execution and a final response" data-gallery-alt-en="CampusAI tool calling design from user context and prompt assembly to tool execution and a final response" data-gallery-alt-zh="CampusAI 工具调用设计：用户上下文、提示词构造、模型决策、应用执行与最终回答" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                        <button class="project-gallery-slide" type="button" data-gallery-slide hidden aria-label="Enlarge: Knowledge indexing and RAG" data-gallery-label-en="Enlarge: Knowledge indexing and RAG" data-gallery-label-zh="放大查看：知识索引与 RAG">
+                            <img src="images/campusai-notice-rag-flow.svg" alt="CampusAI announcement and document indexing through RabbitMQ and Redis Stack, followed by Spring AI RAG question answering" data-gallery-alt-en="CampusAI announcement and document indexing through RabbitMQ and Redis Stack, followed by Spring AI RAG question answering" data-gallery-alt-zh="CampusAI 公告与资料通过 RabbitMQ、Redis Stack 完成知识索引，并由 Spring AI 进行 RAG 问答" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                    </div>
+                    <div class="project-gallery-controls">
+                        <span class="project-gallery-count" role="status" aria-live="polite" aria-atomic="true"><span data-gallery-current>01</span><span class="project-gallery-total"> / 04</span></span>
+                        <div class="project-gallery-dots" role="group" aria-label="Choose project image" data-gallery-label-en="Choose project image" data-gallery-label-zh="选择项目介绍图">
+                            <button type="button" class="project-gallery-dot" data-gallery-index="0" aria-pressed="true" aria-label="Show image 1: Project overview" data-gallery-label-en="Show image 1: Project overview" data-gallery-label-zh="查看第 1 张：项目概览"><span></span></button>
+                            <button type="button" class="project-gallery-dot" data-gallery-index="1" aria-pressed="false" aria-label="Show image 2: Service architecture" data-gallery-label-en="Show image 2: Service architecture" data-gallery-label-zh="查看第 2 张：系统架构总览"><span></span></button>
+                            <button type="button" class="project-gallery-dot" data-gallery-index="2" aria-pressed="false" aria-label="Show image 3: Tool calling loop" data-gallery-label-en="Show image 3: Tool calling loop" data-gallery-label-zh="查看第 3 张：工具调用闭环"><span></span></button>
+                            <button type="button" class="project-gallery-dot" data-gallery-index="3" aria-pressed="false" aria-label="Show image 4: Knowledge indexing and RAG" data-gallery-label-en="Show image 4: Knowledge indexing and RAG" data-gallery-label-zh="查看第 4 张：知识索引与 RAG"><span></span></button>
+                        </div>
+                        <div class="project-gallery-arrows">
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-prev aria-label="Previous image" data-gallery-label-en="Previous image" data-gallery-label-zh="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-next aria-label="Next image" data-gallery-label-en="Next image" data-gallery-label-zh="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3>AI Knowledge Base &amp; Q&amp;A Platform</h3>
-                    <p class="project-description">An intelligent knowledge base and Q&amp;A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.</p>
+                    <h3>CampusAI Campus AI Assistant</h3>
+                    <p class="project-description">A campus assistant built with Spring AI, connecting conversational services, business tool calling, and RAG search across announcements and documents.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Spring Boot</span>
                         <span class="tech-tag">Spring AI</span>
@@ -195,30 +225,8 @@
                             <li>Built a RAG knowledge base on Redis Stack, combining vector retrieval with LLM generation for intelligent document search and summarization</li>
                         </ul>
                     </div>
-                    <div class="project-architecture">
-                        <div class="project-architecture-copy">
-                            <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
-                            <p class="project-architecture-intro">Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&amp;A.</p>
-                        </div>
-                        <div class="project-architecture-grid">
-                            <figure class="project-architecture-figure">
-                                <img src="images/campusai-tool-calling-flow.svg" alt="Tool calling interaction flow for the CampusAI assistant" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Tool Calling Interaction Flow</strong>
-                                    <span class="project-architecture-caption">Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.</span>
-                                </figcaption>
-                            </figure>
-                            <figure class="project-architecture-figure">
-                                <img src="images/campusai-notice-lifecycle-flow-v2.png" alt="Notice knowledge lifecycle and RAG Q&amp;A flow for CampusAI" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Notice Knowledge Lifecycle &amp; RAG Q&amp;A</strong>
-                                    <span class="project-architecture-caption">Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/campusai" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/campusai" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -228,114 +236,58 @@
                 </div>
             </div>
 
-                    <div class="project-card" data-project-slug="sk-knowledge">
-                <div class="project-image project-media project-media-video">
-                    <button class="project-video-trigger" type="button" data-video-src="videos/sk-knowledge-demo.mp4" data-video-type="video/mp4" data-video-poster="videos/sk-knowledge-demo-poster.jpg" aria-label="Play SK Knowledge RAG Knowledge Base System demo video">
-                        <img src="videos/sk-knowledge-demo-poster.jpg" alt="SK Knowledge RAG Knowledge Base System demo video cover" loading="lazy" decoding="async">
-                        <span class="project-video-play" aria-hidden="true">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"></path>
-                            </svg>
-                        </span>
-                    </button>
+                    <div class="project-card" id="project-ai-agent-scaffold-lite" data-project-slug="ai-agent-scaffold-lite">
+                <div class="project-gallery" role="region" aria-roledescription="carousel" aria-label="AI Agent Scaffold Lite project images" data-gallery-label-en="AI Agent Scaffold Lite project images" data-gallery-label-zh="AI Agent Scaffold Lite 智能体脚手架项目介绍轮播">
+                    <div class="project-gallery-stage">
+                        <button class="project-gallery-slide" type="button" data-gallery-slide aria-label="Enlarge: Project overview" data-gallery-label-en="Enlarge: Project overview" data-gallery-label-zh="放大查看：项目概览">
+                            <img src="images/project-ai-agent-scaffold-lite.svg" alt="AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools" data-gallery-alt-en="AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools" data-gallery-alt-zh="AI Agent Scaffold Lite 项目封面：DDD 模块、Agent 编排与 MCP 工具接入" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                        <button class="project-gallery-slide" type="button" data-gallery-slide hidden aria-label="Enlarge: DDD Architecture · Six Module Responsibilities" data-gallery-label-en="Enlarge: DDD Architecture · Six Module Responsibilities" data-gallery-label-zh="放大查看：DDD 六模块 · 工程职责架构图">
+                            <img src="images/ai-agent-scaffold-architecture.svg" alt="Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked" data-gallery-alt-en="Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked" data-gallery-alt-zh="AI Agent Scaffold Lite 的 DDD 六模块职责架构，标明已有实现与预留扩展结构" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                        <button class="project-gallery-slide" type="button" data-gallery-slide hidden aria-label="Enlarge: Agent Assembly · Sequential, Parallel &amp; Loop" data-gallery-label-en="Enlarge: Agent Assembly · Sequential, Parallel &amp; Loop" data-gallery-label-zh="放大查看：Agent 装配 · 顺序、并行与循环协作">
+                            <img src="images/ai-agent-scaffold-workflows.svg" alt="Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite" data-gallery-alt-en="Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite" data-gallery-alt-zh="AI Agent Scaffold Lite 的配置驱动装配、MCP 工具接入及三种多智能体协作模式图" loading="lazy" decoding="async" draggable="false">
+                            <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
+                        </button>
+                    </div>
+                    <div class="project-gallery-controls">
+                        <span class="project-gallery-count" role="status" aria-live="polite" aria-atomic="true"><span data-gallery-current>01</span><span class="project-gallery-total"> / 03</span></span>
+                        <div class="project-gallery-dots" role="group" aria-label="Choose project image" data-gallery-label-en="Choose project image" data-gallery-label-zh="选择项目介绍图">
+                            <button type="button" class="project-gallery-dot" data-gallery-index="0" aria-pressed="true" aria-label="Show image 1: Project overview" data-gallery-label-en="Show image 1: Project overview" data-gallery-label-zh="查看第 1 张：项目概览"><span></span></button>
+                            <button type="button" class="project-gallery-dot" data-gallery-index="1" aria-pressed="false" aria-label="Show image 2: DDD Architecture · Six Module Responsibilities" data-gallery-label-en="Show image 2: DDD Architecture · Six Module Responsibilities" data-gallery-label-zh="查看第 2 张：DDD 六模块 · 工程职责架构图"><span></span></button>
+                            <button type="button" class="project-gallery-dot" data-gallery-index="2" aria-pressed="false" aria-label="Show image 3: Agent Assembly · Sequential, Parallel &amp; Loop" data-gallery-label-en="Show image 3: Agent Assembly · Sequential, Parallel &amp; Loop" data-gallery-label-zh="查看第 3 张：Agent 装配 · 顺序、并行与循环协作"><span></span></button>
+                        </div>
+                        <div class="project-gallery-arrows">
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-prev aria-label="Previous image" data-gallery-label-en="Previous image" data-gallery-label-zh="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                            <button type="button" class="ui-button ui-button--secondary ui-button--icon project-gallery-arrow" data-gallery-next aria-label="Next image" data-gallery-label-en="Next image" data-gallery-label-zh="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-content">
-                    <h3>SK Knowledge RAG Knowledge Base System</h3>
-                    <p class="project-description">An intelligent private knowledge base and Q&amp;A system built with Spring Boot, supporting document upload, vector retrieval, AI chat, RBAC permissions, and conversation history.</p>
+                    <h3>AI Agent Scaffold Lite</h3>
+                    <p class="project-description">A Java 17 / Spring Boot 3 AI Agent scaffold with six DDD modules, configuration-driven agent assembly, MCP tool integration, and sequential, parallel, and loop workflow examples.</p>
                     <div class="tech-stack">
+                        <span class="tech-tag">Java 17</span>
                         <span class="tech-tag">Spring Boot 3</span>
-                        <span class="tech-tag">Spring Security</span>
-                        <span class="tech-tag">JWT</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">Weaviate</span>
-                        <span class="tech-tag">MinIO</span>
-                        <span class="tech-tag">Temporal</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Achievements:</h4>
-                        <ul>
-                            <li>Built multi-knowledge-base management with retrieval configuration, knowledge sharing, and permission control</li>
-                            <li>Implemented document processing for PDF, DOC, DOCX, TXT, CSV, and MD, including text extraction, semantic chunking, vectorization, and status tracking</li>
-                            <li>Integrated Weaviate, MinIO, MySQL, MongoDB, and Redis for vector search, object storage, business persistence, and cache/session support</li>
-                            <li>Developed OpenAI-compatible chat with model management, SSE streaming responses, context association, conversation history, and Spring Security + JWT authentication</li>
-                        </ul>
-                    </div>
-                    <div class="project-architecture">
-                        <div class="project-architecture-copy">
-                            <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
-                            <p class="project-architecture-intro">Two maps make the project easier to read: the first clarifies the product capabilities, and the second summarizes the backend, storage, retrieval, task, and security stack.</p>
-                        </div>
-                        <div class="project-architecture-grid">
-                            <figure class="project-architecture-figure">
-                                <img src="images/sk-knowledge-function-map.png" alt="Mind map of SK Knowledge product capabilities" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Capability Map</strong>
-                                    <span class="project-architecture-caption">Covers multi-turn chat, model selection, knowledge-base management, document recall, file chunking, vector processing, memory, and recycle-bin flows.</span>
-                                </figcaption>
-                            </figure>
-                            <figure class="project-architecture-figure">
-                                <img src="images/sk-knowledge-technology-map.png" alt="Mind map of SK Knowledge technical architecture" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Technology Map</strong>
-                                    <span class="project-architecture-caption">Shows Spring Boot, Spring Security, Spring AI, Weaviate, Redis, MongoDB, MinIO, Tika, Temporal Saga, SSE, and document chunking.</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/sk-knowledge.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
-                                <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
-                            </svg>
-                            <span class="btn-label">Gitee</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-                    <div class="project-card" data-project-slug="sk-ai">
-                <div class="project-image project-image-ratio-3x2 project-media">
-                    <img src="images/project-sk-ai-system.svg" alt="SK-AI intelligent financial advisor system cover" loading="lazy" decoding="async">
-                </div>
-                <div class="project-content">
-                    <h3>SK-AI Intelligent Financial Advisor</h3>
-                    <p class="project-description">An upper-layer financial AI Agent that can connect with SK Knowledge for RAG-based knowledge retrieval, then orchestrates reasoning, financial tools, market data, and streaming advisory responses.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Google ADK</span>
                         <span class="tech-tag">Spring AI</span>
-                        <span class="tech-tag">Agent</span>
+                        <span class="tech-tag">LangChain4j</span>
+                        <span class="tech-tag">DDD</span>
                         <span class="tech-tag">MCP</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">REST API</span>
                     </div>
                     <div class="project-features">
-                        <h4>Key Achievements:</h4>
+                        <h4>Key Capabilities:</h4>
                         <ul>
-                            <li>Built a Maven multi-module, DDD-style architecture with API, Agent, infrastructure, framework, and domain layers</li>
-                            <li>Designed a two-layer Skill storage model with built-in read-only skills and external overridable skills, supporting dynamic loading by Agent</li>
-                            <li>Combined LLM reasoning with a Java + Python financial toolchain for DCF valuation, technical indicators, VaR, and portfolio optimization</li>
-                            <li>Orchestrated SK Knowledge RAG recall, MCP market data, audit tracing, multimodal chat, and SSE streaming responses for financial advisory scenarios</li>
+                            <li>Separates API, App, Domain, Infrastructure, Trigger, and Types into six Maven modules with clear responsibilities</li>
+                            <li>Assembles models, LlmAgents, workflows, and InMemoryRunner from configuration through a strategy tree</li>
+                            <li>Connects Local, SSE, and Stdio tool strategies through an MCP factory and attaches tool callbacks to the chat model</li>
+                            <li>Includes Google ADK sequential, parallel, and loop collaboration examples, plus Spring AI and LangChain4j integration tests</li>
                         </ul>
                     </div>
-                    <div class="project-architecture">
-                        <div class="project-architecture-copy">
-                            <h4 class="project-architecture-heading">Architecture &amp; Capability Notes</h4>
-                            <p class="project-architecture-intro">This overview shows how the project combines a layered Agent structure with SK Knowledge RAG recall, dynamic Skill loading, Java + Python financial tools, MCP market data, audit tracing, and SSE streaming output.</p>
-                        </div>
-                        <div class="project-architecture-grid">
-                            <figure class="project-architecture-figure">
-                                <img src="images/sk-ai-architecture-overview.svg" alt="SK-AI layered Agent and Skill orchestration architecture overview" loading="lazy" decoding="async">
-                                <figcaption>
-                                    <strong class="project-architecture-title">Layered Agent &amp; Skill Flow</strong>
-                                    <span class="project-architecture-caption">Summarizes DDD-style modules, two-layer Skill loading, Java + Python financial tools, SK Knowledge RAG recall, MCP market data, audit logs, and SSE output.</span>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/sk-ai.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/ai-agent-scaffold-lite" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -353,7 +305,7 @@
                 <p class="project-category-description">Multi-module backend systems with service splitting, messaging, distributed coordination, orders, payments, and search.</p>
             </div>
             <div class="projects-grid">
-                    <div class="project-card" data-project-slug="tianjixuetang">
+                    <div class="project-card" id="project-tianjixuetang" data-project-slug="tianjixuetang">
                 <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="images/project-tianjixuetang-system.jpg" srcset="images/project-tianjixuetang-system-mobile.jpg 640w, images/project-tianjixuetang-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="Tianjixuetang online education platform cover" loading="lazy" decoding="async">
                 </div>
@@ -382,7 +334,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/tianjixuetang.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/tianjixuetang.git" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -392,7 +344,7 @@
                 </div>
             </div>
 
-                    <div class="project-card" data-project-slug="o2o-city-ride">
+                    <div class="project-card" id="project-o2o-city-ride" data-project-slug="o2o-city-ride">
                 <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="images/project-o2o-city-ride-system.jpg" srcset="images/project-o2o-city-ride-system-mobile.jpg 640w, images/project-o2o-city-ride-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="O2O City Ride System cover" loading="lazy" decoding="async">
                 </div>
@@ -417,7 +369,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/o2o-city-ride.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/o2o-city-ride.git" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -435,7 +387,7 @@
                 <p class="project-category-description">Spring Boot business systems for local-life services, catering, campaigns, user flows, and high-concurrency scenarios.</p>
             </div>
             <div class="projects-grid">
-                    <div class="project-card" data-project-slug="xiaozhong-dianping">
+                    <div class="project-card" id="project-xiaozhong-dianping" data-project-slug="xiaozhong-dianping">
                 <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="images/project-xiaozhong-dianping-system.jpg" srcset="images/project-xiaozhong-dianping-system-mobile.jpg 640w, images/project-xiaozhong-dianping-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="Xiaozhong Dianping local life review backend cover" loading="lazy" decoding="async">
                 </div>
@@ -460,7 +412,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/xiaozhong-dianping.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/xiaozhong-dianping.git" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -470,7 +422,7 @@
                 </div>
             </div>
 
-                    <div class="project-card" data-project-slug="lottery">
+                    <div class="project-card" id="project-lottery" data-project-slug="lottery">
                 <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="images/project-lottery-system.jpg" srcset="images/project-lottery-system-mobile.jpg 640w, images/project-lottery-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="Red Packet Rain Lottery System cover" loading="lazy" decoding="async">
                 </div>
@@ -495,7 +447,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/lottery-system.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/lottery-system.git" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -505,7 +457,7 @@
                 </div>
             </div>
 
-                    <div class="project-card" data-project-slug="sky-takeout">
+                    <div class="project-card" id="project-sky-takeout" data-project-slug="sky-takeout">
                 <div class="project-image project-image-ratio-3x2 project-media">
                     <img src="images/project-sky-takeout-system.jpg" srcset="images/project-sky-takeout-system-mobile.jpg 640w, images/project-sky-takeout-system.jpg 1280w" sizes="(max-width: 768px) 100vw, 50vw" alt="Sky Take Out System cover" loading="lazy" decoding="async">
                 </div>
@@ -529,7 +481,7 @@
                         </ul>
                     </div>
                     <div class="project-links">
-                        <a href="https://gitee.com/joyceyu434840/sky-take-out.git" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        <a href="https://gitee.com/joyceyu434840/sky-take-out.git" class="ui-button ui-button--primary btn-primary" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 1024 1024" width="16" height="16" aria-hidden="true">
                                 <path fill="#C71D23" d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"/>
                             </svg>
@@ -552,35 +504,43 @@
         <div class="scroll-progress-bar"></div>
     </div>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <div class="page-utilities">
+    <button class="ui-button ui-button--secondary back-to-top" id="backToTop" aria-label="Back to top">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 19V5M5 12l7-7 7 7"/>
         </svg>
     </button>
 
-    <button class="contact-toggle" id="contactToggle" aria-label="Toggle contact panel">
+    <button class="ui-button ui-button--primary contact-toggle" id="contactToggle" aria-label="Toggle contact panel">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
         </svg>
     </button>
+    </div>
 
     <div class="image-preview hidden" id="imagePreview" aria-hidden="true">
-        <button class="image-preview-backdrop" type="button" aria-label="Close image preview"></button>
-        <div class="image-preview-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
-            <button class="image-preview-close" id="imagePreviewClose" type="button" aria-label="Close image preview">
+        <button class="image-preview-backdrop" type="button" tabindex="-1" aria-label="Close image preview" data-gallery-label-en="Close image preview" data-gallery-label-zh="关闭图片预览"></button>
+        <div class="image-preview-dialog" role="dialog" aria-modal="true" aria-label="Image preview" data-gallery-label-en="Image preview" data-gallery-label-zh="图片预览">
+            <div class="image-preview-toolbar">
+                <div class="image-preview-navigation" id="imagePreviewNavigation" hidden>
+                    <button type="button" id="imagePreviewPrev" class="ui-button ui-button--secondary ui-button--icon image-preview-arrow" aria-label="Previous image" data-gallery-label-en="Previous image" data-gallery-label-zh="上一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+                    <span id="imagePreviewCount" role="status" aria-live="polite" aria-atomic="true"></span>
+                    <button type="button" id="imagePreviewNext" class="ui-button ui-button--secondary ui-button--icon image-preview-arrow" aria-label="Next image" data-gallery-label-en="Next image" data-gallery-label-zh="下一张"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+                </div>
+            <button class="ui-button ui-button--secondary ui-button--icon image-preview-close" id="imagePreviewClose" type="button" aria-label="Close image preview" data-gallery-label-en="Close image preview" data-gallery-label-zh="关闭图片预览">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
-            <img id="imagePreviewImg" alt="">
-            <video class="image-preview-video" id="imagePreviewVideo" controls playsinline preload="metadata" hidden></video>
+            </div>
+            <div class="image-preview-canvas"><img id="imagePreviewImg" alt=""></div>
         </div>
     </div>
 
     <div class="contact-sidebar hidden" id="contactSidebar">
         <div class="contact-card">
-            <button class="toggle-contact-btn" id="toggleContactBtn" aria-label="Toggle contact panel">
+            <button class="ui-button ui-button--secondary ui-button--icon toggle-contact-btn" id="toggleContactBtn" aria-label="Toggle contact panel">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>

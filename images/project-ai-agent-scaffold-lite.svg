@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">AI Agent Scaffold Lite · 智能体工程脚手架</title>
+  <desc id="desc">深蓝与薄荷绿项目封面，展示 DDD 六模块、三种 Agent 编排模式和三类 MCP 工具接入。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101e35"/><stop offset="1" stop-color="#122f3c"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#52d9b2" stop-opacity=".18"/><stop offset="1" stop-color="#52d9b2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#a7f3d0"/><stop offset="1" stop-color="#5bd5bb"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#9cb7c6" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="940" cy="350" r="380" fill="url(#glow)"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <rect x="72" y="60" width="40" height="40" rx="12" fill="#80e5c1"/>
+    <path d="M84 80H100M92 72V88" stroke="#142a38" stroke-width="3" stroke-linecap="round"/>
+    <text x="128" y="87" fill="#d1dfeb" font-size="22" font-weight="600" letter-spacing="3">JOYCE / AI ENGINEERING</text>
+    <text x="1128" y="85" text-anchor="end" fill="#7c9ba9" font-size="20" letter-spacing="2">PROJECT 02</text>
+
+    <text x="72" y="228" fill="#f4f8fb" font-size="94" font-weight="750" letter-spacing="-4">AI Agent</text>
+    <text x="72" y="326" fill="#f4f8fb" font-size="82" font-weight="750" letter-spacing="-3">Scaffold <tspan fill="#80e5c1">Lite</tspan></text>
+    <text x="76" y="386" fill="#b1c6d4" font-size="29" letter-spacing="2">让智能体开发，从清晰架构开始。</text>
+    <path d="M76 429H124" stroke="#80e5c1" stroke-width="3"/>
+    <text x="140" y="437" fill="#8ba8b9" font-size="23">Java 17 / Spring Boot 3 / Google ADK</text>
+
+    <g fill="none" stroke="#4e8b8a">
+      <circle cx="930" cy="336" r="152" stroke-opacity=".24" stroke-dasharray="5 10"/>
+      <path d="M930 203V272M805 391L881 351M1056 391L980 351" stroke-width="2"/>
+      <path d="M797 250L839 226M1021 226L1063 250M914 484H946" stroke-opacity=".35" stroke-width="2"/>
+    </g>
+    <g transform="translate(861 267)">
+      <rect x="-9" y="9" width="138" height="138" rx="36" fill="#183e49" stroke="#4d938d"/>
+      <rect width="138" height="138" rx="36" fill="url(#core)"/>
+      <path d="M44 46L69 32L94 46V75L69 89L44 75ZM44 46L69 60L94 46M69 60V89" fill="none" stroke="#173c43" stroke-width="3" stroke-linejoin="round"/>
+      <text x="69" y="115" text-anchor="middle" fill="#16383d" font-size="21" font-weight="750" letter-spacing="2">AGENT</text>
+    </g>
+    <g transform="translate(852 147)">
+      <rect width="156" height="68" rx="20" fill="#1b3447" stroke="#46616e"/>
+      <circle cx="25" cy="34" r="5" fill="#80e5c1"/>
+      <text x="45" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Model</text>
+    </g>
+    <g transform="translate(721 391)">
+      <rect width="172" height="68" rx="20" fill="#1b3447" stroke="#46616e"/>
+      <path d="M21 29H35M21 39H35" stroke="#9eb8f3" stroke-width="3" stroke-linecap="round"/>
+      <text x="49" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Workflow</text>
+    </g>
+    <g transform="translate(981 391)">
+      <rect width="146" height="68" rx="20" fill="#1b3447" stroke="#46616e"/>
+      <path d="M22 26L16 34L22 42M33 26L39 34L33 42" fill="none" stroke="#e9c697" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="50" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Tools</text>
+    </g>
+
+    <rect x="72" y="562" width="1056" height="144" rx="24" fill="#ffffff" fill-opacity=".035" stroke="#7ca6b5" stroke-opacity=".2"/>
+    <path d="M423 596V672M775 596V672" stroke="#496171" stroke-opacity=".6"/>
+    <text x="108" y="616" fill="#80e5c1" font-size="22" font-weight="600" letter-spacing="2">DDD ARCHITECTURE</text>
+    <text x="108" y="662" fill="#eaf2f6" font-size="31" font-weight="650">6 个工程模块</text>
+    <text x="459" y="616" fill="#a7baf4" font-size="22" font-weight="600" letter-spacing="2">AGENT WORKFLOWS</text>
+    <text x="459" y="662" fill="#eaf2f6" font-size="31" font-weight="650">顺序 · 并行 · 循环</text>
+    <text x="811" y="616" fill="#e9c697" font-size="22" font-weight="600" letter-spacing="2">MCP TOOL ACCESS</text>
+    <text x="811" y="662" fill="#eaf2f6" font-size="31" font-weight="650">Local · SSE · Stdio</text>
+    <text x="76" y="757" fill="#7592a3" font-size="19" letter-spacing="1">CONFIGURATION → MODEL → AGENTS → WORKFLOW → RUNNER</text>
+    <path d="M1090 748H1124M1114 738L1124 748L1114 758" fill="none" stroke="#80e5c1" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

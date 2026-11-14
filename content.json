@@ -4,12 +4,12 @@
     {
       "id": "ai-rag",
       "title": {
-        "en": "AI & RAG Projects",
-        "zh": "AI 与 RAG 项目"
+        "en": "AI Applications & Agent Projects",
+        "zh": "AI 应用与智能体项目"
       },
       "description": {
-        "en": "Spring AI · RAG · Multimodal Chat · Vector Search · Document Q&A",
-        "zh": "Spring AI · RAG · 图文多模态 · 向量检索 · 文档问答"
+        "en": "Spring AI · AI Agents · Tool Calling · RAG Knowledge Bases · Vector Retrieval",
+        "zh": "Spring AI · AI Agent · Tool Calling · RAG 知识库 · 向量检索"
       }
     },
     {
@@ -46,7 +46,18 @@
         "zh": "天机学堂在线教育平台封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/tianjixuetang.git",
-      "techTags": ["Spring Cloud", "Spring Boot", "Nacos", "Feign", "JWT", "MySQL", "Redis", "RabbitMQ", "Elasticsearch", "Redisson"],
+      "techTags": [
+        "Spring Cloud",
+        "Spring Boot",
+        "Nacos",
+        "Feign",
+        "JWT",
+        "MySQL",
+        "Redis",
+        "RabbitMQ",
+        "Elasticsearch",
+        "Redisson"
+      ],
       "title": {
         "en": "Tianjixuetang Online Education Platform",
         "zh": "天机学堂在线教育平台"
@@ -88,7 +99,14 @@
         "zh": "小众点评本地生活点评系统封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/xiaozhong-dianping.git",
-      "techTags": ["Spring Boot", "MyBatis-Plus", "MySQL", "Redis", "Lombok", "Hutool"],
+      "techTags": [
+        "Spring Boot",
+        "MyBatis-Plus",
+        "MySQL",
+        "Redis",
+        "Lombok",
+        "Hutool"
+      ],
       "title": {
         "en": "Xiaozhong Dianping Local Life Review System",
         "zh": "小众点评本地生活点评系统"
@@ -123,64 +141,82 @@
     {
       "slug": "smart-campus-ai",
       "category": "ai-rag",
-      "image": "images/project-smart-campus-ai-system.jpg",
-      "mobileImage": "images/project-smart-campus-ai-system-mobile.jpg",
+      "image": "images/campusai-product-showcase.svg",
       "imageAlt": {
-        "en": "AI knowledge base and Q&A platform cover",
-        "zh": "AI 智能知识库与问答平台封面"
+        "en": "CampusAI product interface design showing chat, tool calling, and conversation memory",
+        "zh": "CampusAI 产品界面设计：智能对话、工具调用与会话记忆"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/campusai",
-      "techTags": ["Spring Boot", "Spring AI", "Redis", "RabbitMQ", "MySQL", "MinIO"],
+      "techTags": [
+        "Spring Boot",
+        "Spring AI",
+        "Redis",
+        "RabbitMQ",
+        "MySQL",
+        "MinIO"
+      ],
       "title": {
-        "en": "AI Knowledge Base & Q&A Platform",
-        "zh": "AI 智能知识库与问答平台"
+        "en": "CampusAI Campus AI Assistant",
+        "zh": "CampusAI 园区智能助手"
       },
       "description": {
-        "en": "An intelligent knowledge base and Q&A system built on large language models, using Spring AI and vector retrieval to improve search quality and user experience.",
-        "zh": "基于大语言模型构建的智能知识库与问答系统，结合 Spring AI 与向量检索等能力，提升信息检索质量与使用体验。"
-      },
-      "video": {
-        "src": "videos/campusai-demo.webm",
-        "poster": "images/project-smart-campus-ai-video-poster.jpg"
+        "en": "A campus assistant built with Spring AI, connecting conversational services, business tool calling, and RAG search across announcements and documents.",
+        "zh": "基于 Spring AI 的园区智能助手，将智能对话、业务工具调用与公告、资料的 RAG 检索串联起来。"
       },
       "architecture": {
+        "presentation": "carousel",
         "heading": {
-          "en": "Architecture & Capability Notes",
-          "zh": "架构与能力说明"
+          "en": "System design",
+          "zh": "系统设计"
         },
         "intro": {
-          "en": "Two flows highlight the project design: Spring AI tool calling for business actions, and the notice knowledge lifecycle from indexing consistency to conversational RAG Q&A.",
-          "zh": "这里用两张流程图说明项目设计：第一张展示 Spring AI 如何编排 Tool Calling 完成业务动作，第二张整合公告索引一致性与对话式 RAG 问答链路。"
+          "en": "Explore the service architecture, the tool execution loop, and the announcement knowledge pipeline. Select an image to view the details.",
+          "zh": "从系统分层到工具执行，再到公告知识检索，三张设计图呈现核心链路。点击图片查看细节。"
         },
         "diagrams": [
           {
-            "image": "images/campusai-tool-calling-flow.svg",
+            "image": "images/campusai-system-architecture.svg",
             "title": {
-              "en": "Tool Calling Interaction Flow",
-              "zh": "Tool Calling 交互流程"
+              "en": "Service architecture",
+              "zh": "系统架构总览"
             },
             "caption": {
-              "en": "Shows the full loop from user question, prompt construction, tool selection, business API execution, result injection, and final LLM response.",
-              "zh": "覆盖用户提问、Prompt 构造、工具选择、业务接口执行、结果回填与大模型生成最终回答的完整闭环。"
+              "en": "The user interface, AI services, management services, and shared data infrastructure.",
+              "zh": "用户界面、AI 服务、园区业务与数据基础设施的职责分层。"
             },
             "alt": {
-              "en": "Tool calling interaction flow for the CampusAI assistant",
-              "zh": "CampusAI 智能助手 Tool Calling 交互流程图"
+              "en": "CampusAI system architecture: Vue, Spring AI, RuoYi, RabbitMQ, MySQL, Redis Stack, MinIO, and model services",
+              "zh": "CampusAI 系统架构：Vue、Spring AI、若依、RabbitMQ、MySQL、Redis Stack、MinIO 与模型服务"
             }
           },
           {
-            "image": "images/campusai-notice-lifecycle-flow-v2.png",
+            "image": "images/campusai-tool-calling-flow.svg",
             "title": {
-              "en": "Notice Knowledge Lifecycle & RAG Q&A",
-              "zh": "公告知识生命周期与 RAG 问答"
+              "en": "Tool calling loop",
+              "zh": "工具调用闭环"
             },
             "caption": {
-              "en": "Combines notice CRUD synchronization, RabbitMQ-driven indexing, document-id vector cleanup, semantic retrieval, and LLM answer generation in one lifecycle view.",
-              "zh": "把公告 CRUD 同步、RabbitMQ 异步索引、document_id 向量清理、语义召回与大模型回答整合到同一张生命周期图中。"
+              "en": "The model requests a tool; the application executes the business action and returns its result.",
+              "zh": "模型提出工具调用请求，应用执行业务动作，再将结果回填模型。"
             },
             "alt": {
-              "en": "Notice knowledge lifecycle and RAG Q&A flow for CampusAI",
-              "zh": "CampusAI 公告知识生命周期与 RAG 问答流程图"
+              "en": "CampusAI tool calling design from user context and prompt assembly to tool execution and a final response",
+              "zh": "CampusAI 工具调用设计：用户上下文、提示词构造、模型决策、应用执行与最终回答"
+            }
+          },
+          {
+            "image": "images/campusai-notice-rag-flow.svg",
+            "title": {
+              "en": "Knowledge indexing and RAG",
+              "zh": "知识索引与 RAG"
+            },
+            "caption": {
+              "en": "Asynchronous content indexing and semantic retrieval connect maintained knowledge to conversational answers.",
+              "zh": "通过异步内容索引与语义检索，将维护中的知识连接到对话回答。"
+            },
+            "alt": {
+              "en": "CampusAI announcement and document indexing through RabbitMQ and Redis Stack, followed by Spring AI RAG question answering",
+              "zh": "CampusAI 公告与资料通过 RabbitMQ、Redis Stack 完成知识索引，并由 Spring AI 进行 RAG 问答"
             }
           }
         ]
@@ -209,154 +245,91 @@
       }
     },
     {
-      "slug": "sk-knowledge",
+      "slug": "ai-agent-scaffold-lite",
       "category": "ai-rag",
-      "image": "images/project-sk-knowledge-system.jpg",
-      "mobileImage": "images/project-sk-knowledge-system-mobile.jpg",
+      "image": "images/project-ai-agent-scaffold-lite.svg",
       "imageAlt": {
-        "en": "SK Knowledge RAG knowledge base system cover",
-        "zh": "SK Knowledge 智能知识库问答系统封面"
+        "en": "AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools",
+        "zh": "AI Agent Scaffold Lite 项目封面：DDD 模块、Agent 编排与 MCP 工具接入"
       },
-      "giteeUrl": "https://gitee.com/joyceyu434840/sk-knowledge.git",
-      "techTags": ["Spring Boot 3", "Spring Security", "JWT", "MySQL", "MongoDB", "Redis", "Weaviate", "MinIO", "Temporal"],
+      "giteeUrl": "https://gitee.com/joyceyu434840/ai-agent-scaffold-lite",
+      "techTags": [
+        "Java 17",
+        "Spring Boot 3",
+        "Google ADK",
+        "Spring AI",
+        "LangChain4j",
+        "DDD",
+        "MCP"
+      ],
       "title": {
-        "en": "SK Knowledge RAG Knowledge Base System",
-        "zh": "SK Knowledge 智能知识库问答系统"
+        "en": "AI Agent Scaffold Lite",
+        "zh": "AI Agent Scaffold Lite 智能体脚手架"
       },
       "description": {
-        "en": "An intelligent private knowledge base and Q&A system built with Spring Boot, supporting document upload, vector retrieval, AI chat, RBAC permissions, and conversation history.",
-        "zh": "基于 Spring Boot 构建的私有化智能知识库与问答系统，支持文档上传、向量检索、AI 对话、RBAC 权限与会话历史。"
-      },
-      "video": {
-        "src": "videos/sk-knowledge-demo.mp4",
-        "poster": "videos/sk-knowledge-demo-poster.jpg"
+        "en": "A Java 17 / Spring Boot 3 AI Agent scaffold with six DDD modules, configuration-driven agent assembly, MCP tool integration, and sequential, parallel, and loop workflow examples.",
+        "zh": "基于 Java 17 与 Spring Boot 3 的 AI Agent 脚手架，采用 DDD 六模块架构，实现配置驱动的智能体装配与 MCP 工具接入，并提供顺序、并行、循环三种协作示例。"
       },
       "architecture": {
         "heading": {
-          "en": "Architecture & Capability Notes",
-          "zh": "架构与能力说明"
+          "en": "Architecture & Agent Workflows",
+          "zh": "架构设计与智能体编排"
         },
+        "showCaptions": false,
         "intro": {
-          "en": "Two maps make the project easier to read: the first clarifies the product capabilities, and the second summarizes the backend, storage, retrieval, task, and security stack.",
-          "zh": "这里用两张图把项目讲清楚：第一张展示系统功能边界，第二张概括后端、存储、检索、任务处理与安全认证等技术组成。"
+          "en": "Six module responsibilities and three collaboration patterns. Select a diagram to enlarge it.",
+          "zh": "六模块职责与三种协作模式。点击设计图，查看完整细节。"
         },
         "diagrams": [
           {
-            "image": "images/sk-knowledge-function-map.png",
+            "image": "images/ai-agent-scaffold-architecture.svg",
             "title": {
-              "en": "Capability Map",
-              "zh": "功能点总览"
+              "en": "DDD Architecture · Six Module Responsibilities",
+              "zh": "DDD 六模块 · 工程职责架构图"
             },
             "caption": {
-              "en": "Covers multi-turn chat, model selection, knowledge-base management, document recall, file chunking, vector processing, memory, and recycle-bin flows.",
-              "zh": "覆盖多轮对话、模型选择、知识库管理、文档召回、文件分块、向量处理、记忆信息与回收站等核心能力。"
+              "en": "App handles startup, Domain assembles agents and workflows, and API / Types define shared contracts. Trigger and Infrastructure provide extension structures for business integration.",
+              "zh": "App 负责启动配置，Domain 承载 Agent 装配与编排，API / Types 定义契约和通用类型；Trigger 与 Infrastructure 为业务接入保留扩展结构。"
             },
             "alt": {
-              "en": "Mind map of SK Knowledge product capabilities",
-              "zh": "SK Knowledge 项目功能点思维导图"
+              "en": "Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked",
+              "zh": "AI Agent Scaffold Lite 的 DDD 六模块职责架构，标明已有实现与预留扩展结构"
             }
           },
           {
-            "image": "images/sk-knowledge-technology-map.png",
+            "image": "images/ai-agent-scaffold-workflows.svg",
             "title": {
-              "en": "Technology Map",
-              "zh": "技术点总览"
+              "en": "Agent Assembly · Sequential, Parallel & Loop",
+              "zh": "Agent 装配 · 顺序、并行与循环协作"
             },
             "caption": {
-              "en": "Shows Spring Boot, Spring Security, Spring AI, Weaviate, Redis, MongoDB, MinIO, Tika, Temporal Saga, SSE, and document chunking.",
-              "zh": "展示 Spring Boot、Spring Security、Spring AI、Weaviate、Redis、MongoDB、MinIO、Tika、Temporal Saga、SSE 与文档分割等实现要点。"
+              "en": "Configuration flows through API, model, agent, workflow, and runner assembly. Examples show code review, parallel research, and iterative writing, with Local / SSE / Stdio tool strategies.",
+              "zh": "配置依次装配 API、模型、Agent、工作流与 Runner，结合 Local / SSE / Stdio 工具策略；通过代码审查、并行调研、循环写作示例说明协作方式。"
             },
             "alt": {
-              "en": "Mind map of SK Knowledge technical architecture",
-              "zh": "SK Knowledge 项目技术点思维导图"
+              "en": "Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite",
+              "zh": "AI Agent Scaffold Lite 的配置驱动装配、MCP 工具接入及三种多智能体协作模式图"
             }
           }
-        ]
+        ],
+        "presentation": "carousel"
       },
       "featuresHeading": {
-        "en": "Key Achievements:",
-        "zh": "关键成果："
+        "en": "Key Capabilities:",
+        "zh": "核心能力："
       },
       "features": {
         "en": [
-          "Built multi-knowledge-base management with retrieval configuration, knowledge sharing, and permission control",
-          "Implemented document processing for PDF, DOC, DOCX, TXT, CSV, and MD, including text extraction, semantic chunking, vectorization, and status tracking",
-          "Integrated Weaviate, MinIO, MySQL, MongoDB, and Redis for vector search, object storage, business persistence, and cache/session support",
-          "Developed OpenAI-compatible chat with model management, SSE streaming responses, context association, conversation history, and Spring Security + JWT authentication"
+          "Separates API, App, Domain, Infrastructure, Trigger, and Types into six Maven modules with clear responsibilities",
+          "Assembles models, LlmAgents, workflows, and InMemoryRunner from configuration through a strategy tree",
+          "Connects Local, SSE, and Stdio tool strategies through an MCP factory and attaches tool callbacks to the chat model",
+          "Includes Google ADK sequential, parallel, and loop collaboration examples, plus Spring AI and LangChain4j integration tests"
         ],
         "zh": [
-          "实现多知识库创建与管理，支持检索参数配置、知识库分享与权限控制",
-          "支持 PDF、DOC、DOCX、TXT、CSV、MD 等文档处理，完成文本提取、语义分块、向量化与状态跟踪",
-          "整合 Weaviate、MinIO、MySQL、MongoDB 与 Redis，支撑向量检索、对象存储、业务持久化与缓存/会话能力",
-          "开发兼容 OpenAI API 的 AI 对话能力，支持模型管理、SSE 流式响应、上下文关联、会话历史与 Spring Security + JWT 认证"
-        ]
-      },
-      "linkLabel": {
-        "en": "Gitee",
-        "zh": "Gitee"
-      }
-    },
-    {
-      "slug": "sk-ai",
-      "category": "ai-rag",
-      "image": "images/project-sk-ai-system.svg",
-      "imageAlt": {
-        "en": "SK-AI intelligent financial advisor system cover",
-        "zh": "SK-AI 金融智能助手系统封面"
-      },
-      "giteeUrl": "https://gitee.com/joyceyu434840/sk-ai.git",
-      "techTags": ["Spring Boot", "Spring AI", "Agent", "MCP", "Python", "REST API"],
-      "title": {
-        "en": "SK-AI Intelligent Financial Advisor",
-        "zh": "SK-AI 金融智能助手"
-      },
-      "description": {
-        "en": "An upper-layer financial AI Agent that can connect with SK Knowledge for RAG-based knowledge retrieval, then orchestrates reasoning, financial tools, market data, and streaming advisory responses.",
-        "zh": "面向 SK Knowledge 智能知识库问答系统的上层金融 AI Agent，可接入其 RAG 知识检索能力，并编排推理、金融工具、市场数据与流式顾问回答。"
-      },
-      "architecture": {
-        "heading": {
-          "en": "Architecture & Capability Notes",
-          "zh": "架构与能力说明"
-        },
-        "intro": {
-          "en": "This overview shows how the project combines a layered Agent structure with SK Knowledge RAG recall, dynamic Skill loading, Java + Python financial tools, MCP market data, audit tracing, and SSE streaming output.",
-          "zh": "这里用一张架构图说明项目设计：分层 Agent 结构结合 SK Knowledge RAG 召回、动态 Skill 加载、Java + Python 金融工具、MCP 市场数据、审计追踪与 SSE 流式输出。"
-        },
-        "diagrams": [
-          {
-            "image": "images/sk-ai-architecture-overview.svg",
-            "title": {
-              "en": "Layered Agent & Skill Flow",
-              "zh": "分层 Agent 与 Skill 编排"
-            },
-            "caption": {
-              "en": "Summarizes DDD-style modules, two-layer Skill loading, Java + Python financial tools, SK Knowledge RAG recall, MCP market data, audit logs, and SSE output.",
-              "zh": "概括 DDD 分层模块、双层 Skill 加载、Java + Python 金融工具、SK Knowledge RAG 召回、MCP 市场数据、审计日志与 SSE 输出。"
-            },
-            "alt": {
-              "en": "SK-AI layered Agent and Skill orchestration architecture overview",
-              "zh": "SK-AI 分层 Agent 与 Skill 编排架构总览图"
-            }
-          }
-        ]
-      },
-      "featuresHeading": {
-        "en": "Key Achievements:",
-        "zh": "关键成果："
-      },
-      "features": {
-        "en": [
-          "Built a Maven multi-module, DDD-style architecture with API, Agent, infrastructure, framework, and domain layers",
-          "Designed a two-layer Skill storage model with built-in read-only skills and external overridable skills, supporting dynamic loading by Agent",
-          "Combined LLM reasoning with a Java + Python financial toolchain for DCF valuation, technical indicators, VaR, and portfolio optimization",
-          "Orchestrated SK Knowledge RAG recall, MCP market data, audit tracing, multimodal chat, and SSE streaming responses for financial advisory scenarios"
-        ],
-        "zh": [
-          "采用 Maven 多模块与 DDD 分层设计，拆分 API、Agent、基础设施、核心框架与领域模型层",
-          "设计双层 Skill 存储模型，内置 Skill 只读、外部 Skill 可覆盖，并支持 Agent 动态加载",
-          "结合 LLM 推理与 Java + Python 金融工具链，支持 DCF 估值、技术指标、VaR 与组合优化",
-          "编排 SK Knowledge RAG 召回、MCP 市场数据、审计追踪、多模态对话与 SSE 流式返回，支撑金融顾问场景"
+          "按 API、App、Domain、Infrastructure、Trigger、Types 六个 Maven 模块划分职责，形成清晰的 DDD 工程结构",
+          "通过策略树读取配置，依次装配模型、LlmAgent、工作流与 InMemoryRunner，沉淀可复用的装配链路",
+          "通过 MCP 工厂选择 Local、SSE、Stdio 工具策略，将工具回调挂载到对话模型",
+          "提供 Google ADK 顺序、并行、循环协作示例，以及 Spring AI / LangChain4j 模型与工具集成测试"
         ]
       },
       "linkLabel": {
@@ -374,7 +347,14 @@
         "zh": "红包雨抽奖系统封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/lottery-system.git",
-      "techTags": ["Spring Boot", "MyBatis-Plus", "MySQL", "Redis", "RabbitMQ", "MinIO"],
+      "techTags": [
+        "Spring Boot",
+        "MyBatis-Plus",
+        "MySQL",
+        "Redis",
+        "RabbitMQ",
+        "MinIO"
+      ],
       "title": {
         "en": "Red Packet Rain Lottery System",
         "zh": "红包雨抽奖系统"
@@ -416,7 +396,13 @@
         "zh": "天送外卖系统封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/sky-take-out.git",
-      "techTags": ["Spring Boot", "MyBatis", "MySQL", "Redis", "AliOSS"],
+      "techTags": [
+        "Spring Boot",
+        "MyBatis",
+        "MySQL",
+        "Redis",
+        "AliOSS"
+      ],
       "title": {
         "en": "Sky Take Out System",
         "zh": "天送外卖系统"
@@ -458,7 +444,14 @@
         "zh": "同城拼车系统封面"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/o2o-city-ride.git",
-      "techTags": ["Spring Cloud", "MyBatis", "Redis", "RabbitMQ", "MongoDB", "WebSocket"],
+      "techTags": [
+        "Spring Cloud",
+        "MyBatis",
+        "Redis",
+        "RabbitMQ",
+        "MongoDB",
+        "WebSocket"
+      ],
       "title": {
         "en": "O2O City Ride System",
         "zh": "同城拼车系统"
@@ -494,11 +487,11 @@
   "en": {
     "title": "Joyce | Portfolio",
     "hiddenTitle": "👋 Come back soon! - Joyce Portfolio",
-    "metaDescription": "Joyce's portfolio: Business QA at HSBC Software Development, ISTQB Certified Tester; Java backend projects, Python foundation, Spring AI practice, and future LangChain learning.",
+    "metaDescription": "Joyce's portfolio: Business QA at HSBC Software Development, ISTQB Certified Tester; Java backend projects, Spring AI practice, and AI application development.",
     "ogTitle": "Joyce | Portfolio",
-    "ogDescription": "Business QA · ISTQB · Java backend · Python · Spring AI",
+    "ogDescription": "Business QA · ISTQB · Java backend · Spring AI",
     "twitterTitle": "Joyce | Portfolio",
-    "twitterDescription": "Business QA · ISTQB · Java backend · Python · Spring AI",
+    "twitterDescription": "Business QA · ISTQB · Java backend · Spring AI",
     "text": {
       ".skip-link": "Skip to main content",
       ".top-banner-text": "Best viewed on desktop",
@@ -509,7 +502,7 @@
       ".hero-badge": "Open to Software Engineer opportunities",
       "header h1": "Hi, I'm Joyce",
       ".subtitle": "Business QA at HSBC Software Development · ISTQB Certified Tester · AI application engineering direction",
-      ".tagline": "I bring a testing mindset, Java backend foundation, and Python skills to reliable delivery, with my current growth focused on AI application development.",
+      ".tagline": "I bring a testing mindset and Java backend foundation to reliable delivery, with my current growth focused on AI application development.",
       ".hero-cta-experience": "Work experience",
       ".hero-cta-portfolio": "Personal projects",
       ".hero-btn-github": "GitHub",
@@ -520,15 +513,15 @@
       "#about > h2": "About Me",
       "#about > .section-intro": "Testing is my craft; Java engineering is my technical base; AI application development is where I am growing next.",
       ".about-summary p:nth-child(1)": "I work in software testing at HSBC Software Development (Guangdong) and hold ISTQB certification, with a Master's in Technology and Engineering Management. Day to day I run end-to-end testing across banking systems—especially card and points journeys—where accuracy, data consistency, and customer impact matter.",
-      ".about-summary p:nth-child(2)": "Alongside testing delivery, Java is my existing backend foundation, so my current hands-on projects still build on the traditional Java/Spring stack. At the same time, I am expanding toward the Python AI application ecosystem, with LangChain and AI engineering workflows as my next learning focus.",
+      ".about-summary p:nth-child(2)": "Alongside testing delivery, Java is my existing backend foundation, so my current hands-on projects build on the traditional Java/Spring stack. At the same time, I am expanding toward AI application development and engineering workflows.",
       ".about-focus h3": "Current Growth Focus",
       ".about-list li:nth-child(1)": "Focusing on AI application development with Spring AI, RAG, knowledge-base Q&A, and model service integration",
       ".about-list li:nth-child(2)": "Continuing Java backend practice through existing project experience, Spring Boot, API design, persistence integration, and system design",
-      ".about-list li:nth-child(3)": "Expanding into the Python AI application ecosystem, with LangChain as a key next learning direction",
+      ".about-list li:nth-child(3)": "Expanding into AI application development and engineering workflows",
       "#skills > h2": "Technical Skills",
-      "#skills > .section-intro": "AI application development is my leading technical growth focus, while quality assurance remains my professional foundation. I combine Spring AI and Java/Spring backend practice with end-to-end testing, API validation, regression coverage, data consistency checks, and banking-domain delivery experience.",
-      "#skills .skill-card:nth-child(1) h3": "AI Applications & RAG",
-      "#skills .skill-card:nth-child(1) p": "Hands-on with Spring AI and LLM application patterns, including chat APIs, multimodal conversation, ChatPDF, vector retrieval, knowledge-base Q&A, conversation memory, and OpenAI-compatible model integration.",
+      "#skills > .section-intro": "AI application development is my current growth focus, while testing and quality assurance remain my professional foundation. I combine Spring AI, Java/Spring backend practice, Agent orchestration, tool calling, RAG retrieval, and end-to-end testing experience.",
+      "#skills .skill-card:nth-child(1) h3": "AI Applications & Agents",
+      "#skills .skill-card:nth-child(1) p": "Hands-on with Spring AI and LLM application patterns, including conversational Q&A, Agent orchestration, tool calling, RAG knowledge bases, vector retrieval, conversation memory, and model service integration.",
       "#skills .skill-card:nth-child(2) h3": "Testing & Quality Assurance",
       "#skills .skill-card:nth-child(2) p": "Professional QA practice across functional, API, regression, and end-to-end testing, with strong attention to requirements analysis, defect tracking, data consistency, business rule validation, and release quality.",
       "#skills .skill-card:nth-child(3) h3": "Java & Spring Backend",
@@ -547,7 +540,8 @@
       ".company": "HSBC Software Development (Guangdong) Co., Ltd.",
       ".role-note": "",
       ".duration": "Jan 2024 - Present",
-      "#exp-project-1 h4": "Project 1: Hang Seng Bank FUN Center Credit Card Points Mall",
+      "#exp-project-1 h4": "Hang Seng Bank FUN Center Credit Card Points Mall",
+      "#exp-project-2 h4": "P Loan",
       "#experience .experience-item:nth-of-type(2) .experience-header h3": "Software Testing",
       "#experience .experience-item:nth-of-type(2) .company": "Kehua Data Co., Ltd.",
       "#experience .experience-item:nth-of-type(2) .role-note": "",
@@ -563,6 +557,9 @@
       "#exp-project-1 li:nth-child(1)": "Led core testing for the points mall: account journeys, campaign surfaces, FUN Shop redemption, and Lucky Draw modules.",
       "#exp-project-1 li:nth-child(2)": "Ran end-to-end coverage across the points lifecycle, pairing the mobile app with back-office reporting to verify data accuracy and consistency.",
       "#exp-project-1 li:nth-child(3)": "Authored and executed functional, API, and regression suites; tracked defects with emphasis on points debits, reward fulfillment, and reporting logic.",
+      "#exp-project-2 li:nth-child(1)": "Participated in functional testing for the P Loan lending journey, covering application and approval flows.",
+      "#exp-project-2 li:nth-child(2)": "Verified loan data and status changes across front-end channels, back-office systems, and related reports.",
+      "#exp-project-2 li:nth-child(3)": "Executed API and regression testing for key lending scenarios, tracking defects through verification and closure.",
       "#exp-project-4 .project-overview": "<strong>Project Overview:</strong> OCT integrated water–electricity and infrastructure management platform, including the metro energy operations subsystem, spanning billing and intelligent O&M monitoring.",
       "#exp-project-4 li:nth-child(1)": "Owned end-to-end billing testing—rules, charging, invoicing, and reconciliation—to protect logic and data consistency; extended coverage to customer and asset management modules, including exception paths.",
       "#exp-project-4 li:nth-child(2)": "Tested the intelligent O&M monitoring stack (equipment monitoring, energy management, alarms, analytics microservices) and supported environment setup plus regression passes to reproduce and verify complex scenarios faster."
@@ -579,11 +576,11 @@
   "zh": {
     "title": "Joyce | 个人作品集",
     "hiddenTitle": "👋 记得回来看看 - Joyce 作品集",
-    "metaDescription": "Joyce 的个人作品集：汇丰软件测试从业者，ISTQB 认证测试工程师，具备 Java 后端项目经验、Python 基础、Spring AI 实践，并将继续学习 LangChain。",
+    "metaDescription": "Joyce 的个人作品集：汇丰软件测试从业者，ISTQB 认证测试工程师，具备 Java 后端项目经验与 Spring AI 实践，持续聚焦 AI 应用开发。",
     "ogTitle": "Joyce | 个人作品集",
-    "ogDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Python | Spring AI",
+    "ogDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Spring AI",
     "twitterTitle": "Joyce | 个人作品集",
-    "twitterDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Python | Spring AI",
+    "twitterDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Spring AI",
     "text": {
       ".skip-link": "跳转到主要内容",
       ".top-banner-text": "电脑端访问效果更佳。",
@@ -594,7 +591,7 @@
       ".hero-badge": "正在寻找软件工程师机会",
       "header h1": "你好，我是 Joyce",
       ".subtitle": "汇丰软件测试从业者 · ISTQB 认证测试员 · AI 应用工程方向",
-      ".tagline": "我以测试思维、Java 后端基础与 Python 能力构建可靠系统，目前重点成长方向集中在 AI 应用开发。",
+      ".tagline": "我以测试思维与 Java 后端基础构建可靠系统，目前重点成长方向集中在 AI 应用开发。",
       ".hero-cta-experience": "工作经历",
       ".hero-cta-portfolio": "个人项目",
       ".hero-btn-github": "GitHub 源码",
@@ -605,15 +602,15 @@
       "#about > h2": "关于我",
       "#about > .section-intro": "以测试为职业，以 Java 工程能力为技术基础，并将 AI 应用开发作为当前重点成长方向。",
       ".about-summary p:nth-child(1)": "我目前在汇丰从事软件测试工作，并持有 ISTQB 认证，同时拥有技术与工程管理硕士学位。日常工作覆盖银行多系统端到端测试，关注精度、数据一致性与客户影响。",
-      ".about-summary p:nth-child(2)": "在测试交付之外，Java 是我已有的后端技术基础，因此目前项目实践仍以传统 Java/Spring 技术栈为主；同时我也在拓展 Python AI 应用生态能力，并将 LangChain 与 AI 工程化流程作为后续重点学习方向。",
+      ".about-summary p:nth-child(2)": "在测试交付之外，Java 是我已有的后端技术基础，因此目前项目实践以传统 Java/Spring 技术栈为主；同时我也在持续拓展 AI 应用开发与工程化能力。",
       ".about-focus h3": "当前成长方向",
       ".about-list li:nth-child(1)": "聚焦 AI 应用开发，持续实践 Spring AI、RAG、知识库问答与模型服务接入",
       ".about-list li:nth-child(2)": "基于已有项目经验继续深化 Java 后端能力，包括 Spring Boot、接口设计、持久化集成与系统设计",
-      ".about-list li:nth-child(3)": "拓展 Python AI 应用生态能力，并将 LangChain 作为后续重点学习方向",
+      ".about-list li:nth-child(3)": "持续拓展 AI 应用开发与工程化能力",
       "#skills > h2": "技术能力",
-      "#skills > .section-intro": "AI 应用开发是当前重点成长方向，同时测试与质量保障是我的职业基础。我将 Spring AI 与 Java/Spring 后端实践，和端到端测试、接口验证、回归覆盖、数据一致性校验及银行业务交付经验结合起来。",
-      "#skills .skill-card:nth-child(1) h3": "AI 应用与 RAG",
-      "#skills .skill-card:nth-child(1) p": "具备 Spring AI 与大模型应用实践经验，覆盖聊天接口、图文多模态、ChatPDF、向量检索、知识库问答、会话记忆与 OpenAI 兼容模型接入等场景。",
+      "#skills > .section-intro": "AI 应用开发是当前重点成长方向，同时测试与质量保障是我的职业基础。我将 Spring AI、Java/Spring 后端实践、Agent 编排、Tool Calling、RAG 检索，与端到端测试经验结合起来。",
+      "#skills .skill-card:nth-child(1) h3": "AI 应用与智能体",
+      "#skills .skill-card:nth-child(1) p": "具备 Spring AI 与大模型应用实践经验，覆盖对话问答、Agent 编排、Tool Calling、RAG 知识库、向量检索、会话记忆与模型服务接入等场景。",
       "#skills .skill-card:nth-child(2) h3": "测试与质量保障",
       "#skills .skill-card:nth-child(2) p": "具备职业 QA 实践经验，覆盖功能测试、接口测试、回归测试与端到端测试；重视需求分析、缺陷跟踪、数据一致性、业务规则校验与发布质量。",
       "#skills .skill-card:nth-child(3) h3": "Java 与 Spring 后端",
@@ -632,7 +629,8 @@
       ".company": "汇丰软件开发（广东）有限公司",
       ".role-note": "",
       ".duration": "2024.01 - 至今",
-      "#exp-project-1 h4": "项目一：恒生银行 FUN Center 信用卡积分商城",
+      "#exp-project-1 h4": "恒生银行 FUN Center 信用卡积分商城",
+      "#exp-project-2 h4": "P Loan 贷款项目",
       "#experience .experience-item:nth-of-type(2) .experience-header h3": "软件测试",
       "#experience .experience-item:nth-of-type(2) .company": "科华数据股份有限公司",
       "#experience .experience-item:nth-of-type(2) .role-note": "",
@@ -648,6 +646,9 @@
       "#exp-project-1 li:nth-child(1)": "负责积分商城核心功能测试，包括积分账户页面、营销活动展示、FUN Shop 积分兑换及 Lucky Draw 抽奖活动等模块。",
       "#exp-project-1 li:nth-child(2)": "深入参与积分商城全流程测试，结合前端 APP 与后台报表数据，验证业务数据传递的准确性与一致性。",
       "#exp-project-1 li:nth-child(3)": "编写并执行功能测试、接口测试及回归测试，跟踪缺陷并重点验证积分扣减、奖励发放及报表统计等业务逻辑。",
+      "#exp-project-2 li:nth-child(1)": "参与 P Loan 贷款流程功能测试，覆盖贷款申请与审批等核心环节。",
+      "#exp-project-2 li:nth-child(2)": "结合前端渠道、后台系统及相关报表，验证贷款数据与状态流转的准确性。",
+      "#exp-project-2 li:nth-child(3)": "执行关键贷款场景的接口测试与回归测试，跟踪缺陷并完成验证闭环。",
       "#exp-project-4 .project-overview": "<strong>项目概述：</strong>华侨城水电一体化及基础设施综合管理平台，含地铁能源运营子系统，覆盖计费与智能运维监控等能力。",
       "#exp-project-4 li:nth-child(1)": "负责计费系统全流程测试（计费规则、收费、账单、对账），保障计费逻辑准确性与数据一致性，同时参与客户管理、资产管理等业务模块功能与异常场景测试。",
       "#exp-project-4 li:nth-child(2)": "负责智能运维监控系统测试（设备监控、能源管理、告警通知、数据分析等微服务模块），并支持测试环境搭建与回归验证，提升复杂场景问题复现与验证效率。"

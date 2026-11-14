@@ -4,7 +4,7 @@
 
 这是 **Joyce** 的个人作品集站点：用一页清晰展示**我是谁、当前技术方向、个人项目、工作经历**以及联系入口。页面**默认英文**，也可一键切换**中文**，方便不同读者阅读。
 
-我目前在汇丰从事软件测试相关工作，持有 ISTQB 认证。测试与质量保障是我的职业基础；Java 是我已有的后端技术基础，目前项目实践仍以传统 Java/Spring 技术栈为主。同时，我正在聚焦 AI 应用开发，持续实践 Spring AI、RAG、知识库问答与模型服务接入，并将 Python AI 应用生态和 LangChain 作为后续重点学习方向。
+我目前在汇丰从事软件测试相关工作，持有 ISTQB 认证。测试与质量保障是我的职业基础；Java 是我已有的后端技术基础，目前项目实践仍以传统 Java/Spring 技术栈为主。同时，我正在聚焦 AI 应用开发，持续实践 Spring AI、RAG、知识库问答与模型服务接入。
 
 个人项目与练习会**持续在 [Gitee](https://gitee.com/joyceyu434840) 上更新**，网站上的展示也会随时间补充和调整。
 
@@ -37,9 +37,11 @@
 - **QA / 测试交付**：功能测试、接口测试、回归测试、端到端测试、数据一致性与业务规则校验
 - **Java 后端**：Spring Boot、Spring Cloud、REST API、MySQL、Redis、RabbitMQ、微服务与分布式基础
 - **AI 应用实践**：Spring AI、RAG、向量检索、ChatPDF、知识库问答、模型服务接入
-- **成长方向**：Python AI 应用生态、LangChain、AI 工程化流程
+- **成长方向**：AI 应用开发、RAG、Agent 与 AI 工程化流程
 
 若你 fork 本仓库或参与维护：文案、项目列表与中英文翻译主要在 `content.json` 中维护。修改后本地执行 `npm run build`（即 `node build.js`）生成页面，再提交即可；也可依赖 GitHub Actions 在推送后自动构建。
+
+项目介绍图使用图片轮播：在项目的 `architecture` 中设置 `presentation: "carousel"`，封面 `image` 为第一张，后面依次展示 `architecture.diagrams`。当前 CampusAI 为 4 张，AI Agent Scaffold Lite 为 3 张；支持按钮、圆点、键盘、手机横滑切换，以及点击图片放大。新增图片时同时填写中英文 `title` 与 `alt`。
 
 ## 📧 Contact
 

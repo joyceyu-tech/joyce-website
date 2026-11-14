@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function applyGalleryLanguage() {
+        const suffix = currentLanguage === 'zh' ? 'Zh' : 'En';
+        document.querySelectorAll('[data-gallery-label-en]').forEach(element => {
+            element.setAttribute('aria-label', element.dataset[`galleryLabel${suffix}`]);
+        });
+        document.querySelectorAll('[data-gallery-alt-en]').forEach(img => {
+            img.alt = img.dataset[`galleryAlt${suffix}`];
+        });
+    }
+
     function applyLanguage(language) {
         const lang = translations[language] ? language : 'en';
         const t = translations[lang];
@@ -98,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
         applyTexts(t.text);
         applyHtml(t.html);
         applyAria(t.aria);
+        applyGalleryLanguage();
 
         if (langZhButton && langEnButton) {
             langZhButton.classList.toggle('active', lang === 'zh');
@@ -280,42 +291,55 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==================== 7. 架构图查看体验 ====================
-    const architectureSection = document.querySelector('.project-architecture');
+    const architectureSections = document.querySelectorAll('.project-architecture, .project-gallery');
+    const visibleArchitectureSections = new Set();
     const imagePreview = document.getElementById('imagePreview');
     const imagePreviewImg = document.getElementById('imagePreviewImg');
-    const imagePreviewVideo = document.getElementById('imagePreviewVideo');
     const imagePreviewClose = document.getElementById('imagePreviewClose');
     const imagePreviewBackdrop = document.querySelector('.image-preview-backdrop');
+    const imagePreviewNavigation = document.getElementById('imagePreviewNavigation');
+    const imagePreviewCount = document.getElementById('imagePreviewCount');
+    const imagePreviewPrev = document.getElementById('imagePreviewPrev');
+    const imagePreviewNext = document.getElementById('imagePreviewNext');
     const architectureImages = document.querySelectorAll('.project-architecture-figure img');
-    const projectVideoTriggers = document.querySelectorAll('.project-video-trigger');
+    let previewGallery = null;
+    let previewReturnFocus = null;
 
     function closeImagePreview() {
         if (!imagePreview || !imagePreviewImg) return;
+        const wasOpen = !imagePreview.classList.contains('hidden');
+        const focusTarget = previewGallery ? previewGallery.currentSlide() : previewReturnFocus;
         imagePreview.classList.add('hidden');
         imagePreview.setAttribute('aria-hidden', 'true');
         imagePreviewImg.removeAttribute('src');
         imagePreviewImg.setAttribute('alt', '');
-        imagePreviewImg.removeAttribute('hidden');
-        if (imagePreviewVideo) {
-            imagePreviewVideo.pause();
-            imagePreviewVideo.removeAttribute('src');
-            imagePreviewVideo.removeAttribute('poster');
-            imagePreviewVideo.setAttribute('hidden', '');
-            imagePreviewVideo.load();
-        }
+        delete imagePreviewImg.dataset.galleryAltEn;
+        delete imagePreviewImg.dataset.galleryAltZh;
         document.body.classList.remove('preview-open');
+        previewGallery = null;
+        if (wasOpen && focusTarget) focusTarget.focus({ preventScroll: true });
     }
 
-    function openImagePreview(img) {
-        if (!imagePreview || !imagePreviewImg || !img) return;
-        if (imagePreviewVideo) {
-            imagePreviewVideo.pause();
-            imagePreviewVideo.removeAttribute('src');
-            imagePreviewVideo.setAttribute('hidden', '');
+    function setPreviewImage(img) {
+        const canvas = imagePreviewImg.closest('.image-preview-canvas');
+        if (canvas) canvas.scrollTo(0, 0);
+        imagePreviewImg.src = img.currentSrc || img.src;
+        imagePreviewImg.alt = img.alt;
+        if (img.dataset.galleryAltEn) {
+            imagePreviewImg.dataset.galleryAltEn = img.dataset.galleryAltEn;
+            imagePreviewImg.dataset.galleryAltZh = img.dataset.galleryAltZh;
         }
-        imagePreviewImg.removeAttribute('hidden');
-        imagePreviewImg.setAttribute('src', img.currentSrc || img.src);
-        imagePreviewImg.setAttribute('alt', img.getAttribute('alt') || '');
+        if (imagePreviewCount && previewGallery) {
+            imagePreviewCount.textContent = previewGallery.position();
+        }
+    }
+
+    function openImagePreview(img, gallery = null) {
+        if (!imagePreview || !imagePreviewImg || !img) return;
+        previewReturnFocus = document.activeElement;
+        previewGallery = gallery;
+        if (imagePreviewNavigation) imagePreviewNavigation.hidden = !gallery;
+        setPreviewImage(img);
         imagePreview.classList.remove('hidden');
         imagePreview.setAttribute('aria-hidden', 'false');
         document.body.classList.add('preview-open');
@@ -324,23 +348,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function openVideoPreview(trigger) {
-        if (!imagePreview || !imagePreviewImg || !imagePreviewVideo || !trigger) return;
-        const src = trigger.getAttribute('data-video-src');
-        if (!src) return;
-        const poster = trigger.getAttribute('data-video-poster') || '';
-        imagePreviewImg.setAttribute('hidden', '');
-        imagePreviewImg.removeAttribute('src');
-        imagePreviewVideo.setAttribute('src', src);
-        if (poster) {
-            imagePreviewVideo.setAttribute('poster', poster);
-        }
-        imagePreviewVideo.removeAttribute('hidden');
-        imagePreview.classList.remove('hidden');
-        imagePreview.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('preview-open');
-        imagePreviewVideo.focus();
+    function movePreview(direction) {
+        if (!previewGallery) return;
+        previewGallery.move(direction);
+        setPreviewImage(previewGallery.currentSlide().querySelector('img'));
     }
+
+    document.querySelectorAll('.project-gallery').forEach(gallery => {
+        const slides = Array.from(gallery.querySelectorAll('[data-gallery-slide]'));
+        const dots = Array.from(gallery.querySelectorAll('[data-gallery-index]'));
+        const count = gallery.querySelector('[data-gallery-current]');
+        const stage = gallery.querySelector('.project-gallery-stage');
+        let current = 0;
+        let pointerStart = null;
+        let swiped = false;
+
+        function show(index) {
+            const next = (index + slides.length) % slides.length;
+            const focusedSlide = document.activeElement === slides[current];
+            slides[current].hidden = true;
+            current = next;
+            slides[current].hidden = false;
+            dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === current)));
+            count.textContent = String(current + 1).padStart(2, '0');
+            if (focusedSlide) slides[current].focus({ preventScroll: true });
+        }
+
+        const state = {
+            move: direction => show(current + direction),
+            currentSlide: () => slides[current],
+            position: () => `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`
+        };
+        gallery.querySelector('[data-gallery-prev]').addEventListener('click', () => state.move(-1));
+        gallery.querySelector('[data-gallery-next]').addEventListener('click', () => state.move(1));
+        dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+        slides.forEach(slide => slide.addEventListener('click', event => {
+            if (swiped) {
+                event.preventDefault();
+                swiped = false;
+                return;
+            }
+            openImagePreview(slide.querySelector('img'), state);
+        }));
+        gallery.addEventListener('keydown', event => {
+            if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+            event.preventDefault();
+            if (event.key === 'Home') show(0);
+            else if (event.key === 'End') show(slides.length - 1);
+            else state.move(event.key === 'ArrowLeft' ? -1 : 1);
+        });
+        stage.addEventListener('pointerdown', event => {
+            swiped = false;
+            if (!event.isPrimary || event.pointerType === 'mouse') return;
+            pointerStart = { x: event.clientX, y: event.clientY };
+        });
+        stage.addEventListener('pointercancel', () => { pointerStart = null; });
+        stage.addEventListener('pointerup', event => {
+            if (!pointerStart) return;
+            const dx = event.clientX - pointerStart.x;
+            const dy = event.clientY - pointerStart.y;
+            pointerStart = null;
+            if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+                swiped = true;
+                state.move(dx < 0 ? 1 : -1);
+            }
+        });
+        gallery.classList.add('is-ready');
+    });
 
     architectureImages.forEach(img => {
         img.setAttribute('tabindex', '0');
@@ -356,12 +430,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    projectVideoTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function() {
-            openVideoPreview(this);
-        });
-    });
-
+    if (imagePreviewPrev) imagePreviewPrev.addEventListener('click', () => movePreview(-1));
+    if (imagePreviewNext) imagePreviewNext.addEventListener('click', () => movePreview(1));
     if (imagePreviewClose) {
         imagePreviewClose.addEventListener('click', closeImagePreview);
     }
@@ -369,25 +439,45 @@ document.addEventListener('DOMContentLoaded', function() {
         imagePreviewBackdrop.addEventListener('click', closeImagePreview);
     }
     document.addEventListener('keydown', function(e) {
+        if (!imagePreview || imagePreview.classList.contains('hidden')) return;
         if (e.key === 'Escape') {
+            e.preventDefault();
             closeImagePreview();
+        } else if (previewGallery && ['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+            e.preventDefault();
+            movePreview(e.key === 'ArrowLeft' ? -1 : 1);
+        } else if (e.key === 'Tab') {
+            const controls = Array.from(imagePreview.querySelectorAll('.image-preview-dialog button'))
+                .filter(button => !button.closest('[hidden]'));
+            const next = controls[controls.length - 1];
+            if (e.shiftKey && document.activeElement === controls[0]) {
+                e.preventDefault();
+                next.focus();
+            } else if (!e.shiftKey && document.activeElement === next) {
+                e.preventDefault();
+                controls[0].focus();
+            }
         }
     });
 
     function updateArchitectureFocus(entries) {
-        const isFocused = entries.some(entry => entry.isIntersecting && entry.intersectionRatio > 0.18);
-        document.body.classList.toggle('architecture-focus', isMobileViewport.matches && isFocused);
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.18) {
+                visibleArchitectureSections.add(entry.target);
+            } else {
+                visibleArchitectureSections.delete(entry.target);
+            }
+        });
+        document.body.classList.toggle('architecture-focus', isMobileViewport.matches && visibleArchitectureSections.size > 0);
     }
 
-    if (architectureSection && 'IntersectionObserver' in window) {
+    if (architectureSections.length && 'IntersectionObserver' in window) {
         const architectureObserver = new IntersectionObserver(updateArchitectureFocus, {
             threshold: [0, 0.18, 0.5]
         });
-        architectureObserver.observe(architectureSection);
+        architectureSections.forEach(section => architectureObserver.observe(section));
         onMediaQueryChange(isMobileViewport, function() {
-            if (!isMobileViewport.matches) {
-                document.body.classList.remove('architecture-focus');
-            }
+            document.body.classList.toggle('architecture-focus', isMobileViewport.matches && visibleArchitectureSections.size > 0);
         });
     }
 
