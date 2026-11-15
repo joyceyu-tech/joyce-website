@@ -18,21 +18,28 @@
   <rect width="1200" height="800" fill="url(#bg)"/>
   <rect width="1200" height="800" fill="url(#grid)"/>
   <circle cx="940" cy="350" r="380" fill="url(#glow)"/>
-  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <!-- Cover typography follows CampusAI at 75% of its 1600px canvas scale.
+       Keep the upper-right corner clear for the gallery expand control. -->
+  <g font-family="Geist, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">
     <rect x="72" y="60" width="40" height="40" rx="12" fill="#80e5c1"/>
     <path d="M84 80H100M92 72V88" stroke="#142a38" stroke-width="3" stroke-linecap="round"/>
-    <text x="128" y="87" fill="#d1dfeb" font-size="22" font-weight="600" letter-spacing="3">JOYCE / AI ENGINEERING</text>
-    <text x="1128" y="85" text-anchor="end" fill="#7c9ba9" font-size="20" letter-spacing="2">PROJECT 02</text>
+    <text x="128" y="87" fill="#d1dfeb" font-size="21" font-weight="500">JOYCE / AI ENGINEERING</text>
 
-    <text x="72" y="228" fill="#f4f8fb" font-size="94" font-weight="750" letter-spacing="-4">AI Agent</text>
-    <text x="72" y="326" fill="#f4f8fb" font-size="82" font-weight="750" letter-spacing="-3">Scaffold <tspan fill="#80e5c1">Lite</tspan></text>
-    <text x="76" y="386" fill="#b1c6d4" font-size="29" letter-spacing="2">让智能体开发，从清晰架构开始。</text>
-    <path d="M76 429H124" stroke="#80e5c1" stroke-width="3"/>
-    <text x="140" y="437" fill="#8ba8b9" font-size="23">Java 17 / Spring Boot 3 / Google ADK</text>
+    <text x="72" y="255" fill="#f4f8fb" font-size="54" font-weight="500">AI Agent</text>
+    <text x="72" y="326" fill="#f4f8fb" font-size="54" font-weight="500">Scaffold <tspan fill="#80e5c1">Lite</tspan></text>
+    <text x="76" y="386" fill="#b1c6d4" font-size="18.75">让智能体开发，从清晰架构开始。</text>
+    <g fill="#80e5c1" font-size="11.25" font-weight="500" text-anchor="middle">
+      <rect x="76" y="427" width="75" height="25.5" rx="12.75" fill="#20484a"/>
+      <text x="113.5" y="444.25">Java 17</text>
+      <rect x="160" y="427" width="105" height="25.5" rx="12.75" fill="#20484a"/>
+      <text x="212.5" y="444.25">Spring Boot 3</text>
+      <rect x="274" y="427" width="99" height="25.5" rx="12.75" fill="#20484a"/>
+      <text x="323.5" y="444.25">Google ADK</text>
+    </g>
 
     <g fill="none" stroke="#4e8b8a">
       <circle cx="930" cy="336" r="152" stroke-opacity=".24" stroke-dasharray="5 10"/>
-      <path d="M930 203V272M805 391L881 351M1056 391L980 351" stroke-width="2"/>
+      <path d="M930 215V267M807 435L861 360M1054 435L999 360" stroke-width="2"/>
       <path d="M797 250L839 226M1021 226L1063 250M914 484H946" stroke-opacity=".35" stroke-width="2"/>
     </g>
     <g transform="translate(861 267)">
@@ -46,12 +53,12 @@
       <circle cx="25" cy="34" r="5" fill="#80e5c1"/>
       <text x="45" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Model</text>
     </g>
-    <g transform="translate(721 391)">
+    <g transform="translate(721 435)">
       <rect width="172" height="68" rx="20" fill="#1b3447" stroke="#46616e"/>
       <path d="M21 29H35M21 39H35" stroke="#9eb8f3" stroke-width="3" stroke-linecap="round"/>
       <text x="49" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Workflow</text>
     </g>
-    <g transform="translate(981 391)">
+    <g transform="translate(981 435)">
       <rect width="146" height="68" rx="20" fill="#1b3447" stroke="#46616e"/>
       <path d="M22 26L16 34L22 42M33 26L39 34L33 42" fill="none" stroke="#e9c697" stroke-width="2.5" stroke-linecap="round"/>
       <text x="50" y="42" fill="#d7e7ed" font-size="23" font-weight="600">Tools</text>

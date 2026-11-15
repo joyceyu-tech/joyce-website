@@ -12,7 +12,6 @@
     <text x="56" y="49" fill="#80e5c1" font-size="17" font-weight="650" letter-spacing="3">AI AGENT SCAFFOLD LITE / ORCHESTRATION</text>
     <text x="56" y="111" fill="#ffffff" font-size="44" font-weight="700">从配置装配，到多智能体协作</text>
     <text x="58" y="150" fill="#a9c0cd" font-size="21">一条装配链，组合模型、工具、智能体与工作流。</text>
-    <text x="1384" y="113" text-anchor="end" fill="#567783" font-size="70" font-weight="650">02</text>
 
     <rect x="56" y="222" width="1328" height="292" rx="20" fill="#ffffff" stroke="#d8e2e9"/>
     <text x="82" y="261" fill="#2a8270" font-size="18" font-weight="700" letter-spacing="2">01 / 配置驱动装配</text>

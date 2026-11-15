@@ -13,7 +13,6 @@
     <text x="56" y="49" fill="#80e5c1" font-size="17" font-weight="650" letter-spacing="3">AI AGENT SCAFFOLD LITE / SYSTEM DESIGN</text>
     <text x="56" y="111" fill="#ffffff" font-size="44" font-weight="700">DDD 六模块架构</text>
     <text x="58" y="150" fill="#a9c0cd" font-size="21">以领域为核心，让启动配置、业务编排与外部适配各司其职。</text>
-    <text x="1384" y="113" text-anchor="end" fill="#567783" font-size="70" font-weight="650">01</text>
 
     <rect x="56" y="222" width="1328" height="108" rx="18" fill="#edf2fc" stroke="#cbd7ee"/>
     <rect x="76" y="242" width="68" height="68" rx="15" fill="#dce5f9"/>

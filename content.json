@@ -66,6 +66,64 @@
         "en": "A Spring Cloud microservices online education platform covering course management, online learning, course purchases and payments, exam practice, media, messages, search, and analytics.",
         "zh": "基于 Spring Cloud 微服务架构的在线教育平台，覆盖课程管理、在线学习、支付购买、考试练习、媒资、消息、搜索与数据看板等核心场景。"
       },
+      "architecture": {
+        "presentation": "carousel",
+        "heading": {
+          "en": "Platform design & learning journey",
+          "zh": "平台架构与学习旅程"
+        },
+        "intro": {
+          "en": "Explore how domain services, course publishing, and student commerce fit together.",
+          "zh": "通过架构分层、课程发布和学习购买流程，了解平台核心模块如何协作。"
+        },
+        "diagrams": [
+          {
+            "image": "images/tianji-platform-architecture.svg",
+            "title": {
+              "en": "Microservice platform architecture",
+              "zh": "微服务平台架构"
+            },
+            "caption": {
+              "en": "Gateway routes requests to identity, learning, commerce, content, and insight services, supported by shared infrastructure.",
+              "zh": "网关连接认证、学习、交易、内容与数据服务，并由公共基础设施提供支撑。"
+            },
+            "alt": {
+              "en": "Tianjixuetang microservice architecture showing gateway, domain services, and shared infrastructure",
+              "zh": "天机学堂微服务架构图，展示 API 网关、领域服务与共享基础设施"
+            }
+          },
+          {
+            "image": "images/tianji-course-workflow.svg",
+            "title": {
+              "en": "Course publishing workflow",
+              "zh": "课程配置与发布流程"
+            },
+            "caption": {
+              "en": "Course information, teachers, catalogue chapters, and media are configured before review and listing.",
+              "zh": "课程信息、教师、章节目录与媒资配置完成后，进入审核和上架流程。"
+            },
+            "alt": {
+              "en": "Course management view illustrating course details, teacher association, catalogue chapters, and draft review",
+              "zh": "课程管理界面示意图，展示课程信息、教师关联、章节目录与草稿审核"
+            }
+          },
+          {
+            "image": "images/tianji-learning-commerce.svg",
+            "title": {
+              "en": "Purchase to learning journey",
+              "zh": "从课程购买到在线学习"
+            },
+            "caption": {
+              "en": "Course discovery leads to order checkout and payment, then unlocks course access and progress tracking.",
+              "zh": "课程浏览进入下单与支付，完成后开通课程权限并持续记录学习进度。"
+            },
+            "alt": {
+              "en": "Student journey from course discovery through checkout and payment to learning access and progress tracking",
+              "zh": "学员旅程图：课程发现、确认订单、完成支付、获得学习权限并追踪进度"
+            }
+          }
+        ]
+      },
       "featuresHeading": {
         "en": "Key Achievements:",
         "zh": "关键成果："
@@ -115,6 +173,64 @@
         "en": "A Spring Boot backend for local-life reviews, supporting user login, shop queries, blog sharing, social interactions, voucher release, and flash-sale coupon purchasing.",
         "zh": "基于 Spring Boot 的本地生活点评系统后端，支持用户登录、商铺查询、博客分享、社交互动、优惠券发放与秒杀抢购。"
       },
+      "architecture": {
+        "presentation": "carousel",
+        "heading": {
+          "en": "Local discovery & community commerce",
+          "zh": "本地发现与社区消费"
+        },
+        "intro": {
+          "en": "Follow the core product journeys from finding a shop to sharing an experience and claiming a voucher.",
+          "zh": "从商铺查找、探店分享，到优惠券领取与秒杀下单，浏览项目覆盖的核心业务场景。"
+        },
+        "diagrams": [
+          {
+            "image": "images/xiaozhong-shop-discovery.svg",
+            "title": {
+              "en": "Shop discovery",
+              "zh": "商铺发现与搜索"
+            },
+            "caption": {
+              "en": "Browse shops by type or search by name, then open a shop record for its local-life details.",
+              "zh": "按商铺类型浏览或根据名称搜索，并进入商铺详情查看本地生活信息。"
+            },
+            "alt": {
+              "en": "Illustrative shop discovery interface with category filters, name search, and shop result cards",
+              "zh": "商铺发现界面示意图，展示类型筛选、名称搜索和商铺结果卡片"
+            }
+          },
+          {
+            "image": "images/xiaozhong-blog-social.svg",
+            "title": {
+              "en": "Blog sharing & social interaction",
+              "zh": "博客分享与社交互动"
+            },
+            "caption": {
+              "en": "Publish local-life notes, browse hot blogs, and interact through likes, comments, and follow relationships.",
+              "zh": "发布本地生活博客、浏览热门内容，并通过点赞、评论与关注关系进行互动。"
+            },
+            "alt": {
+              "en": "Illustrative community blog interface with a local-life post, hot content list, and like and comment actions",
+              "zh": "社区博客界面示意图，展示本地生活帖子、热门内容列表以及点赞和评论操作"
+            }
+          },
+          {
+            "image": "images/xiaozhong-voucher-seckill.svg",
+            "title": {
+              "en": "Voucher and flash-sale flow",
+              "zh": "优惠券与秒杀流程"
+            },
+            "caption": {
+              "en": "Trace voucher discovery and the seckill order request through the service, Redis practice, and MySQL persistence.",
+              "zh": "展示优惠券查询与秒杀请求在服务端的处理，以及 Redis 实践和 MySQL 数据持久化。"
+            },
+            "alt": {
+              "en": "Illustrative voucher flow connecting a user purchase request, backend handling, Redis, and MySQL order data",
+              "zh": "优惠券流程示意图，连接用户抢购请求、后端处理、Redis 与 MySQL 订单数据"
+            }
+          }
+        ]
+      },
       "featuresHeading": {
         "en": "Key Achievements:",
         "zh": "关键成果："
@@ -131,6 +247,99 @@
           "完成商铺与博客模块，支持商铺查询、分类筛选、博客发布、点赞、热门博客与用户博客列表",
           "实现优惠券管理与秒杀抢购流程，结合 Redis 缓存与分布式锁练习高并发处理",
           "基于 MyBatis-Plus 与 MySQL 持久化，按 controller、service、mapper、DTO、entity 与 utils 分层组织后端代码"
+        ]
+      },
+      "linkLabel": {
+        "en": "Gitee",
+        "zh": "Gitee"
+      }
+    },
+    {
+      "slug": "ai-agent-scaffold-lite",
+      "category": "ai-rag",
+      "image": "images/project-ai-agent-scaffold-lite.svg",
+      "imageAlt": {
+        "en": "AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools",
+        "zh": "AI Agent Scaffold Lite 项目封面：DDD 模块、Agent 编排与 MCP 工具接入"
+      },
+      "giteeUrl": "https://gitee.com/joyceyu434840/ai-agent-scaffold-lite",
+      "techTags": [
+        "Java 17",
+        "Spring Boot 3",
+        "Google ADK",
+        "Spring AI",
+        "LangChain4j",
+        "DDD",
+        "MCP"
+      ],
+      "title": {
+        "en": "AI Agent Scaffold Lite",
+        "zh": "AI Agent Scaffold Lite 智能体脚手架"
+      },
+      "description": {
+        "en": "A Java 17 / Spring Boot 3 AI Agent scaffold with six DDD modules, configuration-driven agent assembly, MCP tool integration, and sequential, parallel, and loop workflow examples.",
+        "zh": "基于 Java 17 与 Spring Boot 3 的 AI Agent 脚手架，采用 DDD 六模块架构，实现配置驱动的智能体装配与 MCP 工具接入，并提供顺序、并行、循环三种协作示例。"
+      },
+      "architecture": {
+        "heading": {
+          "en": "Architecture & Agent Workflows",
+          "zh": "架构设计与智能体编排"
+        },
+        "showCaptions": false,
+        "intro": {
+          "en": "Six module responsibilities and three collaboration patterns. Select a diagram to enlarge it.",
+          "zh": "六模块职责与三种协作模式。点击设计图，查看完整细节。"
+        },
+        "diagrams": [
+          {
+            "image": "images/ai-agent-scaffold-architecture.svg",
+            "title": {
+              "en": "DDD Architecture · Six Module Responsibilities",
+              "zh": "DDD 六模块 · 工程职责架构图"
+            },
+            "caption": {
+              "en": "App handles startup, Domain assembles agents and workflows, and API / Types define shared contracts. Trigger and Infrastructure provide extension structures for business integration.",
+              "zh": "App 负责启动配置，Domain 承载 Agent 装配与编排，API / Types 定义契约和通用类型；Trigger 与 Infrastructure 为业务接入保留扩展结构。"
+            },
+            "alt": {
+              "en": "Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked",
+              "zh": "AI Agent Scaffold Lite 的 DDD 六模块职责架构，标明已有实现与预留扩展结构"
+            }
+          },
+          {
+            "image": "images/ai-agent-scaffold-workflows.svg",
+            "title": {
+              "en": "Agent Assembly · Sequential, Parallel & Loop",
+              "zh": "Agent 装配 · 顺序、并行与循环协作"
+            },
+            "caption": {
+              "en": "Configuration flows through API, model, agent, workflow, and runner assembly. Examples show code review, parallel research, and iterative writing, with Local / SSE / Stdio tool strategies.",
+              "zh": "配置依次装配 API、模型、Agent、工作流与 Runner，结合 Local / SSE / Stdio 工具策略；通过代码审查、并行调研、循环写作示例说明协作方式。"
+            },
+            "alt": {
+              "en": "Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite",
+              "zh": "AI Agent Scaffold Lite 的配置驱动装配、MCP 工具接入及三种多智能体协作模式图"
+            }
+          }
+        ],
+        "presentation": "carousel"
+      },
+      "featuresHeading": {
+        "en": "Key Capabilities:",
+        "zh": "核心能力："
+      },
+      "features": {
+        "en": [
+          "Separates API, App, Domain, Infrastructure, Trigger, and Types into six Maven modules with clear responsibilities",
+          "Assembles models, LlmAgents, workflows, and InMemoryRunner from configuration through a strategy tree",
+          "Connects Local, SSE, and Stdio tool strategies through an MCP factory and attaches tool callbacks to the chat model",
+          "Includes Google ADK sequential, parallel, and loop collaboration examples, plus Spring AI and LangChain4j integration tests"
+        ],
+        "zh": [
+          "按 API、App、Domain、Infrastructure、Trigger、Types 六个 Maven 模块划分职责，形成清晰的 DDD 工程结构",
+          "通过策略树读取配置，依次装配模型、LlmAgent、工作流与 InMemoryRunner，沉淀可复用的装配链路",
+          "通过 MCP 工厂选择 Local、SSE、Stdio 工具策略，将工具回调挂载到对话模型",
+          "提供 Google ADK 顺序、并行、循环协作示例，以及 Spring AI / LangChain4j 模型与工具集成测试"
         ]
       },
       "linkLabel": {
@@ -245,99 +454,6 @@
       }
     },
     {
-      "slug": "ai-agent-scaffold-lite",
-      "category": "ai-rag",
-      "image": "images/project-ai-agent-scaffold-lite.svg",
-      "imageAlt": {
-        "en": "AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools",
-        "zh": "AI Agent Scaffold Lite 项目封面：DDD 模块、Agent 编排与 MCP 工具接入"
-      },
-      "giteeUrl": "https://gitee.com/joyceyu434840/ai-agent-scaffold-lite",
-      "techTags": [
-        "Java 17",
-        "Spring Boot 3",
-        "Google ADK",
-        "Spring AI",
-        "LangChain4j",
-        "DDD",
-        "MCP"
-      ],
-      "title": {
-        "en": "AI Agent Scaffold Lite",
-        "zh": "AI Agent Scaffold Lite 智能体脚手架"
-      },
-      "description": {
-        "en": "A Java 17 / Spring Boot 3 AI Agent scaffold with six DDD modules, configuration-driven agent assembly, MCP tool integration, and sequential, parallel, and loop workflow examples.",
-        "zh": "基于 Java 17 与 Spring Boot 3 的 AI Agent 脚手架，采用 DDD 六模块架构，实现配置驱动的智能体装配与 MCP 工具接入，并提供顺序、并行、循环三种协作示例。"
-      },
-      "architecture": {
-        "heading": {
-          "en": "Architecture & Agent Workflows",
-          "zh": "架构设计与智能体编排"
-        },
-        "showCaptions": false,
-        "intro": {
-          "en": "Six module responsibilities and three collaboration patterns. Select a diagram to enlarge it.",
-          "zh": "六模块职责与三种协作模式。点击设计图，查看完整细节。"
-        },
-        "diagrams": [
-          {
-            "image": "images/ai-agent-scaffold-architecture.svg",
-            "title": {
-              "en": "DDD Architecture · Six Module Responsibilities",
-              "zh": "DDD 六模块 · 工程职责架构图"
-            },
-            "caption": {
-              "en": "App handles startup, Domain assembles agents and workflows, and API / Types define shared contracts. Trigger and Infrastructure provide extension structures for business integration.",
-              "zh": "App 负责启动配置，Domain 承载 Agent 装配与编排，API / Types 定义契约和通用类型；Trigger 与 Infrastructure 为业务接入保留扩展结构。"
-            },
-            "alt": {
-              "en": "Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked",
-              "zh": "AI Agent Scaffold Lite 的 DDD 六模块职责架构，标明已有实现与预留扩展结构"
-            }
-          },
-          {
-            "image": "images/ai-agent-scaffold-workflows.svg",
-            "title": {
-              "en": "Agent Assembly · Sequential, Parallel & Loop",
-              "zh": "Agent 装配 · 顺序、并行与循环协作"
-            },
-            "caption": {
-              "en": "Configuration flows through API, model, agent, workflow, and runner assembly. Examples show code review, parallel research, and iterative writing, with Local / SSE / Stdio tool strategies.",
-              "zh": "配置依次装配 API、模型、Agent、工作流与 Runner，结合 Local / SSE / Stdio 工具策略；通过代码审查、并行调研、循环写作示例说明协作方式。"
-            },
-            "alt": {
-              "en": "Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite",
-              "zh": "AI Agent Scaffold Lite 的配置驱动装配、MCP 工具接入及三种多智能体协作模式图"
-            }
-          }
-        ],
-        "presentation": "carousel"
-      },
-      "featuresHeading": {
-        "en": "Key Capabilities:",
-        "zh": "核心能力："
-      },
-      "features": {
-        "en": [
-          "Separates API, App, Domain, Infrastructure, Trigger, and Types into six Maven modules with clear responsibilities",
-          "Assembles models, LlmAgents, workflows, and InMemoryRunner from configuration through a strategy tree",
-          "Connects Local, SSE, and Stdio tool strategies through an MCP factory and attaches tool callbacks to the chat model",
-          "Includes Google ADK sequential, parallel, and loop collaboration examples, plus Spring AI and LangChain4j integration tests"
-        ],
-        "zh": [
-          "按 API、App、Domain、Infrastructure、Trigger、Types 六个 Maven 模块划分职责，形成清晰的 DDD 工程结构",
-          "通过策略树读取配置，依次装配模型、LlmAgent、工作流与 InMemoryRunner，沉淀可复用的装配链路",
-          "通过 MCP 工厂选择 Local、SSE、Stdio 工具策略，将工具回调挂载到对话模型",
-          "提供 Google ADK 顺序、并行、循环协作示例，以及 Spring AI / LangChain4j 模型与工具集成测试"
-        ]
-      },
-      "linkLabel": {
-        "en": "Gitee",
-        "zh": "Gitee"
-      }
-    },
-    {
       "slug": "lottery",
       "category": "business-backend",
       "image": "images/project-lottery-system.jpg",
@@ -362,6 +478,64 @@
       "description": {
         "en": "Enterprise-level lottery activity management platform, supporting red packet rain, lottery events, prizes, and member management. Suitable for high-concurrency scenarios such as corporate annual meetings and holiday events.",
         "zh": "面向企业活动场景的抽奖管理平台，支持红包雨、奖品管理与会员管理，适用于年会与节日等高并发活动。"
+      },
+      "architecture": {
+        "presentation": "carousel",
+        "heading": {
+          "en": "Campaign management and lottery processing",
+          "zh": "活动管理与抽奖处理"
+        },
+        "intro": {
+          "en": "Explore activity configuration, participation statistics, winner records, and the request processing flow.",
+          "zh": "查看活动配置、参与统计与中奖记录，以及抽奖请求的服务端处理流程。"
+        },
+        "diagrams": [
+          {
+            "image": "images/lottery-activity-control.svg",
+            "title": {
+              "en": "Activity and prize configuration",
+              "zh": "活动配置与奖池管理"
+            },
+            "caption": {
+              "en": "Configure activity timing and types, maintain prizes, and set participation rules by membership level.",
+              "zh": "配置活动时段与类型，维护奖品信息，并按会员等级设置参与规则。"
+            },
+            "alt": {
+              "en": "Illustrative activity configuration console with activity timing, lottery types, member rules, and prize management",
+              "zh": "活动配置后台示意图，展示活动时段、抽奖类型、会员规则与奖品管理"
+            }
+          },
+          {
+            "image": "images/lottery-live-operations.svg",
+            "title": {
+              "en": "Activity statistics and winner records",
+              "zh": "活动现场与中奖数据"
+            },
+            "caption": {
+              "en": "Review participation and winning summaries alongside activity, member, and prize details in winner records.",
+              "zh": "集中查看参与和中奖概况，并通过中奖记录关联活动、会员与奖品明细。"
+            },
+            "alt": {
+              "en": "Illustrative activity dashboard with participation and winning summaries, statistics dimensions, and winner record fields",
+              "zh": "活动看板示意图，展示参与和中奖概况、统计维度与中奖记录字段"
+            }
+          },
+          {
+            "image": "images/lottery-high-concurrency.svg",
+            "title": {
+              "en": "Lottery request and asynchronous records",
+              "zh": "高并发抽奖处理链路"
+            },
+            "caption": {
+              "en": "Trace the time-random lottery path through activity checks, Redis and Lua token validation, and RabbitMQ consumers that persist participation and winning records.",
+              "zh": "以时间随机玩法为例，展示活动规则检查、Redis 与 Lua 令牌校验，以及 RabbitMQ 消息消费和记录写入。"
+            },
+            "alt": {
+              "en": "Request flow diagram showing participant, activity checks, Redis and Lua token validation, lottery result, RabbitMQ, and MySQL records",
+              "zh": "抽奖请求流程图，展示参与者、活动检查、Redis 与 Lua 令牌校验、抽奖结果、RabbitMQ 和 MySQL 记录"
+            }
+          }
+        ]
       },
       "featuresHeading": {
         "en": "Key Achievements:",
@@ -410,6 +584,64 @@
       "description": {
         "en": "A catering management system with frontend-backend separation, including a merchant backend management system and a user mini program. Supports dishes, set meals, categories, and orders, optimizing user ordering experience and merchant management efficiency.",
         "zh": "前后端分离的餐饮管理系统，包含商家后台与用户端小程序，覆盖菜品、套餐、分类与订单等核心流程。"
+      },
+      "architecture": {
+        "presentation": "carousel",
+        "heading": {
+          "en": "Merchant operations and online ordering",
+          "zh": "商家运营与线上点餐"
+        },
+        "intro": {
+          "en": "Explore merchant operations, the customer ordering journey, and the Spring Boot services behind both sides. The repository includes a sample mini program for integration testing.",
+          "zh": "从商家运营、用户点餐到 Spring Boot 服务协作，了解系统的主要业务链路。仓库内含用于联调的示例小程序。"
+        },
+        "diagrams": [
+          {
+            "image": "images/skytakeout-merchant-console.svg",
+            "title": {
+              "en": "Merchant console and store operations",
+              "zh": "商家后台与门店管理"
+            },
+            "caption": {
+              "en": "Manage staff, categories, dishes, set meals, store status, and order records from the merchant side.",
+              "zh": "在商家端管理员工、分类、菜品、套餐、门店营业状态与订单记录。"
+            },
+            "alt": {
+              "en": "Illustrative merchant console showing store operations, employee and category management, dishes, set meals, and order records",
+              "zh": "商家后台界面示意图，展示门店运营、员工与分类管理、菜品、套餐及订单记录"
+            }
+          },
+          {
+            "image": "images/skytakeout-ordering-flow.svg",
+            "title": {
+              "en": "Customer browsing, cart, and checkout",
+              "zh": "用户点餐与购物车"
+            },
+            "caption": {
+              "en": "Follow category browsing and item selection through cart updates, delivery details, order submission, and payment. The repository's mini program is provided as an integration sample.",
+              "zh": "串联分类浏览、菜品选择、购物车调整、收货信息、订单提交与支付；仓库中的小程序为联调示例。"
+            },
+            "alt": {
+              "en": "Illustrative ordering flow with category browsing, dish and set meal selection, shopping cart, delivery details, and order submission",
+              "zh": "点餐流程示意图，展示分类浏览、菜品与套餐选择、购物车、收货信息和订单提交"
+            }
+          },
+          {
+            "image": "images/skytakeout-service-architecture.svg",
+            "title": {
+              "en": "Frontend, backend, and data services",
+              "zh": "前后端协同与数据服务"
+            },
+            "caption": {
+              "en": "See how merchant and customer requests reach Spring Boot services backed by Redis, MySQL, and Aliyun OSS.",
+              "zh": "展示商家端与用户端请求如何进入 Spring Boot 服务，并连接 Redis、MySQL 与阿里云 OSS。"
+            },
+            "alt": {
+              "en": "System architecture diagram connecting merchant and customer clients to Spring Boot, Redis cache, MySQL, and Aliyun OSS",
+              "zh": "系统架构图，连接商家端和用户端、Spring Boot、Redis 缓存、MySQL 与阿里云 OSS"
+            }
+          }
+        ]
       },
       "featuresHeading": {
         "en": "Key Achievements:",
@@ -460,6 +692,64 @@
         "en": "A city-based carpooling platform supporting drivers posting trips, passenger route matching, order generation, and message notifications. Based on microservices architecture with high availability and real-time communication, covering registration, trip publishing, ride invitations, and complete payment workflow.",
         "zh": "基于微服务的同城拼车平台，支持行程发布、路线匹配、订单处理与消息通知，覆盖从注册到支付的完整流程。"
       },
+      "architecture": {
+        "presentation": "carousel",
+        "heading": {
+          "en": "Trip matching & ride journey",
+          "zh": "行程匹配与拼车旅程"
+        },
+        "intro": {
+          "en": "See how passengers find a suitable route, drivers publish trips, and confirmed rides move through order and payment steps.",
+          "zh": "通过路线匹配、司机发布行程和订单履约流程，了解乘客如何找到合适的同行路线并完成拼车。"
+        },
+        "diagrams": [
+          {
+            "image": "images/cityride-route-matching.svg",
+            "title": {
+              "en": "Passenger route matching",
+              "zh": "乘客路线匹配"
+            },
+            "caption": {
+              "en": "Origin, destination, and travel time narrow down available trips so passengers can compare nearby routes and seats.",
+              "zh": "根据起终点与出行时间筛选可用行程，乘客可以比较顺路路线、出发时间和剩余座位。"
+            },
+            "alt": {
+              "en": "City ride route-matching interface with a map, passenger and driver routes, and matching trip cards",
+              "zh": "同城拼车路线匹配界面示意图，展示地图上的乘客与司机路线以及匹配行程卡片"
+            }
+          },
+          {
+            "image": "images/cityride-publish-trip.svg",
+            "title": {
+              "en": "Driver publishes a trip",
+              "zh": "司机发布行程"
+            },
+            "caption": {
+              "en": "Drivers set their route, departure time, available seats, and fare before publishing a trip for passengers to discover.",
+              "zh": "司机填写路线、出发时间、空余座位和费用后发布行程，供乘客搜索与邀请同行。"
+            },
+            "alt": {
+              "en": "Trip publishing form with route, date, available seats, fare, and a route preview",
+              "zh": "行程发布表单示意图，包含路线、日期、剩余座位、费用和路线预览"
+            }
+          },
+          {
+            "image": "images/cityride-order-journey.svg",
+            "title": {
+              "en": "Ride order journey",
+              "zh": "拼车订单履约流程"
+            },
+            "caption": {
+              "en": "A ride invitation progresses through confirmation, payment, and trip completion, with status updates keeping both sides informed.",
+              "zh": "拼车邀请依次进入双方确认、支付和行程完成，各阶段通过订单状态与消息通知保持同步。"
+            },
+            "alt": {
+              "en": "Ride order journey showing invitation, confirmation, payment, trip completion, and real-time status updates",
+              "zh": "拼车订单流程示意图，展示同行邀请、双方确认、支付、行程完成和实时状态通知"
+            }
+          }
+        ]
+      },
       "featuresHeading": {
         "en": "Key Achievements:",
         "zh": "关键成果："
@@ -485,12 +775,12 @@
     }
   ],
   "en": {
-    "title": "Joyce | Portfolio",
+    "title": "Joyce | QA & AI Engineering Portfolio",
     "hiddenTitle": "👋 Come back soon! - Joyce Portfolio",
     "metaDescription": "Joyce's portfolio: Business QA at HSBC Software Development, ISTQB Certified Tester; Java backend projects, Spring AI practice, and AI application development.",
-    "ogTitle": "Joyce | Portfolio",
+    "ogTitle": "Joyce | QA & AI Engineering Portfolio",
     "ogDescription": "Business QA · ISTQB · Java backend · Spring AI",
-    "twitterTitle": "Joyce | Portfolio",
+    "twitterTitle": "Joyce | QA & AI Engineering Portfolio",
     "twitterDescription": "Business QA · ISTQB · Java backend · Spring AI",
     "text": {
       ".skip-link": "Skip to main content",
@@ -500,7 +790,7 @@
       ".first-visit-modal-body": "This site works best on desktop. On mobile or in WeChat it adapts; in WeChat if something looks wrong, tap … → Open in browser.",
       ".first-visit-modal-close": "Got it",
       ".hero-badge": "Open to Software Engineer opportunities",
-      "header h1": "Hi, I'm Joyce",
+      "header h1": "Joyce · QA & AI Portfolio",
       ".subtitle": "Business QA at HSBC Software Development · ISTQB Certified Tester · AI application engineering direction",
       ".tagline": "I bring a testing mindset and Java backend foundation to reliable delivery, with my current growth focused on AI application development.",
       ".hero-cta-experience": "Work experience",
@@ -518,7 +808,7 @@
       ".about-list li:nth-child(1)": "Focusing on AI application development with Spring AI, RAG, knowledge-base Q&A, and model service integration",
       ".about-list li:nth-child(2)": "Continuing Java backend practice through existing project experience, Spring Boot, API design, persistence integration, and system design",
       ".about-list li:nth-child(3)": "Expanding into AI application development and engineering workflows",
-      "#skills > h2": "Technical Skills",
+      "#skills > h2": "AI & Engineering Skills",
       "#skills > .section-intro": "AI application development is my current growth focus, while testing and quality assurance remain my professional foundation. I combine Spring AI, Java/Spring backend practice, Agent orchestration, tool calling, RAG retrieval, and end-to-end testing experience.",
       "#skills .skill-card:nth-child(1) h3": "AI Applications & Agents",
       "#skills .skill-card:nth-child(1) p": "Hands-on with Spring AI and LLM application patterns, including conversational Q&A, Agent orchestration, tool calling, RAG knowledge bases, vector retrieval, conversation memory, and model service integration.",
@@ -534,9 +824,9 @@
       "#skills .skill-card:nth-child(6) p": "Familiar with credit-card business flows—points programs, marketing campaigns, and payment validation across channels and systems.",
       "#projects > h2": "Personal Projects",
       "#projects > .section-intro": "Selected projects across AI applications, backend systems, distributed architectures, and business workflows.",
-      "#experience > h2": "Work Experience",
+      "#experience > h2": "Quality Engineering Experience",
       "#experience > .section-intro": "Testing and project work at HSBC Software Development and Kehua Data.",
-      ".experience-header h3": "Business QA",
+      ".experience-header h3": "Banking Quality Assurance",
       ".company": "HSBC Software Development (Guangdong) Co., Ltd.",
       ".role-note": "",
       ".duration": "Jan 2024 - Present",
@@ -574,12 +864,12 @@
     }
   },
   "zh": {
-    "title": "Joyce | 个人作品集",
+    "title": "Joyce | 软件测试与 AI 工程作品集",
     "hiddenTitle": "👋 记得回来看看 - Joyce 作品集",
     "metaDescription": "Joyce 的个人作品集：汇丰软件测试从业者，ISTQB 认证测试工程师，具备 Java 后端项目经验与 Spring AI 实践，持续聚焦 AI 应用开发。",
-    "ogTitle": "Joyce | 个人作品集",
+    "ogTitle": "Joyce | 软件测试与 AI 工程作品集",
     "ogDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Spring AI",
-    "twitterTitle": "Joyce | 个人作品集",
+    "twitterTitle": "Joyce | 软件测试与 AI 工程作品集",
     "twitterDescription": "汇丰软件测试 | ISTQB 认证测试工程师 | Java 后端 | Spring AI",
     "text": {
       ".skip-link": "跳转到主要内容",
@@ -589,7 +879,7 @@
       ".first-visit-modal-body": "本站推荐在电脑浏览器访问；手机与微信内也可使用。若在微信内显示异常，请点右上角「…」→「在浏览器中打开」。",
       ".first-visit-modal-close": "知道了",
       ".hero-badge": "正在寻找软件工程师机会",
-      "header h1": "你好，我是 Joyce",
+      "header h1": "Joyce · 测试与 AI 工程",
       ".subtitle": "汇丰软件测试从业者 · ISTQB 认证测试员 · AI 应用工程方向",
       ".tagline": "我以测试思维与 Java 后端基础构建可靠系统，目前重点成长方向集中在 AI 应用开发。",
       ".hero-cta-experience": "工作经历",
@@ -607,7 +897,7 @@
       ".about-list li:nth-child(1)": "聚焦 AI 应用开发，持续实践 Spring AI、RAG、知识库问答与模型服务接入",
       ".about-list li:nth-child(2)": "基于已有项目经验继续深化 Java 后端能力，包括 Spring Boot、接口设计、持久化集成与系统设计",
       ".about-list li:nth-child(3)": "持续拓展 AI 应用开发与工程化能力",
-      "#skills > h2": "技术能力",
+      "#skills > h2": "AI 与工程技术能力",
       "#skills > .section-intro": "AI 应用开发是当前重点成长方向，同时测试与质量保障是我的职业基础。我将 Spring AI、Java/Spring 后端实践、Agent 编排、Tool Calling、RAG 检索，与端到端测试经验结合起来。",
       "#skills .skill-card:nth-child(1) h3": "AI 应用与智能体",
       "#skills .skill-card:nth-child(1) p": "具备 Spring AI 与大模型应用实践经验，覆盖对话问答、Agent 编排、Tool Calling、RAG 知识库、向量检索、会话记忆与模型服务接入等场景。",
@@ -623,9 +913,9 @@
       "#skills .skill-card:nth-child(6) p": "熟悉银行信用卡相关业务，包括积分、营销活动与支付校验等典型场景。",
       "#projects > h2": "个人项目",
       "#projects > .section-intro": "围绕 AI 应用、后端系统、分布式架构与业务流程构建的项目作品。",
-      "#experience > h2": "工作经历",
+      "#experience > h2": "质量工程经历",
       "#experience > .section-intro": "汇丰软件开发与科华数据期间的测试与项目经历。",
-      ".experience-header h3": "业务QA",
+      ".experience-header h3": "业务质量保障",
       ".company": "汇丰软件开发（广东）有限公司",
       ".role-note": "",
       ".duration": "2024.01 - 至今",

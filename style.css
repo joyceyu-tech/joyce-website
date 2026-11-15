@@ -39,7 +39,8 @@ body {
 }
 
 html {
-    scroll-behavior: smooth;
+    /* Keep keyboard focus navigation immediate; click handlers animate their own scrolls. */
+    scroll-behavior: auto;
 }
 
 .skip-link {
@@ -187,10 +188,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
+    top: auto;
     z-index: 9999;
     padding: calc(env(safe-area-inset-top, 0px) + 8px) 104px 8px 16px;
     min-height: calc(64px + env(safe-area-inset-top, 0px));
@@ -779,6 +778,14 @@ h2 {
 }
 
 @container (max-width: 420px) {
+    /* The entire slide opens the preview; keep its visual hint clear of artwork. */
+    .project-gallery .project-gallery-expand {
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+    }
+
     .project-card .project-gallery.is-ready .project-gallery-controls {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -933,7 +940,17 @@ h2 {
 }
 
 .project-gallery .project-gallery-slide:focus-visible {
-    outline-color: #ffffff;
+    outline: 3px solid #183b38;
+    outline-offset: -5px;
+    box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.project-gallery .project-gallery-dot:focus-visible,
+.project-gallery .project-gallery-arrow:focus-visible,
+.project-gallery .project-gallery-expand:focus-visible {
+    outline: 3px solid #183b38;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #ffffff;
 }
 
 @media (max-width: 380px) {
@@ -1295,7 +1312,8 @@ footer .footer-hint-icon {
 /* ==================== 返回顶部按钮 ==================== */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
+    /* Stack above the always-visible contact control in the desktop layout. */
+    bottom: calc(30px + var(--button-height) + 12px);
     right: 30px;
     opacity: 0;
     visibility: hidden;
@@ -1339,7 +1357,7 @@ body.preview-open .top-banner {
     inset: 0;
     border: 0;
     padding: 0;
-    background: rgba(18, 26, 43, 0.78);
+    background: #273141;
     cursor: zoom-out;
 }
 
@@ -1414,6 +1432,7 @@ body.preview-open {
 
 /* ==================== 滚动进度条 ==================== */
 .scroll-progress {
+    display: none;
     position: fixed;
     top: 0;
     left: 220px;
@@ -1545,7 +1564,7 @@ body.preview-open {
         padding: 10px 20px;
         border-left: none;
         border-radius: var(--button-radius);
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .nav-bar a:hover,
@@ -1649,7 +1668,7 @@ body.preview-open {
         position: sticky;
         top: 0;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: safe center;
         gap: 8px;
         padding: 10px 12px;
         overflow-x: auto;
@@ -1658,7 +1677,7 @@ body.preview-open {
 
     .nav-bar a {
         padding: 10px 12px;
-        font-size: 14px;
+        font-size: 15px;
         white-space: nowrap;
         flex: 0 0 auto;
     }
@@ -2042,6 +2061,12 @@ body.preview-open {
 
 }
 
+@media (max-width: 380px) {
+    .nav-bar a {
+        font-size: 14px;
+    }
+}
+
 /* 小型手机 (480px 及以下) */
 @media (max-width: 480px) {
     header {
@@ -2255,6 +2280,168 @@ body.preview-open {
 
     body:has(.top-banner:not([hidden])) header {
         padding-top: calc(env(safe-area-inset-top, 0px) + 132px);
+    }
+}
+
+/* Readability and layout fixes confirmed against the design review screenshots. */
+:root {
+    --color-muted: #34495e;
+}
+
+.skip-link:focus-visible,
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #243b85;
+    outline-offset: 3px;
+}
+
+.section-intro,
+#projects .section-intro {
+    color: #26364a;
+    font-size: 16px;
+}
+
+h2 {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.about-content p,
+.about-list li,
+.skill-card p,
+.project-description,
+.project-features li,
+.project-architecture-intro,
+.project li {
+    color: #26364a;
+    font-size: 16px;
+}
+
+.project-category-description {
+    color: #34495e;
+    font-size: 15px;
+}
+
+.project-architecture-caption,
+.role-note {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.company,
+.skill-card h3,
+.project-features h4,
+.project-architecture-heading,
+.project li strong {
+    color: #2b3d89;
+}
+
+.duration {
+    color: #49566a;
+}
+
+.project-gallery-slide:focus,
+.project-gallery-slide:focus-visible {
+    outline: 3px solid #183b38;
+    outline-offset: -5px;
+    box-shadow: inset 0 0 0 3px #ffffff;
+    z-index: 1;
+}
+
+.project-gallery-dot:focus,
+.project-gallery-dot:focus-visible,
+.project-gallery-arrow:focus,
+.project-gallery-arrow:focus-visible,
+.project-gallery-expand:focus,
+.project-gallery-expand:focus-visible {
+    outline: 3px solid #183b38;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px #ffffff;
+    z-index: 2;
+}
+
+.project-gallery-controls {
+    padding-bottom: 8px;
+}
+
+section:not(#projects) {
+    padding-bottom: 28px;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+#projects {
+    margin-bottom: 0;
+    padding-bottom: 16px;
+}
+
+footer {
+    margin-top: 0;
+}
+
+.contact-sidebar.hidden {
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0);
+}
+
+.contact-sidebar:not(.hidden) {
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .nav-bar a {
+        min-height: 44px;
+        color: #2b3d89;
+        padding: 10px 12px;
+    }
+
+    .about-content p,
+    .about-list li,
+    .skill-card p,
+    .project-description,
+    .project-category-description,
+    .project-architecture-intro,
+    .project li,
+    .section-intro,
+    #projects .section-intro {
+        font-size: 15px;
+    }
+
+    .contact-sidebar.hidden {
+        right: 0;
+        transform: translateX(0);
+    }
+
+    section:not(#projects) {
+        padding-bottom: 20px;
+    }
+
+    #projects {
+        margin-bottom: 0;
+        padding-bottom: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about-content p,
+    .about-list li,
+    .skill-card p,
+    .project-description,
+    .project-category-description,
+    .project-architecture-intro,
+    .project li,
+    .section-intro,
+    #projects .section-intro {
+        font-size: 15px;
+    }
+
+    .project-features li {
+        font-size: 14px;
     }
 }
 /* Mobile fixed action bar keeps utility controls reachable while scrolling. */
