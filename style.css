@@ -826,6 +826,12 @@ h2 {
     display: none;
 }
 
+.project-gallery-slide picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .project-gallery-slide img {
     display: block;
     width: 100%;

@@ -89,14 +89,24 @@ function galleryLabel(en, zh) {
 
 function buildProjectGallery(project) {
   const slides = [
-    { image: project.image, alt: project.imageAlt, title: { en: 'Project overview', zh: '项目概览' } },
+    { image: project.image, mobileImage: project.mobileImage, alt: project.imageAlt, title: { en: 'Project overview', zh: '项目概览' } },
     ...project.architecture.diagrams
   ];
   const arrow = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>`;
+  const slideImage = (slide, index) => {
+    const attrs = `alt="${escapeHtml(slide.alt.en)}" data-gallery-alt-en="${escapeHtml(slide.alt.en)}" data-gallery-alt-zh="${escapeHtml(slide.alt.zh)}" loading="lazy" decoding="async" draggable="false"`;
+    if (index > 0) {
+      return `<img data-gallery-src="${escapeHtml(slide.image)}" ${attrs}>`;
+    }
+    if (slide.mobileImage) {
+      return `<picture><source media="(max-width: 768px)" srcset="${escapeHtml(slide.mobileImage)}"><img src="${escapeHtml(slide.image)}" ${attrs}></picture>`;
+    }
+    return `<img src="${escapeHtml(slide.image)}" ${attrs}>`;
+  };
   return `                <div class="project-gallery" role="region" aria-roledescription="carousel" ${galleryLabel(`${project.title.en} project images`, `${project.title.zh}项目介绍轮播`)}>
                     <div class="project-gallery-stage">
 ${slides.map((slide, i) => `                        <button class="project-gallery-slide" type="button" data-gallery-slide${i ? ' hidden' : ''} ${galleryLabel(`Enlarge: ${slide.title.en}`, `放大查看：${slide.title.zh}`)}>
-                            <img src="${escapeHtml(slide.image)}" alt="${escapeHtml(slide.alt.en)}" data-gallery-alt-en="${escapeHtml(slide.alt.en)}" data-gallery-alt-zh="${escapeHtml(slide.alt.zh)}" loading="lazy" decoding="async" draggable="false">
+                            ${slideImage(slide, i)}
                             <span class="project-gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></span>
                         </button>`).join('\n')}
                     </div>

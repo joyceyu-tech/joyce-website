@@ -363,9 +363,19 @@ document.addEventListener('DOMContentLoaded', function() {
         let pointerStart = null;
         let swiped = false;
 
+        // Keep hidden gallery slides out of the initial network waterfall. Their
+        // source is attached only when the visitor moves to that slide.
+        function ensureSlideImageLoaded(slide) {
+            const image = slide?.querySelector('img[data-gallery-src]');
+            if (!image || image.hasAttribute('src')) return;
+            image.src = image.dataset.gallerySrc;
+            delete image.dataset.gallerySrc;
+        }
+
         function show(index) {
             const next = (index + slides.length) % slides.length;
             const focusedSlide = document.activeElement === slides[current];
+            ensureSlideImageLoaded(slides[next]);
             slides[current].hidden = true;
             current = next;
             slides[current].hidden = false;
