@@ -1,52 +1,62 @@
 # Joyce 的个人网站
 
-*Joyce's Portfolio — personal site & project showcase.*
+*Joyce's Portfolio — About me, my work, and what I'm building.*
 
-这是 **Joyce** 的个人作品集站点：用一页清晰展示**我是谁、当前技术方向、个人项目、工作经历**以及联系入口。页面**默认英文**，也可一键切换**中文**，方便不同读者阅读。
+这是我的个人作品集网站，用一页介绍我的职业背景、技术方向、项目实践与工作经历。网站默认使用英文，支持一键切换中文。
 
-我目前在汇丰从事软件测试相关工作，持有 ISTQB 认证。测试与质量保障是我的职业基础；Java 是我已有的后端技术基础，目前项目实践仍以传统 Java/Spring 技术栈为主。同时，我正在聚焦 AI 应用开发，持续实践 Spring AI、RAG、知识库问答与模型服务接入。
+我目前在汇丰从事软件测试工作，持有 ISTQB 认证。测试与质量保障是我的职业基础，Java / Spring 是我开展后端项目实践的主要技术栈。在此基础上，我正逐步深入 AI 应用开发，通过 Spring AI、RAG、知识库问答与模型服务接入等项目积累实践经验，并继续探索 Agent 与 AI 工程化流程。
 
-个人项目与练习会**持续在 [Gitee](https://gitee.com/joyceyu434840) 上更新**，网站上的展示也会随时间补充和调整。
+个人项目与学习实践会持续更新至 [Gitee](https://gitee.com/joyceyu434840)，网站也会同步补充项目成果与学习进展。
 
-## 网站上大致有什么
+**在线访问：[joyceyu.dpdns.org](https://joyceyu.dpdns.org/)**
 
-- **关于我**：QA 背景、Java 后端基础、AI 应用成长方向  
-- **技术能力**：AI 应用与 RAG、测试与质量保障、Java / Spring 后端、Redis / RabbitMQ、分布式与微服务、银行信用卡业务  
-- **个人项目**：当前展示 8 个 Gitee 项目，并按 AI/RAG 实践、微服务与分布式系统、业务后端项目分类呈现  
-- **工作经历**：汇丰软件开发与科华数据期间的测试项目与职责摘要  
-- **联系入口**：邮箱、GitHub 与 Gitee  
+## 网站内容
 
-## 在线访问
+- **关于我**：测试与质量保障背景、Java 后端基础，以及 AI 应用开发方向。
+- **技术能力**：测试交付、Java / Spring 后端、AI 应用与 RAG、微服务与分布式基础，以及银行信用卡业务经验。
+- **个人项目**：目前展示 7 个 Gitee 项目，分为「AI 应用与智能体项目」「微服务与分布式系统」「业务后端项目」三类。
+- **工作经历**：在汇丰软件开发与科华数据工作期间参与的测试项目及主要职责。
+- **联系方式**：邮箱、GitHub 与 Gitee。
 
-- 站点：[https://joyceyu.dpdns.org/](https://joyceyu.dpdns.org/)
+## 浏览建议
 
-## 浏览小贴士
+- **电脑浏览器**：推荐使用，便于查看项目介绍与架构图。
+- **手机浏览器**：支持自适应布局，可直接访问。
+- **微信内置浏览器**：部分环境下可能出现加载异常或访问受限。如遇问题，可通过右上角「…」选择「在浏览器中打开」，或复制链接至 Safari、Chrome 等浏览器访问。
 
-- **电脑浏览器**：推荐，版式与阅读体验最完整。  
-- **手机浏览器**：已做自适应，可直接打开。  
-- **微信内打开**：部分环境下可能加载异常或被拦截；若遇到问题，请复制链接到系统浏览器（Safari、Chrome 等）打开，或使用右上角「…」→「在浏览器中打开」。
+## 本地预览与维护
 
----
+本站使用 **HTML、CSS 和 JavaScript** 构建，以 `content.json` 统一维护文案、项目列表及中英文内容，通过 `build.js` 生成 `index.html` 与 `translations.js`。
 
-## 技术与本仓库（简）
+### 本地预览
 
-本站当前以 **HTML、CSS、JavaScript** 实现，并通过 `content.json` 作为主要内容源生成 `index.html` 与 `translations.js`。
+安装 Node.js 后，在仓库根目录执行：
 
-网站内容重点围绕：
+```bash
+npm run build
+npm run preview
+```
 
-- **QA / 测试交付**：功能测试、接口测试、回归测试、端到端测试、数据一致性与业务规则校验
-- **Java 后端**：Spring Boot、Spring Cloud、REST API、MySQL、Redis、RabbitMQ、微服务与分布式基础
-- **AI 应用实践**：Spring AI、RAG、向量检索、ChatPDF、知识库问答、模型服务接入
-- **成长方向**：AI 应用开发、RAG、Agent 与 AI 工程化流程
+然后在浏览器中打开 [localhost:4173](http://localhost:4173/)。修改内容后，重新运行 `npm run build` 并刷新页面即可查看。
 
-若你 fork 本仓库或参与维护：文案、项目列表与中英文翻译主要在 `content.json` 中维护。修改后本地执行 `npm run build`（即 `node build.js`）生成页面，再提交即可；也可依赖 GitHub Actions 在推送后自动构建。
+### 内容更新
 
-项目介绍图使用图片轮播：在项目的 `architecture` 中设置 `presentation: "carousel"`，封面 `image` 为第一张，后面依次展示 `architecture.diagrams`。当前 CampusAI 为 4 张，AI Agent Scaffold Lite 为 3 张；支持按钮、圆点、键盘、手机横滑切换，以及点击图片放大。新增图片时同时填写中英文 `title` 与 `alt`。
+- **文案与项目**：编辑 `content.json`，统一维护中英文内容。
+- **页面结构**：编辑 `index.template.html`，然后重新构建。
+- **构建产物**：`index.html` 与 `translations.js` 由脚本生成，请在源文件中修改对应内容。
 
-## 📧 Contact
+修改完成后，运行 `npm run build` 并提交源文件与生成文件。仓库也配置了 GitHub Actions：推送至 `main` 或 `master` 分支后，会自动构建并将有变化的生成文件提交回仓库。
+
+### 项目图片轮播
+
+在项目的 `architecture` 中设置 `presentation: "carousel"` 即可启用轮播。项目封面 `image` 作为第一张图片，后续图片按 `architecture.diagrams` 的顺序展示。
+
+轮播支持按钮、圆点、键盘和手机横滑切换，也支持点击图片放大。新增图解时，请同时填写中英文 `title` 与 `alt`。目前 CampusAI 展示 4 张图片，AI Agent Scaffold Lite 展示 3 张图片。
+
+## 联系方式
 
 **Joyce Yu**
 
-- 📧 Email: [joyceyu434840@163.com](mailto:joyceyu434840@163.com)  
-- 🐙 GitHub: [@joyceyu-tech](https://github.com/joyceyu-tech)  
-- 🦊 Gitee: [@joyceyu434840](https://gitee.com/joyceyu434840)
+- Email：[joyceyu434840@163.com](mailto:joyceyu434840@163.com)
+- GitHub：[@joyceyu-tech](https://github.com/joyceyu-tech)
+- Gitee：[@joyceyu434840](https://gitee.com/joyceyu434840)
