@@ -1674,16 +1674,15 @@ body.preview-open {
         position: sticky;
         top: 0;
         flex-wrap: nowrap;
-        justify-content: safe center;
-        gap: 8px;
-        padding: 10px 12px;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        justify-content: center;
+        gap: 4px;
+        padding: 8px;
+        overflow: visible;
     }
 
     .nav-bar a {
-        padding: 10px 12px;
-        font-size: 15px;
+        padding: 8px 9px;
+        font-size: 14px;
         white-space: nowrap;
         flex: 0 0 auto;
     }
@@ -2068,8 +2067,15 @@ body.preview-open {
 }
 
 @media (max-width: 380px) {
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 6px 8px;
+    }
+
     .nav-bar a {
-        font-size: 14px;
+        padding: 7px 8px;
+        font-size: 13px;
     }
 }
 
@@ -2402,7 +2408,6 @@ footer {
     .nav-bar a {
         min-height: 44px;
         color: #2b3d89;
-        padding: 10px 12px;
     }
 
     .about-content p,
