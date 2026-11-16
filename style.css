@@ -441,8 +441,9 @@ header h1 {
 }
 
 .lang-toggle {
-    min-width: var(--button-height);
-    padding-inline: 12px;
+    width: 54px;
+    min-width: 54px;
+    padding-inline: 0;
 }
 
 .nav-bar a:hover {
