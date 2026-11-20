@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
   <title id="title">AI Agent Scaffold Lite · 配置装配与三种 Agent 协作模式</title>
-  <desc id="desc">配置经 Root、AiApi、ChatModel、Agent、AgentWorkflow、Runner 节点装配，MCP 工具挂载到模型。下方展示顺序代码协作、并行调研汇总、循环审稿优化示例。</desc>
+  <desc id="desc">配置经 Root、AiApi、ChatModel、Agent、AgentWorkflow、Runner 节点装配，MCP 与目录 / 类路径 Skills 工具挂载到模型。下方展示顺序代码协作、并行调研汇总、循环审稿优化示例。</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#759591" stroke-width="1.5"/></marker>
     <marker id="purpleArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#8793ba" stroke-width="1.5"/></marker>
@@ -11,7 +11,7 @@
   <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
     <text x="56" y="49" fill="#80e5c1" font-size="17" font-weight="650" letter-spacing="3">AI AGENT SCAFFOLD LITE / ORCHESTRATION</text>
     <text x="56" y="111" fill="#ffffff" font-size="44" font-weight="700">从配置装配，到多智能体协作</text>
-    <text x="58" y="150" fill="#a9c0cd" font-size="21">一条装配链，组合模型、工具、智能体与工作流。</text>
+    <text x="58" y="150" fill="#a9c0cd" font-size="21">配置装配模型、MCP / Skills、智能体与工作流；绘图应用使用顺序编排。</text>
 
     <rect x="56" y="222" width="1328" height="292" rx="20" fill="#ffffff" stroke="#d8e2e9"/>
     <text x="82" y="261" fill="#2a8270" font-size="18" font-weight="700" letter-spacing="2">01 / 配置驱动装配</text>
@@ -28,19 +28,19 @@
     <rect x="1106" y="299" width="250" height="94" rx="13" fill="#153b43"/>
     <g fill="#224d43" font-size="22" font-weight="650" text-anchor="middle">
       <text x="186" y="338">AiApiNode</text><text x="442" y="338">ChatModelNode</text>
-      <text x="698" y="338">AgentNode</text><text x="954" y="338">AgentWorkflowNode</text>
+      <text x="698" y="338">AgentNode</text><text x="954" y="338" font-size="18">AgentWorkflowNode</text>
     </g>
     <g fill="#648076" font-size="18" text-anchor="middle">
-      <text x="186" y="371">构建模型 API</text><text x="442" y="371">模型 + 工具回调</text>
+      <text x="186" y="371">构建模型 API</text><text x="442" y="371">模型 + MCP / Skills</text>
       <text x="698" y="371">创建 LlmAgent</text><text x="954" y="371">组合编排节点</text>
     </g>
     <text x="1231" y="338" text-anchor="middle" fill="#b4f1dc" font-size="23" font-weight="650">RunnerNode</text>
     <text x="1231" y="371" text-anchor="middle" fill="#b0c9cc" font-size="18">InMemoryRunner 注册</text>
     <path d="M442 447V403" fill="none" stroke="#ad8d5d" stroke-width="2" marker-end="url(#arrow)"/>
     <rect x="82" y="445" width="1274" height="44" rx="9" fill="#fbf5e9"/>
-    <text x="105" y="474" fill="#947348" font-size="18" font-weight="650">MCP 工具接入</text>
-    <text x="284" y="474" fill="#947348" font-size="18">Local / SSE / Stdio → ToolCallback → ChatModel</text>
-    <text x="1335" y="474" text-anchor="end" fill="#b19b79" font-size="17">按配置选择工厂策略</text>
+    <text x="105" y="474" fill="#947348" font-size="18" font-weight="650">MCP + Skills</text>
+    <text x="284" y="474" fill="#947348" font-size="18">MCP 策略 / Skills（directory、resource）→ ToolCallback → ChatModel</text>
+    <text x="1335" y="474" text-anchor="end" fill="#b19b79" font-size="17">统一工具回调</text>
 
     <text x="58" y="566" fill="#3c5667" font-size="18" font-weight="700" letter-spacing="2">02 / AGENT 协作模式</text>
     <text x="1382" y="566" text-anchor="end" fill="#7d919d" font-size="18">基于仓库中的三组测试示例</text>

@@ -51,7 +51,7 @@ npm run preview
 
 在项目的 `architecture` 中设置 `presentation: "carousel"` 即可启用轮播。项目封面 `image` 作为第一张图片，后续图片按 `architecture.diagrams` 的顺序展示。
 
-轮播支持按钮、圆点、键盘和手机横滑切换，也支持点击图片放大。新增图解时，请同时填写中英文 `title` 与 `alt`。目前 CampusAI 展示 4 张图片，AI Agent Scaffold Lite 展示 3 张图片。
+轮播支持按钮、圆点、键盘和手机横滑切换，也支持点击图片放大。新增图解时，请同时填写中英文 `title` 与 `alt`。目前 CampusAI 展示 4 张图片，AI Agent Scaffold Lite / AI Draw.io 展示 4 张图片（项目封面、绘图流程、后端架构与 Agent 编排）。
 
 ## 联系方式
 

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-  <title id="title">AI Agent Scaffold Lite · 智能体工程脚手架</title>
-  <desc id="desc">深蓝与薄荷绿项目封面，展示 DDD 六模块、三种 Agent 编排模式和三类 MCP 工具接入。</desc>
+  <title id="title">AI Agent Scaffold Lite · AI Draw.io 交互绘图</title>
+  <desc id="desc">AI Draw.io 项目封面，展示人机协作绘图、DDD 六模块、顺序绘图流程与 MCP / Skills 工具装配。</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#101e35"/><stop offset="1" stop-color="#122f3c"/>
@@ -25,9 +25,9 @@
     <path d="M84 80H100M92 72V88" stroke="#142a38" stroke-width="3" stroke-linecap="round"/>
     <text x="128" y="87" fill="#d1dfeb" font-size="21" font-weight="500">JOYCE / AI ENGINEERING</text>
 
-    <text x="72" y="255" fill="#f4f8fb" font-size="54" font-weight="500">AI Agent</text>
-    <text x="72" y="326" fill="#f4f8fb" font-size="54" font-weight="500">Scaffold <tspan fill="#80e5c1">Lite</tspan></text>
-    <text x="76" y="386" fill="#b1c6d4" font-size="18.75">让智能体开发，从清晰架构开始。</text>
+    <text x="72" y="255" fill="#f4f8fb" font-size="54" font-weight="500">AI Draw.io</text>
+    <text x="72" y="326" fill="#f4f8fb" font-size="54" font-weight="500">人 + AI <tspan fill="#80e5c1">协作绘图</tspan></text>
+    <text x="76" y="386" fill="#b1c6d4" font-size="18.75">Agent Scaffold Lite · 对话生成，手动编辑，继续修改。</text>
     <g fill="#80e5c1" font-size="11.25" font-weight="500" text-anchor="middle">
       <rect x="76" y="427" width="75" height="25.5" rx="12.75" fill="#20484a"/>
       <text x="113.5" y="444.25">Java 17</text>
@@ -68,11 +68,11 @@
     <path d="M423 596V672M775 596V672" stroke="#496171" stroke-opacity=".6"/>
     <text x="108" y="616" fill="#80e5c1" font-size="22" font-weight="600" letter-spacing="2">DDD ARCHITECTURE</text>
     <text x="108" y="662" fill="#eaf2f6" font-size="31" font-weight="650">6 个工程模块</text>
-    <text x="459" y="616" fill="#a7baf4" font-size="22" font-weight="600" letter-spacing="2">AGENT WORKFLOWS</text>
-    <text x="459" y="662" fill="#eaf2f6" font-size="31" font-weight="650">顺序 · 并行 · 循环</text>
-    <text x="811" y="616" fill="#e9c697" font-size="22" font-weight="600" letter-spacing="2">MCP TOOL ACCESS</text>
-    <text x="811" y="662" fill="#eaf2f6" font-size="31" font-weight="650">Local · SSE · Stdio</text>
-    <text x="76" y="757" fill="#7592a3" font-size="19" letter-spacing="1">CONFIGURATION → MODEL → AGENTS → WORKFLOW → RUNNER</text>
+    <text x="459" y="616" fill="#a7baf4" font-size="22" font-weight="600" letter-spacing="2">DRAWING WORKFLOW</text>
+    <text x="459" y="662" fill="#eaf2f6" font-size="31" font-weight="650">分析 · 绘图 · 检查</text>
+    <text x="811" y="616" fill="#e9c697" font-size="22" font-weight="600" letter-spacing="2">TOOLS &amp; SKILLS</text>
+    <text x="811" y="662" fill="#eaf2f6" font-size="31" font-weight="650">MCP + Skills</text>
+    <text x="76" y="757" fill="#7592a3" font-size="19" letter-spacing="1">NEXT.JS + DRAW.IO → HTTP API → AGENTS → EDITABLE XML</text>
     <path d="M1090 748H1124M1114 738L1124 748L1114 758" fill="none" stroke="#80e5c1" stroke-width="2.5" stroke-linecap="round"/>
   </g>
 </svg>

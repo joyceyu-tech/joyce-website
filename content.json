@@ -259,8 +259,8 @@
       "category": "ai-rag",
       "image": "images/project-ai-agent-scaffold-lite.svg",
       "imageAlt": {
-        "en": "AI Agent Scaffold Lite cover showing DDD modules, agent workflows, and MCP tools",
-        "zh": "AI Agent Scaffold Lite 项目封面：DDD 模块、Agent 编排与 MCP 工具接入"
+        "en": "AI Draw.io project overview: human and AI diagram editing, six backend modules, MCP and Skills",
+        "zh": "AI Draw.io 项目概览：人机协作绘图、后端六模块、MCP 与 Skills 工具装配"
       },
       "giteeUrl": "https://gitee.com/joyceyu434840/ai-agent-scaffold-lite",
       "techTags": [
@@ -268,29 +268,47 @@
         "Spring Boot 3",
         "Google ADK",
         "Spring AI",
-        "LangChain4j",
+        "Next.js",
+        "TypeScript",
+        "Draw.io",
         "DDD",
-        "MCP"
+        "MCP",
+        "Docker"
       ],
       "title": {
-        "en": "AI Agent Scaffold Lite",
-        "zh": "AI Agent Scaffold Lite 智能体脚手架"
+        "en": "AI Agent Scaffold Lite / AI Draw.io",
+        "zh": "AI Agent Scaffold Lite / AI 交互绘图"
       },
       "description": {
-        "en": "A Java 17 / Spring Boot 3 AI Agent scaffold with six DDD modules, configuration-driven agent assembly, MCP tool integration, and sequential, parallel, and loop workflow examples.",
-        "zh": "基于 Java 17 与 Spring Boot 3 的 AI Agent 脚手架，采用 DDD 六模块架构，实现配置驱动的智能体装配与 MCP 工具接入，并提供顺序、并行、循环三种协作示例。"
+        "en": "An AI diagramming application built on a six-module Java / Spring Boot Agent scaffold. A Next.js frontend embeds Draw.io for conversational diagram generation, manual editing, and further AI revisions using the current diagram.",
+        "zh": "基于 Java / Spring Boot 六模块 Agent 脚手架，扩展出 AI 交互绘图应用。Next.js 前端嵌入 Draw.io，支持对话生成图表、手动编辑，并携带当前图继续由 AI 修改。"
       },
       "architecture": {
         "heading": {
-          "en": "Architecture & Agent Workflows",
-          "zh": "架构设计与智能体编排"
+          "en": "AI Diagramming & Agent Architecture",
+          "zh": "AI 交互绘图与智能体架构"
         },
         "showCaptions": false,
         "intro": {
-          "en": "Six module responsibilities and three collaboration patterns. Select a diagram to enlarge it.",
-          "zh": "六模块职责与三种协作模式。点击设计图，查看完整细节。"
+          "en": "The diagramming flow, six backend modules, and reusable Agent assembly. Select a diagram to enlarge it.",
+          "zh": "交互绘图流程、后端六模块与可复用的 Agent 装配。点击设计图，查看完整细节。"
         },
         "diagrams": [
+          {
+            "image": "images/ai-agent-drawio-flow.svg",
+            "title": {
+              "en": "AI Draw.io · Generate, Edit & Refine",
+              "zh": "AI Draw.io · 对话生成、手动编辑与迭代修改"
+            },
+            "caption": {
+              "en": "A request passes through analysis, drawing, and review agents. A user response requests clarification; a drawio response loads XML into the canvas. The next request can include manually edited XML. Browser history uses localStorage; backend sessions use InMemoryRunner.",
+              "zh": "请求依次经过需求分析、绘图和检查 Agent；user 响应补充信息，drawio 响应加载 XML 到画布。后续请求可携带手动编辑后的 XML；浏览器历史保存在 localStorage，后端会话使用 InMemoryRunner。"
+            },
+            "alt": {
+              "en": "AI Draw.io interaction flow from a Next.js frontend through HTTP session APIs and three sequential agents to XML rendering, manual edits, and optional diagram context for the next request",
+              "zh": "AI Draw.io 交互流程：Next.js 前端经 HTTP 会话接口调用三个顺序 Agent，返回 XML 渲染到画布，支持手动编辑并按需携带当前图继续对话"
+            }
+          },
           {
             "image": "images/ai-agent-scaffold-architecture.svg",
             "title": {
@@ -298,12 +316,12 @@
               "zh": "DDD 六模块 · 工程职责架构图"
             },
             "caption": {
-              "en": "App handles startup, Domain assembles agents and workflows, and API / Types define shared contracts. Trigger and Infrastructure provide extension structures for business integration.",
-              "zh": "App 负责启动配置，Domain 承载 Agent 装配与编排，API / Types 定义契约和通用类型；Trigger 与 Infrastructure 为业务接入保留扩展结构。"
+              "en": "A Next.js / Draw.io frontend calls the HTTP endpoints in Trigger. App loads configuration, Domain assembles agents and handles in-memory sessions, and API / Types define shared contracts. Infrastructure remains an extension skeleton.",
+              "zh": "Next.js / Draw.io 前端调用 Trigger 的 HTTP 接口；App 加载配置，Domain 负责 Agent 装配和内存会话，API / Types 定义契约与通用类型；Infrastructure 仍以扩展骨架为主。"
             },
             "alt": {
-              "en": "Six-module DDD architecture of AI Agent Scaffold Lite, with implemented components and extension structures marked",
-              "zh": "AI Agent Scaffold Lite 的 DDD 六模块职责架构，标明已有实现与预留扩展结构"
+              "en": "AI Draw.io frontend and six backend modules, including implemented HTTP endpoints and in-memory chat sessions, with Infrastructure marked as an extension skeleton",
+              "zh": "AI Draw.io 前端与后端六模块架构：已实现 HTTP 接口、内存会话与 Agent 装配，Infrastructure 标明为扩展骨架"
             }
           },
           {
@@ -313,12 +331,12 @@
               "zh": "Agent 装配 · 顺序、并行与循环协作"
             },
             "caption": {
-              "en": "Configuration flows through API, model, agent, workflow, and runner assembly. Examples show code review, parallel research, and iterative writing, with Local / SSE / Stdio tool strategies.",
-              "zh": "配置依次装配 API、模型、Agent、工作流与 Runner，结合 Local / SSE / Stdio 工具策略；通过代码审查、并行调研、循环写作示例说明协作方式。"
+              "en": "Configuration assembles API, model, agents, workflows, and runner. MCP strategies and directory / classpath Skills become model tool callbacks. Sequential, parallel, and loop collaboration examples remain available; AI Draw.io uses the sequential analysis, drawing, and review flow.",
+              "zh": "配置依次装配 API、模型、Agent、工作流与 Runner；MCP 策略和目录 / 类路径 Skills 统一挂载为模型工具回调。保留顺序、并行、循环示例；AI Draw.io 当前采用分析、绘图、检查的顺序流程。"
             },
             "alt": {
-              "en": "Configuration-driven agent assembly, MCP tool integration, and three collaboration patterns in AI Agent Scaffold Lite",
-              "zh": "AI Agent Scaffold Lite 的配置驱动装配、MCP 工具接入及三种多智能体协作模式图"
+              "en": "Configuration-driven Agent assembly with MCP and Skills callbacks, plus sequential, parallel, and loop examples; the drawing runner uses the sequential workflow",
+              "zh": "配置驱动 Agent 装配，接入 MCP 与 Skills 工具回调，并展示顺序、并行、循环示例；绘图 Runner 使用顺序流程"
             }
           }
         ],
@@ -330,16 +348,18 @@
       },
       "features": {
         "en": [
-          "Separates API, App, Domain, Infrastructure, Trigger, and Types into six Maven modules with clear responsibilities",
-          "Assembles models, LlmAgents, workflows, and InMemoryRunner from configuration through a strategy tree",
-          "Connects Local, SSE, and Stdio tool strategies through an MCP factory and attaches tool callbacks to the chat model",
-          "Includes Google ADK sequential, parallel, and loop collaboration examples, plus Spring AI and LangChain4j integration tests"
+          "Runs analysis, drawing, and review agents in sequence to generate Draw.io XML or ask for clarification",
+          "Embeds an editable Draw.io canvas in Next.js / TypeScript, with optional diagram context, SVG export, and browser-local conversation history",
+          "Exposes Agent listing, session creation, and chat HTTP APIs; keeps backend sessions in InMemoryRunner",
+          "Reuses six DDD backend modules and configuration-driven assembly, with Local / SSE / Stdio MCP tools and directory / classpath Skills callbacks",
+          "Provides Docker Compose deployment for frontend and backend, with environment-based model keys and API address configuration"
         ],
         "zh": [
-          "按 API、App、Domain、Infrastructure、Trigger、Types 六个 Maven 模块划分职责，形成清晰的 DDD 工程结构",
-          "通过策略树读取配置，依次装配模型、LlmAgent、工作流与 InMemoryRunner，沉淀可复用的装配链路",
-          "通过 MCP 工厂选择 Local、SSE、Stdio 工具策略，将工具回调挂载到对话模型",
-          "提供 Google ADK 顺序、并行、循环协作示例，以及 Spring AI / LangChain4j 模型与工具集成测试"
+          "通过需求分析、绘图、检查三个 Agent 顺序协作，生成 Draw.io XML 或提示用户补充信息",
+          "以 Next.js / TypeScript 嵌入可编辑 Draw.io 画布，支持按需携带当前图、SVG 导出与浏览器本地会话历史",
+          "实现智能体列表、创建会话、对话 HTTP 接口，后端会话由 InMemoryRunner 在内存中维护",
+          "复用 DDD 后端六模块与配置驱动装配，接入 Local / SSE / Stdio MCP 工具及目录 / 类路径 Skills 回调",
+          "提供前后端 Docker Compose 部署配置，通过环境变量配置模型密钥与 API 地址"
         ]
       },
       "linkLabel": {
